@@ -24,24 +24,14 @@ sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build
     </item>
     
     <item>
-      <title>Quick client server in Python</title>
-      <link>https://pcotret.github.io/networks/python-clser/</link>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://pcotret.github.io/networks/python-clser/</guid>
-      <description>+/- based on this tutorial (in French): https://python.doctor/page-reseaux-sockets-python-port
-What&amp;rsquo;s a socket print(&amp;#39;hello world&amp;#39;) Socket and Python Todo
-Socket and threading Todo</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>https://pcotret.github.io/about-me/</link>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://pcotret.github.io/about-me/</guid>
-      <description>Embedded systems, security, SDR, etc, etc.
-Please have a look at my academic website for research stuff.</description>
+      <description>Embedded systems, security, SDR, and other stuff :)
+This website is mainly Github-related (both personal and academic).
+ Github repos  Please have a look at my academic website for research purposes.</description>
     </item>
     
     <item>
