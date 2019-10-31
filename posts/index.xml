@@ -1,0 +1,120 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Pascal Cotret</title>
+		<link>https://pcotret.github.io/posts/</link>
+		<description>Recent content in Posts on Pascal Cotret</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Thu, 31 Oct 2019 00:00:00 +0000</lastBuildDate>
+		<atom:link href="https://pcotret.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Running Modelsim on a 64-bit Ubuntu</title>
+			<link>https://pcotret.github.io/posts/modelsim-ubuntu/</link>
+			<pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+			
+			<guid>https://pcotret.github.io/posts/modelsim-ubuntu/</guid>
+			<description>## Install Modelsim on a 64-bit (x)Ubuntu
+wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
+sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386 Next, we need to build a free version of FreeType:</description>
+			<content type="html"><![CDATA[
+
+<p>## Install Modelsim on a 64-bit (x)Ubuntu</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run
+chmod +x ModelSimSetup-13.1.0.162.run</code></pre></div>
+<p>However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dpkg --add-architecture i386
+sudo apt-get update
+
+sudo apt-get install build-essential
+
+sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386</code></pre></div>
+<p>Next, we need to build a free version of FreeType:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget http://download.savannah.gnu.org/releases/freetype/freetype-2.4.12.tar.bz2
+tar -xjvf freetype-2.4.12.tar.bz2
+<span class="nb">cd</span> freetype-2.4.12
+./configure --build<span class="o">=</span>i686-pc-linux-gnu <span class="s2">&#34;CFLAGS=-m32&#34;</span> <span class="s2">&#34;CXXFLAGS=-m32&#34;</span> <span class="s2">&#34;LDFLAGS=-m32&#34;</span>
+make -j<span class="k">$(</span>nproc<span class="k">)</span></code></pre></div>
+<p>Then, install Modelsim:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo ./ModelSimSetup-13.1.0.162.run</code></pre></div>
+<p><strong>Note: I&rsquo;ll assume that Modelsim is installed in <code>opt/modelsim</code> for the next steps.</strong></p>
+
+<p>Copy the FreeType libraries in Modelsim folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bas" data-lang="bas"><span class="vg">cd</span><span class="w"> </span><span class="o">/</span><span class="vg">opt</span><span class="o">/</span><span class="vg">modelsim</span><span class="o">/</span><span class="vg">modelsim_ase</span>
+<span class="vg">sudo</span><span class="w"> </span><span class="vg">mkdir</span><span class="w"> </span><span class="vg">lib32</span>
+<span class="vg">sudo</span><span class="w"> </span><span class="vg">cp</span><span class="w"> </span><span class="o">~/</span><span class="vg">freetype</span><span class="mf">-2.4.12</span><span class="o">/</span><span class="vg">objs</span><span class="o">/.</span><span class="vg">libs</span><span class="o">/</span><span class="vg">libfreetype</span><span class="o">.</span><span class="vg">so</span><span class="o">*</span><span class="w"> </span><span class="o">./</span><span class="vg">lib32</span></code></pre></div>
+<h2 id="modify-the-bin-vsim-script">Modify the <code>bin/vsim</code> script</h2>
+
+<h3 id="step-1-path-to-the-freetype-folder">Step 1 - Path to the FreeType folder</h3>
+
+<p>Search for the following line:</p>
+
+<pre><code>dir=`dirname $arg0`
+</code></pre>
+
+<p>and underneath add the following new line:</p>
+
+<pre><code>export LD_LIBRARY_PATH=${dir}/lib32
+</code></pre>
+
+<h3 id="step2-modify-the-redhat-only-support">Step2 - Modify the RedHat only support</h3>
+
+<p>Search for the following string:</p>
+
+<pre><code>vco=&quot;linux_rh60&quot;
+</code></pre>
+
+<p>and replace by:</p>
+
+<pre><code>vco=&quot;linux&quot;
+</code></pre>
+
+<h3 id="step-3-change-vco-mode">Step 3 - Change VCO mode</h3>
+
+<p>Search for the following line:</p>
+
+<pre><code>mode=${MTI_VCO_MODE:-&quot; &quot;}
+</code></pre>
+
+<p>and replace by:</p>
+
+<pre><code>mode=${MTI_VCO_MODE:-&quot;32&quot;}
+</code></pre>
+
+<h2 id="running-modelsim">Running Modelsim</h2>
+
+<p>Now, you should be able to run Modelsim with: <code>./bin/vsim</code></p>
+
+<h2 id="references">References</h2>
+
+<p><a href="https://mil.ufl.edu/3701/docs/quartus/linux/ModelSim_linux.pdf">https://mil.ufl.edu/3701/docs/quartus/linux/ModelSim_linux.pdf</a></p>
+
+<p><a href="http://mattaw.blogspot.com/2014/05/making-modelsim-altera-starter-edition.html">http://mattaw.blogspot.com/2014/05/making-modelsim-altera-starter-edition.html</a></p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>Convert an SVG to PNG in commande line using Inkscape (on Windows)</title>
+			<link>https://pcotret.github.io/posts/svg-to-png/</link>
+			<pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+			
+			<guid>https://pcotret.github.io/posts/svg-to-png/</guid>
+			<description>Change export-height if you want a bigger image
+@echo off for %%f in (%*) do ( echo %%~f &amp;#34;C:\Program Files\Inkscape\inkscape.exe&amp;#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&amp;#34;%%~dpnf.png&amp;#34; ^  --file=&amp;#34;%%~f&amp;#34; )</description>
+			<content type="html"><![CDATA[<p>Change export-height if you want a bigger image</p>
+<div class="highlight"><pre class="chroma"><code class="language-batch" data-lang="batch"><span class="p">@</span><span class="k">echo</span> off
+<span class="k">for</span> <span class="se">%%</span>f <span class="k">in</span> <span class="p">(</span><span class="nv">%*</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+    <span class="k">echo</span> <span class="se">%%</span>~f
+    <span class="s2">&#34;C:\Program Files\Inkscape\inkscape.exe&#34;</span> <span class="se">^
+</span><span class="se"> </span>     -z <span class="se">^
+</span><span class="se"> </span>     --export-background-opacity=0 <span class="se">^
+</span><span class="se"> </span>     --export-height=48 <span class="se">^
+</span><span class="se"> </span>     --export-png=<span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpnf.png&#34;</span> <span class="se">^
+</span><span class="se"> </span>     --file=<span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~f&#34;</span>
+
+<span class="p">)</span></code></pre></div>]]></content>
+		</item>
+		
+	</channel>
+</rss>
