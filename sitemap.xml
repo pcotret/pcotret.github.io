@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pcotret.github.io/about-me/</loc>
-    <lastmod>2019-08-03T00:00:00+00:00</lastmod>
+    <loc>https://pcotret.github.io/</loc>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pcotret.github.io/</loc>
+    <loc>https://pcotret.github.io/talks/</loc>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pcotret.github.io/about-me/</loc>
     <lastmod>2019-08-03T00:00:00+00:00</lastmod>
   </url>
   
