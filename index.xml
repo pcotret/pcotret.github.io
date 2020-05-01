@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/arduino_reverse/</guid>
     <description><![CDATA[As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: https://github.com/arduino/arduino-cli Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.]]></description>
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.]]></description>
 </item><item>
     <title>Quick start guide for SimulIDE as an Arduino simulator</title>
     <link>https://pcotret.github.io/simulide/</link>

@@ -8,15 +8,15 @@
         <title>Arduino vs. embedded C - AVR reversing - Pascal Cotret @ ENSTA Bretagne</title>
         <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Arduino vs. embedded C - AVR reversing" />
 <meta property="og:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: https://github.com/arduino/arduino-cli Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno." />
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/arduino_reverse/" />
 <meta property="article:published_time" content="2020-05-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta property="article:modified_time" content="2020-05-02T00:26:24+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arduino vs. embedded C - AVR reversing"/>
 <meta name="twitter:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: https://github.com/arduino/arduino-cli Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno."/>
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno."/>
 <meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
 <meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,8 +34,8 @@
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "arduino, embedded","wordcount":  676 ,
-        "url": "https:\/\/pcotret.github.io\/arduino_reverse\/","datePublished": "2020-05-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+            },"genre": "posts","keywords": "arduino, embedded","wordcount":  679 ,
+        "url": "https:\/\/pcotret.github.io\/arduino_reverse\/","datePublished": "2020-05-01T00:00:00+08:00","dateModified": "2020-05-02T00:26:24+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -122,7 +122,7 @@
                                 <i class="far fa-folder fa-fw"></i>Articles
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-01>2020-05-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 676 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 679 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>4 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -156,7 +156,7 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li><a href="https://github.com/arduino/arduino-cli" target="_blank" rel="noopener noreffer"><code>arduino-cli</code></a>: Command Line Interface for Arduino</li>
-<li>AVR cross compiler: <a href="https://github.com/arduino/arduino-cli">https://github.com/arduino/arduino-cli</a></li>
+<li>AVR cross compiler: <code>sudo apt install gcc-avr</code></li>
 <li>Optional: an Arduino simulator such as <a href="https://simulide.blogspot.com/" target="_blank" rel="noopener noreffer">SimulIDE</a></li>
 </ul>
 <h2 id="sample-program">Sample program</h2>
@@ -387,8 +387,8 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
-                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/57135ec48ec314606a58cd8489da9ad620071f1f" target="_blank" title="commit by Pascal(pascal@ensta-laptop) 57135ec48ec314606a58cd8489da9ad620071f1f: update">
+                                <i class="fas fa-hashtag fa-fw"></i>57135ec</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
