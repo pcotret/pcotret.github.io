@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>buffer - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/buffer/</link>
+        <description>buffer - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/buffer/" rel="self" type="application/rss+xml" /><item>
+    <title>Buffer overflow on ARM architecture</title>
+    <link>https://pcotret.github.io/buffer-overflow-raspberrypi/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/buffer-overflow-raspberrypi/</guid>
+    <description><![CDATA[Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
+An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.]]></description>
+</item></channel>
+</rss>

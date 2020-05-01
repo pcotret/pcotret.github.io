@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>My first topology - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="My first topology" />
+<meta property="og:description" content="Mainly based on an official tutorial (link).
+A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
+In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
+ Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+We can see our two routers:
+Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/first_topology/" />
+<meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My first topology"/>
+<meta name="twitter:description" content="Mainly based on an official tutorial (link).
+A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
+In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
+ Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+We can see our two routers:
+Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers."/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/first_topology/" /><link rel="prev" href="https://pcotret.github.io/orangepi4sdr/" /><link rel="next" href="https://pcotret.github.io/memory-alignment/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "My first topology",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/first_topology\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "gns3, simulation","wordcount":  1016 ,
+        "url": "https:\/\/pcotret.github.io\/first_topology\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">My first topology</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tech-networks/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Networks
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 1016 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>5 min&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#topology-creation">Topology creation</a></li>
+    <li><a href="#routers-configuration">Routers configuration</a></li>
+    <li><a href="#ospf-routing">OSPF routing</a></li>
+    <li><a href="#router-configuration-backup">Router configuration backup</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>Mainly based on an official tutorial (<a href="https://docs.gns3.com/1d1huu6z9-wWGD_ipTSQZqy2mpaxiqzymu-YQo6at_Jg/index.html" target="_blank" rel="noopener noreffer">link</a>).</p>
+<p>A Google Drive with several Cisco IOS: <a href="https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR" target="_blank" rel="noopener noreffer">https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR</a>.</p>
+<p>In this tutorial, the <code>c7200</code> is used. You may not have the same interfaces in another case.</p>
+</blockquote>
+<h2 id="topology-creation">Topology creation</h2>
+<p>Take two <code>c7200</code> routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/net1.jpg"
+        data-srcset="/img/net1.jpg, /img/net1.jpg 1.5x, /img/net1.jpg 2x"
+        data-sizes="auto"
+        alt="p3"
+        title="p3" /></p>
+<p>We can see our two routers:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/net2.jpg"
+        data-srcset="/img/net2.jpg, /img/net2.jpg 1.5x, /img/net2.jpg 2x"
+        data-sizes="auto"
+        alt="p4"
+        title="p4" /></p>
+<p>Use the <strong>link</strong> icon in order to&hellip; &hellip;link them. In this case, we connect the <strong>FastEthernet0/0</strong> interfaces of the routers.
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/net4.jpg"
+        data-srcset="/img/net4.jpg, /img/net4.jpg 1.5x, /img/net4.jpg 2x"
+        data-sizes="auto"
+        alt="p5"
+        title="p5" /></p>
+<p>Below, the green <strong>Start</strong> button (marked #1) and the <strong>Console</strong> button (marked #2) have been selected.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/net5.jpg"
+        data-srcset="/img/net5.jpg, /img/net5.jpg 1.5x, /img/net5.jpg 2x"
+        data-sizes="auto"
+        alt="p2"
+        title="p2" /></p>
+<p>Now, let&rsquo;s configure the routers. Reminder: GNS3 runs IOS images, it&rsquo;s like playing with a real router (commands are the same).</p>
+<h2 id="routers-configuration">Routers configuration</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1# sh ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down  
+</code></pre></td></tr></table>
+</div>
+</div><p>As you can see, all interfaces are <strong>administratively down</strong>. Same thing for R2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2# sh ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down
+</code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s configure <code>fa0/0</code> and <code>loopback0</code> interfaces:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1# conf t
+R1<span class="o">(</span>config<span class="o">)</span><span class="c1"># int fa0/0</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.1 255.255.255.0</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 1.1.1.1 255.255.255.255</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
+R1#sh ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            10.1.1.1        YES manual administratively down down    
+FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+Loopback0                  1.1.1.1         YES manual up                    up   
+</code></pre></td></tr></table>
+</div>
+</div><p>Interfaces are correctly configured. There&rsquo;s only one difference: <em>loopback</em> virtual interfaces are automatically enabled (<strong>up</strong> state). In order to enable <code>fa0/0</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1# conf t
+R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
+R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#end</span>
+R1#sh ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            10.1.1.1        YES manual up                    up      
+FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+Loopback0                  1.1.1.1         YES manual up                    up  
+</code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s configure R2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2#conf t
+R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
+R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
+R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.2 255.255.255.0</span>
+R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
+R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 2.2.2.2 255.255.255.255</span>
+R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
+R2#sh ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            10.1.1.2        YES manual up                    up      
+FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+Loopback0                  2.2.2.2         YES manual up                    up     
+</code></pre></td></tr></table>
+</div>
+</div><p>We can have some information about the IOS with the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2#sh ver
+Cisco IOS Software, <span class="m">7200</span> Software <span class="o">(</span>C7200-JK9S-M<span class="o">)</span>, Version 12.4<span class="o">(</span>13b<span class="o">)</span>, RELEASE SOFTWARE <span class="o">(</span>fc3<span class="o">)</span>
+Technical Support: http://www.cisco.com/techsupport
+Copyright <span class="o">(</span>c<span class="o">)</span> 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 25-Apr-07 03:18 by prod_rel_team
+<span class="o">[</span>...<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>By now, R1 and R2 can talk to each other:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2#ping 10.1.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.1.1.1, timeout is <span class="m">2</span> seconds:
+.!!!!
+Success rate is <span class="m">80</span> percent <span class="o">(</span>4/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 44/57/64 ms
+</code></pre></td></tr></table>
+</div>
+</div><p>Only 80% of packets are received, don&rsquo;t worry! The first packet is lost due to the <a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol" target="_blank" rel="noopener noreffer">ARP address resolution</a> (reminder: ARP is mainly responsible for <em>translating</em> IP to MAC addresses).</p>
+<p>Here is a ping in the other direction:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1#ping 10.1.1.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.1.1.2, timeout is <span class="m">2</span> seconds:
+!!!!!
+Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 60/62/68 ms
+</code></pre></td></tr></table>
+</div>
+</div><p>100% of packets are received as the ARP exchange is already done!</p>
+<h2 id="ospf-routing">OSPF routing</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1#conf t
+R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
+R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 1.1.1.1</span>
+R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
+R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
+R2#conf t
+R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
+R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 2.2.2.2</span>
+R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
+R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>List of R2 neighbors:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2#sh ip ospf neigh
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           <span class="m">1</span>   FULL/DR         00:00:32    10.1.1.1        FastEthernet0/0
+</code></pre></td></tr></table>
+</div>
+</div><p><code>1.1.1.1</code> is the address of R1.</p>
+<p>R1 routing table:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1#sh ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external <span class="nb">type</span> 1, N2 - OSPF NSSA external <span class="nb">type</span> <span class="m">2</span>
+       E1 - OSPF external <span class="nb">type</span> 1, E2 - OSPF external <span class="nb">type</span> <span class="m">2</span>
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not <span class="nb">set</span>
+
+     1.0.0.0/32 is subnetted, <span class="m">1</span> subnets
+C       1.1.1.1 is directly connected, Loopback0
+     2.0.0.0/32 is subnetted, <span class="m">1</span> subnets
+O       2.2.2.2 <span class="o">[</span>110/2<span class="o">]</span> via 10.1.1.2, 00:08:21, FastEthernet0/0
+     10.0.0.0/24 is subnetted, <span class="m">1</span> subnets
+C       10.1.1.0 is directly connected, FastEthernet0/0
+R1#ping 2.2.2.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is <span class="m">2</span> seconds:
+!!!!!
+Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 8/24/72 ms
+</code></pre></td></tr></table>
+</div>
+</div><p>There&rsquo;s the OSPF route towards <code>2.2.2.2</code>. On the R2 side:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R2#ping 1.1.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is <span class="m">2</span> seconds:
+!!!!!
+Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 12/28/40 ms
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="router-configuration-backup">Router configuration backup</h2>
+<p>By default, GNS3 won&rsquo;t save routers configuration. It can be done manually:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">R1#copy running-config startup-config
+</code></pre></td></tr></table>
+</div>
+</div><p>Next time GNS3 is launched, routers will still be configured!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
+                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/first_topology/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/gns3/">gns3</a>,&nbsp;<a href="/tags/simulation/">simulation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/orangepi4sdr/" class="prev" rel="prev" title="OrangePi4SDR"><i class="fas fa-angle-left fa-fw"></i>OrangePi4SDR</a>
+            <a href="/memory-alignment/" class="next" rel="next" title="Memory alignment">Memory alignment<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","noResultsFound":"No results found","type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

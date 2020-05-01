@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>zedboard - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/zedboard/</link>
+        <description>zedboard - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/zedboard/" rel="self" type="application/rss+xml" /><item>
+    <title>Yocto on the Zedboard 101</title>
+    <link>https://pcotret.github.io/yocto-zedboard-101/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/yocto-zedboard-101/</guid>
+    <description><![CDATA[1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
+ Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
+ An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1.]]></description>
+</item></channel>
+</rss>

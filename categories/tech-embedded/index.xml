@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tech notes / Embedded - Category - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/categories/tech-embedded/</link>
+        <description>Tech notes / Embedded - Category - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-embedded/" rel="self" type="application/rss+xml" /><item>
+    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+    <link>https://pcotret.github.io/simulide/</link>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/simulide/</guid>
+    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
+</item><item>
+    <title>Buffer overflow on ARM architecture</title>
+    <link>https://pcotret.github.io/buffer-overflow-raspberrypi/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/buffer-overflow-raspberrypi/</guid>
+    <description><![CDATA[Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
+An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.]]></description>
+</item><item>
+    <title>Memory alignment</title>
+    <link>https://pcotret.github.io/memory-alignment/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/memory-alignment/</guid>
+    <description><![CDATA[This note was inspired by a work of Samuele Giraudo (LIGM, Université Paris-Est Marne-la-Vallée)
+http://igm.univ-mlv.fr/~giraudo/Enseignements/
+Memory alignment https://en.wikipedia.org/wiki/Data_structure_alignment
+Memory alignment of a given data is the way this data is organized in the memory. For instance, an array of n elements of type T is organized as a continuous array of sizeof(T) * n bytes.
+How does memory alignment work for variables of a structured type? Let&rsquo;s find out 😊]]></description>
+</item><item>
+    <title>OrangePi4SDR</title>
+    <link>https://pcotret.github.io/orangepi4sdr/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/orangepi4sdr/</guid>
+    <description><![CDATA[The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www.]]></description>
+</item><item>
+    <title>Register windows in SPARC</title>
+    <link>https://pcotret.github.io/sparc_window_registers/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/sparc_window_registers/</guid>
+    <description><![CDATA[128 registers available in SPARC. Each window is divided in 3 areas:  8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07)    1 2 3 4 5 6 7  input // Function F1 local output	input // Save instruction (F2 called in F1) 	local output	input // Save instruction (F3 called in F2) 	local output   As you can see, each time a function is called in another, the registers window &ldquo;slides&rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.]]></description>
+</item><item>
+    <title>Yocto on the Zedboard 101</title>
+    <link>https://pcotret.github.io/yocto-zedboard-101/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/yocto-zedboard-101/</guid>
+    <description><![CDATA[1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
+ Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
+ An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1.]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>arduino - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/arduino/</link>
+        <description>arduino - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 May 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/arduino/" rel="self" type="application/rss+xml" /><item>
+    <title>Arduino vs. embedded C - AVR reversing</title>
+    <link>https://pcotret.github.io/arduino_reverse/</link>
+    <pubDate>Fri, 01 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/arduino_reverse/</guid>
+    <description><![CDATA[As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: https://github.com/arduino/arduino-cli Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.]]></description>
+</item><item>
+    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+    <link>https://pcotret.github.io/simulide/</link>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/simulide/</guid>
+    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
+</item></channel>
+</rss>

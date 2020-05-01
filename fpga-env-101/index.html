@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine" />
+<meta property="og:description" content="Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
+  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
+1  source /opt/Xilinx/Vivado/2018." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/fpga-env-101/" />
+<meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine"/>
+<meta name="twitter:description" content="Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
+  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
+1  source /opt/Xilinx/Vivado/2018."/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/fpga-env-101/" /><link rel="prev" href="https://pcotret.github.io/lattice-ubuntu/" /><link rel="next" href="https://pcotret.github.io/image_scripts/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Installing a Xilinx FPGA environment for an Ubuntu-based machine",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/fpga-env-101\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "fpga, xilinx","wordcount":  222 ,
+        "url": "https:\/\/pcotret.github.io\/fpga-env-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Installing a Xilinx FPGA environment for an Ubuntu-based machine</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tech-hardware/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Hardware
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 222 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#installing-vivado">Installing Vivado</a>
+      <ul>
+        <li><a href="#license">License</a></li>
+        <li><a href="#pre-configuration">Pre-configuration</a></li>
+        <li><a href="#hello-world-tutorial-for-zedboard-and-nexys4">&ldquo;Hello World&rdquo; tutorial for Zedboard and Nexys4</a></li>
+      </ul>
+    </li>
+    <li><a href="#vhdl-simulation">VHDL simulation</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="installing-vivado">Installing Vivado</h2>
+<ul>
+<li>Vivado Design Suite - HLx Editions - 2019.2 for the latest version: <a href="https://www.xilinx.com/support/download.html">https://www.xilinx.com/support/download.html</a></li>
+<li>Tutorial available here: : <a href="https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0">https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0</a></li>
+</ul>
+<h3 id="license">License</h3>
+<ul>
+<li>Infos available in <a href="./xilinx_bashrc.md" rel="">another note</a>.</li>
+<li>However, some families don&rsquo;t need a license file 😉</li>
+</ul>
+<h3 id="pre-configuration">Pre-configuration</h3>
+<p>Before executing Vivado, a few things to be aware of:</p>
+<ul>
+<li>
+<p>Add this line in your <code>$HOME/.bashrc</code> (amongst other things, this script add binaries to <code>PATH</code>) :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> /opt/Xilinx/Vivado/2018.2/settings64.sh  <span class="c1"># Modify the path to Vivado if needed</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Now, Vivado could be executed with the command: <code>vivado</code></p>
+</li>
+<li>
+<p>It may be easier to have write rights on the Vivado install directory:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chown -R <span class="nv">$USER</span> /opt/Xilinx
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Board drivers may be installed with scripts at <code>/opt/Xilinx/Vivado/2018.3/data/xicom/cable_drivers/lin64/install_script</code></p>
+</li>
+</ul>
+<h3 id="hello-world-tutorial-for-zedboard-and-nexys4">&ldquo;Hello World&rdquo; tutorial for Zedboard and Nexys4</h3>
+<ul>
+<li>For the Zedboard: <a href="https://gitlab.com/pcotret/hello-zedboard">https://gitlab.com/pcotret/hello-zedboard</a>
+Without going into details, it allows the user to compile a first design and verifies that the user can talk with the board.</li>
+<li>For the Nexys4: <a href="https://reference.digilentinc.com/learn/programmable-logic/tutorials/nexys-4-ddr-programming-guide/start#tutorial">https://reference.digilentinc.com/learn/programmable-logic/tutorials/nexys-4-ddr-programming-guide/start#tutorial</a></li>
+</ul>
+<h2 id="vhdl-simulation">VHDL simulation</h2>
+<p>Vivado includes a VHDL simulator which seems not optimal to me. Furthermore, for a quick simulation of a tiny component, it may be interesting to get a simulator without all the FPGA vendor layer. Modelsim is a well-known solution:</p>
+<ul>
+<li><strong>Problem #1 :</strong> Modelsim is usually included in a bundle with other tools.</li>
+<li><strong>Problem #2 :</strong> Modelsim isn&rsquo;t very 64-bits friendly</li>
+</ul>
+<p>Here is a note to set up Modelsim on a <a href="./modelsim-ubuntu.md" rel="">64-bit Ubuntu machine</a>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
+                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/fpga-env-101/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/xilinx/">xilinx</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/lattice-ubuntu/" class="prev" rel="prev" title="Installing Lattice iCEcube2 FPGA tools on Ubuntu"><i class="fas fa-angle-left fa-fw"></i>Installing Lattice iCEcube2 FPGA tools on Ubuntu</a>
+            <a href="/image_scripts/" class="next" rel="next" title="Image processing">Image processing<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","noResultsFound":"No results found","type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

