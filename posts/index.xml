@@ -3,7 +3,15 @@
         <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 May 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 03 May 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Arduino Due vs. embedded C - ARM reversing</title>
+    <link>https://pcotret.github.io/arduino_due_reverse/</link>
+    <pubDate>Sun, 03 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/arduino_due_reverse/</guid>
+    <description><![CDATA[arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
+Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR .]]></description>
+</item><item>
     <title>Arduino vs. embedded C - AVR reversing</title>
     <link>https://pcotret.github.io/arduino_reverse/</link>
     <pubDate>Fri, 01 May 2020 00:00:00 &#43;0800</pubDate>
@@ -79,13 +87,5 @@ Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/poo
     <guid>https://pcotret.github.io/latex_tips/</guid>
     <description><![CDATA[Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
 1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &#34;^##&#34; Makefile; all: pdflatex ${FILENAME}.]]></description>
-</item><item>
-    <title>Marp to PDF</title>
-    <link>https://pcotret.github.io/marp-to-pdf/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/marp-to-pdf/</guid>
-    <description><![CDATA[Here is a way to convert Marp slides in PDF with emojis:
-1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  ]]></description>
 </item></channel>
 </rss>

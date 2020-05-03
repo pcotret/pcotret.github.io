@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/pascal/Documents/work/blog",
+	"sourceRoot": "/home/pascal/Documents/ensta/misc/blog",
 	"sources": [
 		"themes/LoveIt/assets/css/style.template.scss",
 		"themes/LoveIt/assets/css/_variables.scss",

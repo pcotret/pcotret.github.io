@@ -5,37 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Arduino vs. embedded C - AVR reversing - Pascal Cotret @ ENSTA Bretagne</title>
-        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Arduino vs. embedded C - AVR reversing" />
-<meta property="og:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno." />
+        <title>Arduino Due vs. embedded C - ARM reversing - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Arduino Due vs. embedded C - ARM reversing" />
+<meta property="og:description" content="arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
+Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/arduino_reverse/" />
-<meta property="article:published_time" content="2020-05-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:26:24+02:00" />
+<meta property="og:url" content="https://pcotret.github.io/arduino_due_reverse/" />
+<meta property="article:published_time" content="2020-05-03T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-05-03T17:03:33+02:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Arduino vs. embedded C - AVR reversing"/>
-<meta name="twitter:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno."/>
+<meta name="twitter:title" content="Arduino Due vs. embedded C - ARM reversing"/>
+<meta name="twitter:description" content="arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
+Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR ."/>
 <meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
 <meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/arduino_reverse/" /><link rel="prev" href="https://pcotret.github.io/simulide/" /><link rel="next" href="https://pcotret.github.io/arduino_due_reverse/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/arduino_due_reverse/" /><link rel="prev" href="https://pcotret.github.io/arduino_reverse/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Arduino vs. embedded C - AVR reversing",
+        "headline": "Arduino Due vs. embedded C - ARM reversing",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/pcotret.github.io\/arduino_reverse\/"
+            "@id": "https:\/\/pcotret.github.io\/arduino_due_reverse\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "arduino, embedded","wordcount":  679 ,
-        "url": "https:\/\/pcotret.github.io\/arduino_reverse\/","datePublished": "2020-05-01T00:00:00+08:00","dateModified": "2020-05-02T00:26:24+02:00","publisher": {
+            },"genre": "posts","keywords": "arduino, embedded","wordcount":  704 ,
+        "url": "https:\/\/pcotret.github.io\/arduino_due_reverse\/","datePublished": "2020-05-03T00:00:00+08:00","dateModified": "2020-05-03T17:03:33+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -89,13 +89,13 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Arduino vs. embedded C - AVR reversing</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Arduino Due vs. embedded C - ARM reversing</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
                     <span class="post-category">included in<a href="/categories/articles/">
                                 <i class="far fa-folder fa-fw"></i>Articles
                             </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-01>2020-05-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 679 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-03>2020-05-03</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 704 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>4 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -104,7 +104,6 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#sample-program">Sample program</a>
       <ul>
         <li><a href="#arduino">Arduino</a></li>
@@ -123,25 +122,20 @@
     <li><a href="#references">References</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p>As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a <strong>really</strong> simple program compiled with both methods for the Arduino Uno.</p>
-</blockquote>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
+            </div><div class="content" id="content"><ul>
 <li><a href="https://github.com/arduino/arduino-cli" target="_blank" rel="noopener noreffer"><code>arduino-cli</code></a>: Command Line Interface for Arduino</li>
-<li>AVR cross compiler: <code>sudo apt install gcc-avr</code></li>
-<li>Optional: an Arduino simulator such as <a href="https://simulide.blogspot.com/" target="_blank" rel="noopener noreffer">SimulIDE</a></li>
+<li>ARM cross compiler: <code>sudo apt install gcc-arm-none-eabi</code></li>
 </ul>
 <h2 id="sample-program">Sample program</h2>
 <p><img
         class="lazyload"
         src="/svg/loading/small.min.svg"
-        data-src="/img/arduino_blink.jpg"
-        data-srcset="/img/arduino_blink.jpg, /img/arduino_blink.jpg 1.5x, /img/arduino_blink.jpg 2x"
+        data-src="/img/arduino-due.jpg"
+        data-srcset="/img/arduino-due.jpg, /img/arduino-due.jpg 1.5x, /img/arduino-due.jpg 2x"
         data-sizes="auto"
-        alt="/img/arduino_blink.jpg"
-        title="/img/arduino_blink.jpg" /></p>
-<p>We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.</p>
+        alt="/img/arduino-due.jpg"
+        title="/img/arduino-due.jpg" /></p>
+<p>We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.</p>
 <h3 id="arduino">Arduino</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -177,11 +171,11 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;avr/io.h&gt;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="n">DDRB</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">PB5</span><span class="p">;</span>
-    <span class="n">PORTB</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">PB5</span><span class="p">;</span>
+    <span class="n">PIOB</span><span class="o">-&gt;</span><span class="n">PIO_PER</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">27</span><span class="p">;</span>       <span class="cm">/* Enable port PB27 */</span>
+    <span class="n">PIOB</span><span class="o">-&gt;</span><span class="n">PIO_OER</span> <span class="o">=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">27</span><span class="p">;</span>       <span class="cm">/* Configure PB27 as output */</span>
+    <span class="n">PIOB</span><span class="o">-&gt;</span><span class="n">PIO_ODSR</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span> <span class="cm">/* Write 1 in all PORTB ports */</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -207,8 +201,8 @@ total <span class="m">4</span>
 ./led-embedded:
 total <span class="m">4</span>
 -rw-r--r-- <span class="m">1</span> pascal pascal <span class="m">81</span> mai    <span class="m">1</span> 13:00 led-embedded.ino
-$ arduino-cli compile --fqbn arduino:avr:uno led-arduino
-$ arduino-cli compile --fqbn arduino:avr:uno led-embedded
+$ arduino-cli compile --fqbn arduino:sam:arduino_due_x led-arduino
+$ arduino-cli compile --fqbn arduino:sam:arduino_due_x led-embedded
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="binary-comparison">Binary comparison</h2>
@@ -223,8 +217,8 @@ $ arduino-cli compile --fqbn arduino:avr:uno led-embedded
 <tbody>
 <tr>
 <td>Storage use</td>
-<td>724 bytes</td>
-<td>144 bytes</td>
+<td>10660 bytes</td>
+<td>2544 bytes</td>
 </tr>
 </tbody>
 </table>
@@ -237,8 +231,8 @@ $ arduino-cli compile --fqbn arduino:avr:uno led-embedded
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ avr-objdump -S led-arduino/led-arduino.arduino.avr.uno.elf &gt; led-arduino.asm
-$ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded.asm
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ arm-none-eabi-objdump -S led-arduino/led-arduino.arduino.sam.arduino_due_x.elf &gt; led-arduino.asm
+$ arm-none-eabi-objdump -S led-embedded/led-embedded.arduino.sam.arduino_due_x.elf &gt; led-embedded.asm
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="arduino-binary">Arduino binary</h3>
@@ -263,39 +257,30 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">void init()
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void init( void )
 {
-	// this needs to be called before setup() or some functions won&#39;t
-	// work there
-	sei();
- 174:	78 94       	sei
-	
-	// on the ATmega168, timer 0 is also used for fast hardware pwm
-	// (using phase-correct PWM would mean that timer 0 overflowed half as often
-	// resulting in different millis() behavior on the ATmega8 and ATmega168)
-#if defined(TCCR0A) &amp;&amp; defined(WGM01)
-	sbi(TCCR0A, WGM01);
- 176:	84 b5       	in	r24, 0x24	; 36
- 178:	82 60       	ori	r24, 0x02	; 2
- 17a:	84 bd       	out	0x24, r24	; 36
-	sbi(TCCR0A, WGM00);
- 17c:	84 b5       	in	r24, 0x24	; 36
- 17e:	81 60       	ori	r24, 0x01	; 1
- 180:	84 bd       	out	0x24, r24	; 36
-	// this combination is for the standard atmega8
+   80194:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+  SystemInit();
+
+  // Set Systick to 1ms interval, common to all SAM3 variants
+  if (SysTick_Config(SystemCoreClock / 1000))
+   80198:	4d3f      	ldr	r5, [pc, #252]	; (80298 &lt;init+0x104&gt;)
+  SystemInit();
+   8019a:	f000 f9f1 	bl	80580 &lt;SystemInit&gt;
+  if (SysTick_Config(SystemCoreClock / 1000))
+   8019e:	682b      	ldr	r3, [r5, #0]
+   801a0:	f44f 727a 	mov.w	r2, #1000	; 0x3e8
+   801a4:	fbb3 f3f2 	udiv	r3, r3, r2
+ */
+static __INLINE uint32_t SysTick_Config(uint32_t ticks)
+{
+  if (ticks &gt; SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
 [...]
 </code></pre></td></tr></table>
 </div>
-</div><p>Here is a part of the Arduino objdump. The assembly code is really long for such a program&hellip; It is easy to understand when we look at the source code of <code>pinMode()</code> and <code>digitalWrite()</code> (<a href="https://github.com/arduino/ArduinoCore-avr/blob/master/cores/arduino/wiring_digital.c)">https://github.com/arduino/ArduinoCore-avr/blob/master/cores/arduino/wiring_digital.c)</a>. It does not only write a value into a register&hellip;</p>
-<p>Garretlab made an analysis of both functions:</p>
-<ul>
-<li><a href="https://garretlab.web.fc2.com/en/arduino/inside/hardware/arduino/avr/cores/arduino/wiring_digital.c/digitalWrite.html">https://garretlab.web.fc2.com/en/arduino/inside/hardware/arduino/avr/cores/arduino/wiring_digital.c/digitalWrite.html</a></li>
-<li><a href="https://garretlab.web.fc2.com/en/arduino/inside/hardware/arduino/avr/cores/arduino/wiring_digital.c/pinMode.html">https://garretlab.web.fc2.com/en/arduino/inside/hardware/arduino/avr/cores/arduino/wiring_digital.c/pinMode.html</a></li>
-</ul>
+</div><p>Here is a part of the Arduino objdump. The assembly code is really long for such a program&hellip; It is easy to understand when we look at the source code of <code>pinMode()</code> and <code>digitalWrite()</code> (<a href="https://github.com/arduino/ArduinoCore-sam/blob/master/cores/arduino/wiring_digital.c)">https://github.com/arduino/ArduinoCore-sam/blob/master/cores/arduino/wiring_digital.c)</a>. It does not only write a value into a register&hellip;</p>
 <h3 id="embedded-c-binary">Embedded C binary</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -312,62 +297,72 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">48 00000080 &lt;main&gt;:
-49 #include &lt;avr/io.h&gt;
-50 int main()
-51 {
-52   DDRB = 1&lt;&lt;PB5;
-53   80:	80 e2       	ldi	r24, 0x20	; 32
-54   82:	84 b9       	out	0x04, r24	; 4
-55  PORTB = 1&lt;&lt;PB5;
-56  84:	85 b9       	out	0x05, r24	; 5
-57  return 0;
-58  86:	90 e0       	ldi	r25, 0x00	; 0
-59  88:	80 e0       	ldi	r24, 0x00	; 0
-60  8a:	08 95       	ret
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">61 00080148 &lt;main&gt;:
+62 int main()
+63 {
+64     PIOB-&gt;PIO_PER = 1&lt;&lt;27;
+65    80148:	4b04      	ldr	r3, [pc, #16]	; (8015c &lt;main+0x14&gt;)
+66    8014a:	f04f 6200 	mov.w	r2, #134217728	; 0x8000000
+67    8014e:	601a      	str	r2, [r3, #0]
+68     PIOB-&gt;PIO_OER = 1&lt;&lt;27;
+69    80150:	611a      	str	r2, [r3, #16]
+70     PIOB-&gt;PIO_ODSR = 0xFFFFFFFF;
+71    80152:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+72    80156:	639a      	str	r2, [r3, #56]	; 0x38
+73     return 0;
+74 }
 </code></pre></td></tr></table>
 </div>
-</div><p>At first sight, it&rsquo;s clearly easier. Step-by-step instruction decoding:</p>
-<p><strong>ldi r24, 0x20:</strong> according to the AVR ISA [1], <code>ldi</code> load the value <code>0x20</code> in <code>r24</code> which is a General Purpose Working Register of the Arduino.</p>
-<p><img
+</div><p><img
         class="lazyload"
         src="/svg/loading/small.min.svg"
-        data-src="/img/registers.jpg"
-        data-srcset="/img/registers.jpg, /img/registers.jpg 1.5x, /img/registers.jpg 2x"
-        data-sizes="auto"
-        alt="registers"
-        title="registers" /></p>
-<p><strong>out 0x04, r24:</strong> this instruction write the value stored in <code>r24</code> at the address <code>0x04</code> (the address of <code>DDRB</code> according to [2]). <code>0x20=0b100000</code>: <code>DDRB5</code> is set to 1 😉</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/mapping.jpg"
-        data-srcset="/img/mapping.jpg, /img/mapping.jpg 1.5x, /img/mapping.jpg 2x"
+        data-src="/img/mapping-sam3x.jpg"
+        data-srcset="/img/mapping-sam3x.jpg, /img/mapping-sam3x.jpg 1.5x, /img/mapping-sam3x.jpg 2x"
         data-sizes="auto"
         alt="mapping"
         title="mapping" /></p>
-<p><strong>out 0x05, r24:</strong> same thing, for <code>PORTB</code>.</p>
+<p>At first sight, it&rsquo;s clearly easier. Step-by-step instruction decoding using mainly [2] and [6]:</p>
+<ul>
+<li><strong>mov.w	r2, #134217728</strong>. Move the immediate value <code>134217728</code> in <code>r2</code>, a general purpose register. <code>134217728</code> = <code>0x8000000</code> (hex) = <code>0b1000000000000000000000000000</code> (bin) which is <strong>1</strong> on the <strong>27th</strong> bit ! 😉</li>
+<li><strong>str	r2, [r3, #0]</strong>. Store the value of <code>r2</code> in <code>r3</code>, another general purpose register, with offset=0. According to the register mapping: <code>PIO_PER</code> is at the offset <code>0x0000</code>.</li>
+<li><strong>str	r2, [r3, #16]</strong>. Store the value of <code>r2</code> in <code>r3</code> with offset=16 (or <code>0x10</code> in hexadecimal). According to the register mapping: <code>PIO_OER</code> is at the offset <code>0x0010</code>.</li>
+<li><strong>mov.w	r2, #4294967295</strong>. Move the immediate value <code>4294967295</code> in register 2. <code>4294967295</code> = <code>0xFFFFFFFF</code> (hex). In this case, we put all bits to <strong>1</strong>. It doesn&rsquo;t really matter as only the 27th has been enabled 😉</li>
+<li><strong>str	r2, [r3, #56]</strong>. Store the value of <code>r2</code> in <code>r3</code> with offset=56 (or <code>0x38</code> in hexadecimal). According to the register mapping: <code>PIO_ODSR</code> is at the offset <code>0x0038</code>.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/registers-sam3x.jpg"
+        data-srcset="/img/registers-sam3x.jpg, /img/registers-sam3x.jpg 1.5x, /img/registers-sam3x.jpg 2x"
+        data-sizes="auto"
+        alt="sam3x"
+        title="sam3x" /></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Embedded C code is usually quicker and smaller as long as we make some effort to study the datasheet. But it&rsquo;s worth it when we&rsquo;re working with embedded systems! 😉</p>
 <h2 id="references">References</h2>
 <ol>
-<li><a href="http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf" target="_blank" rel="noopener noreffer">AVR ISA</a></li>
-<li><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf" target="_blank" rel="noopener noreffer">ATMega328 datasheet</a></li>
+<li><a href="http://infocenter.arm.com/help/topic/com.arm.doc.ddi0337h/DDI0337H_cortex_m3_r2p0_trm.pdf" target="_blank" rel="noopener noreffer">Cortex-M3 Revision r2p0Technical Reference Manual</a></li>
+<li><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-11057-32-bit-Cortex-M3-Microcontroller-SAM3X-SAM3A_Datasheet.pdf" target="_blank" rel="noopener noreffer">SAM3X datasheet</a></li>
+<li><a href="https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/third-party/archives/ddi0100e_arm_arm.pdf" target="_blank" rel="noopener noreffer">ARMv7-M ArchitectureReference Manual</a></li>
+<li><a href="https://iitd-plos.github.io/col718/ref/arm-instructionset.pdf" target="_blank" rel="noopener noreffer">A simplified ISA document</a></li>
+<li><a href="http://infocenter.arm.com/help/topic/com.arm.doc.ddi0337h/DDI0337H_cortex_m3_r2p0_trm.pdf" target="_blank" rel="noopener noreffer">Cortex-M3 TRM</a></li>
+<li><a href="https://azeria-labs.com/writing-arm-assembly-part-1/" target="_blank" rel="noopener noreffer">ARM assembly basics</a></li>
 </ol>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/57135ec48ec314606a58cd8489da9ad620071f1f" target="_blank" title="commit by Pascal(pascal@ensta-laptop) 57135ec48ec314606a58cd8489da9ad620071f1f: update">
-                                <i class="fas fa-hashtag fa-fw"></i>57135ec</a></span>
+                <span>The article was updated on 2020-05-03&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/99aa8ab042a5fb0e71e62a9e0b549dd1238a6b13" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) 99aa8ab042a5fb0e71e62a9e0b549dd1238a6b13: arm reversing arduino due">
+                                <i class="fas fa-hashtag fa-fw"></i>99aa8ab</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/arduino_reverse/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/arduino_due_reverse/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -382,8 +377,7 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
         </section>
     </div>
 
-    <div class="post-nav"><a href="/simulide/" class="prev" rel="prev" title="Quick start guide for SimulIDE as an Arduino simulator"><i class="fas fa-angle-left fa-fw"></i>Quick start guide for SimulIDE as an Arduino simulator</a>
-            <a href="/arduino_due_reverse/" class="next" rel="next" title="Arduino Due vs. embedded C - ARM reversing">Arduino Due vs. embedded C - ARM reversing<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/arduino_reverse/" class="prev" rel="prev" title="Arduino vs. embedded C - AVR reversing"><i class="fas fa-angle-left fa-fw"></i>Arduino vs. embedded C - AVR reversing</a></div>
 </div>
 </article></div>
             </main></div>
