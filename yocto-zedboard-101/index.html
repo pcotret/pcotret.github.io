@@ -109,7 +109,7 @@
     <li><a href="#1-introduction">1. Introduction</a>
       <ul>
         <li><a href="#11-packages-to-be-installed">1.1. Packages to be installed</a></li>
-        <li><a href="#12-clone-yocto-and-recipes-rocko-branch">1.2. Clone Yocto and recipes (rocko branch)</a></li>
+        <li><a href="#12-clone-yocto-and-recipes-zeus-branch">1.2. Clone Yocto and recipes (zeus branch)</a></li>
         <li><a href="#13-build-configuration">1.3. Build configuration</a></li>
         <li><a href="#14-generate-image-and-take-a-coffee">1.4. Generate image (and take a coffee&hellip;)</a></li>
       </ul>
@@ -154,7 +154,7 @@
 </span><span class="se"></span>     pylint3 xterm
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="12-clone-yocto-and-recipes-rocko-branch">1.2. Clone Yocto and recipes (rocko branch)</h3>
+</div><h3 id="12-clone-yocto-and-recipes-zeus-branch">1.2. Clone Yocto and recipes (zeus branch)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -167,10 +167,10 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://git.yoctoproject.org/git/poky
 <span class="nb">cd</span> poky
-git checkout -b rocko origin/rocko
+git checkout -b zeus origin/zeus
 <span class="c1"># Next clones must be done in the poky folder</span>
-git clone -b rocko https://github.com/Xilinx/meta-xilinx
-git clone -b rocko https://github.com/openembedded/meta-openembedded.git
+git clone -b zeus https://github.com/Xilinx/meta-xilinx
+git clone -b zeus https://github.com/openembedded/meta-openembedded.git
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="13-build-configuration">1.3. Build configuration</h3>
