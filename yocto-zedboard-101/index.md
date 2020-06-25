@@ -25,14 +25,14 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      pylint3 xterm
 ```
 
-### 1.2. Clone Yocto and recipes (rocko branch)
+### 1.2. Clone Yocto and recipes (zeus branch)
 ```bash
 git clone https://git.yoctoproject.org/git/poky
 cd poky
-git checkout -b rocko origin/rocko
+git checkout -b zeus origin/zeus
 # Next clones must be done in the poky folder
-git clone -b rocko https://github.com/Xilinx/meta-xilinx
-git clone -b rocko https://github.com/openembedded/meta-openembedded.git
+git clone -b zeus https://github.com/Xilinx/meta-xilinx
+git clone -b zeus https://github.com/openembedded/meta-openembedded.git
 ```
 
 ### 1.3. Build configuration
