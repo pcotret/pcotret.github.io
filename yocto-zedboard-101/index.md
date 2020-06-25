@@ -70,7 +70,7 @@ Create two partitions on the SD card:
 Copy the following files in partition #1:
 
 ```bash
-sudo cp boot.bin core-image-minimal-zedboard-zynq7-20200304204540.rootfs.cpio.gz.u-boot u-boot.img uEnv.txt uImage zynq-zed.dtb /mnt/partition1
+sudo cp boot.bin core-image-minimal-zedboard-zynq7.cpio.gz.u-boot u-boot.img uEnv.txt uImage zynq-zed.dtb /mnt/partition1
 ```
 
 Extract the `core-image-minimal` archive in partition #2:
