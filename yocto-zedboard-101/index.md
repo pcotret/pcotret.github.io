@@ -95,7 +95,7 @@ sudo tar xvzf core-image-minimal-zedboard-zynq7.tar.gz
 Now, everything should be OK!
 
 ```
-Poky (Yocto Project Reference Distro) 2.4.4 zedboard-zynq7 /dev/ttyPS0
+Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0
 
 zedboard-zynq7 login: root
 root@zedboard-zynq7:~# cat /proc/cpuinfo 
@@ -121,13 +121,6 @@ CPU revision    : 0
 
 Hardware        : Xilinx Zynq Platform
 Revision        : 0003
-Serial          : 0000000000000000
-root@zedboard-zynq7:~# df -h
-Filesystem                Size      Used Available Use% Mounted on
-/dev/root                14.5G     60.9M     13.7G   0% /
-devtmpfs                240.7M         0    240.7M   0% /dev
-tmpfs                   249.2M     72.0K    249.2M   0% /run
-tmpfs                   249.2M     40.0K    249.2M   0% /var/volatile
 ```
 
 ## References
