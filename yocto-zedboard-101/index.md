@@ -44,7 +44,7 @@ source oe-init-build-env
 # Change the default target
 $ echo "MACHINE??=\"zedboard-zynq7\"" >> conf/local.conf
 # Add a few lines
-$ echo "IMAGE_FEATURES += \"package-management\"" > conf/local.conf
+$ echo "IMAGE_FEATURES += \"package-management\"" >> conf/local.conf
 $ echo "DISTRO_HOSTNAME = \"zynq\"" >> conf/local.conf
 ```
 
