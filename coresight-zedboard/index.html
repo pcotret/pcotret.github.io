@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Activate Coresight components in a Yocto environment for the Zedboard board - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Activate Coresight components in a Yocto environment for the Zedboard board" />
+<meta property="og:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
+Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
+Activate Coresight components - Hardware side 😨" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/coresight-zedboard/" />
+<meta property="article:modified_time" content="2020-06-29T22:22:21+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Activate Coresight components in a Yocto environment for the Zedboard board"/>
+<meta name="twitter:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
+Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
+Activate Coresight components - Hardware side 😨"/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/coresight-zedboard/" /><link rel="next" href="https://pcotret.github.io/yocto-zedboard-101/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Activate Coresight components in a Yocto environment for the Zedboard board",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/coresight-zedboard\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "yocto, zedboard, coresight","wordcount":  63 ,
+        "url": "https:\/\/pcotret.github.io\/coresight-zedboard\/","dateModified": "2020-06-29T22:22:21+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Activate Coresight components in a Yocto environment for the Zedboard board</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tech-embedded/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=0001-01-01>0001-01-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 63 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#activate-coresight-components---software-side---method-1">Activate Coresight components - Software side - Method #1</a>
+      <ul>
+        <li><a href="#generate-a-core-image-minimal">Generate a <code>core-image-minimal</code></a></li>
+        <li><a href="#customize-a-linux-xlnx-kernel-uimage">Customize a <code>linux-xlnx</code> kernel <code>uImage</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#activate-coresight-components---hardware-side">Activate Coresight components - Hardware side</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="activate-coresight-components---software-side---method-1">Activate Coresight components - Software side - Method #1</h2>
+<h3 id="generate-a-core-image-minimal">Generate a <code>core-image-minimal</code></h3>
+<p>Just follow <a href="https://pcotret.github.io/yocto-zedboard-101/">https://pcotret.github.io/yocto-zedboard-101/</a></p>
+<h3 id="customize-a-linux-xlnx-kernel-uimage">Customize a <code>linux-xlnx</code> kernel <code>uImage</code></h3>
+<p>The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual <code>core-image-minimal</code> image with Yocto tools. Fortunately, we can do it on a <code>linux-xlnx</code> image!</p>
+<h2 id="activate-coresight-components---hardware-side">Activate Coresight components - Hardware side</h2>
+<p>😨</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-06-29&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/e283057d5b5d7fca7a52f01532a50d294ab86f0e" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) e283057d5b5d7fca7a52f01532a50d294ab86f0e: Update coresight-zedboard.md">
+                                <i class="fas fa-hashtag fa-fw"></i>e283057</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/coresight-zedboard/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/yocto/">yocto</a>,&nbsp;<a href="/tags/zedboard/">zedboard</a>,&nbsp;<a href="/tags/coresight/">coresight</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/yocto-zedboard-101/" class="next" rel="next" title="Yocto on the Zedboard 101">Yocto on the Zedboard 101<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
