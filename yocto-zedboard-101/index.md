@@ -27,9 +27,8 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 
 ### 1.2. Clone Yocto and recipes (zeus branch)
 ```bash
-git clone https://git.yoctoproject.org/git/poky
+git clone -b zeus https://git.yoctoproject.org/git/poky
 cd poky
-git checkout -b zeus origin/zeus
 # Next clones must be done in the poky folder
 git clone -b zeus https://github.com/Xilinx/meta-xilinx
 git clone -b zeus https://github.com/openembedded/meta-openembedded.git
@@ -39,24 +38,36 @@ git clone -b zeus https://github.com/openembedded/meta-openembedded.git
 ```bash
 source oe-init-build-env
 ```
-- Edit `conf/local.conf`.
-     - Replace `MACHINE??="qemux86"` by `MACHINE??="zedboard-zynq7"`.
-     - Change `PACKAGE_CLASSES '= "package_rpm"` by `PACKAGE_CLASSES '= "package_deb"`
-     - Then, add the following lines:
-          - `IMAGE_FEATURES += "package-management"`
-          - `DISTRO_HOSTNAME = "zynq"`
-- Edit `conf/bblayers.conf` and add two lines to the BBLAYERS variable:
-```
-***/poky/meta-xilinx/meta-xilinx-bsp \
-***/poky/meta-openembedded/meta-oe \
-```
-(replace *** by the same path as for other layers)
+- Modifications in `conf/local.conf`:
 
+```bash
+# Change the default target
+$ echo "MACHINE??=\"zedboard-zynq7\"" > conf/local.conf
+# Add a few lines
+$ echo "IMAGE_FEATURES += \"package-management\"" > conf/local.conf
+$ echo "DISTRO_HOSTNAME = \"zynq\"" > conf/local.conf
+```
+
+- You may also like to change the package type from `rpm` to `deb`: modify `PACKAGE_CLASSES '= "package_rpm"` by `PACKAGE_CLASSES '= "package_deb"`
+
+- Modifications in `conf/bblayers.conf` in order to add the cloned layers:
+```
+$ bitbake-layers add-layer ../meta-xilinx/meta-xilinx-bsp/
+$ bitbake-layers add-layer ../meta-openembedded/meta-oe/
+```
 ### 1.4. Generate image (and take a coffee...)
 ```bash
 bitbake core-image-minimal
 ```
 Once complete the images for the target machine will be available in the output directory `poky/build/tmp/deploy/images/zedboard-zynq7`.
+
+## 1.5 Modify the `uEnv.txt` file
+
+We need to modify `uEnv.txt` a little bit according to a Xilinx layer [README-booting.md](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/README.booting.md#preparing-sdmmc)
+
+```bash
+echo "ramdisk_image=core-image-minimal-zedboard-zynq7.cpio.gz.u-boot" > tmp/deploy/images/zedboard-zynq7/uEnv.txt
+```
 
 ## 2. Creating the SD card
 
@@ -76,6 +87,7 @@ sudo cp boot.bin core-image-minimal-zedboard-zynq7.cpio.gz.u-boot u-boot.img uEn
 Extract the `core-image-minimal` archive in partition #2:
 
 ```bash
+sudo cp core-image-minimal-zedboard-zynq7.tar.gz /mnt/partition2
 cd /mnt/partition2
 sudo tar xvzf core-image-minimal-zedboard-zynq7.tar.gz 
 ```
@@ -124,3 +136,4 @@ tmpfs                   249.2M     40.0K    249.2M   0% /var/volatile
 ## Other sources (to check later)
 - https://blog.mbedded.ninja/programming/embedded-linux/zynq/building-linux-for-the-zynq-zc702-eval-kit-using-yocto/
 - https://dwjbosman.github.io/yocto-linux-on-the-xilinx-zynq-zed-board
+
