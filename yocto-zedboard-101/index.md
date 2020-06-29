@@ -42,10 +42,10 @@ source oe-init-build-env
 
 ```bash
 # Change the default target
-$ echo "MACHINE??=\"zedboard-zynq7\"" > conf/local.conf
+$ echo "MACHINE??=\"zedboard-zynq7\"" >> conf/local.conf
 # Add a few lines
 $ echo "IMAGE_FEATURES += \"package-management\"" > conf/local.conf
-$ echo "DISTRO_HOSTNAME = \"zynq\"" > conf/local.conf
+$ echo "DISTRO_HOSTNAME = \"zynq\"" >> conf/local.conf
 ```
 
 - You may also like to change the package type from `rpm` to `deb`: modify `PACKAGE_CLASSES '= "package_rpm"` by `PACKAGE_CLASSES '= "package_deb"`

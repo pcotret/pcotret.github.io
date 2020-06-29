@@ -13,7 +13,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/yocto-zedboard-101/" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-06-29T14:05:17+02:00" />
+<meta property="article:modified_time" content="2020-06-29T14:49:47+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yocto on the Zedboard 101"/>
 <meta name="twitter:description" content="1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
@@ -37,7 +37,7 @@
                 "width":  800 ,
                 "height":  600 
             },"genre": "posts","keywords": "yocto, zedboard","wordcount":  539 ,
-        "url": "https:\/\/pcotret.github.io\/yocto-zedboard-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-06-29T14:05:17+02:00","publisher": {
+        "url": "https:\/\/pcotret.github.io\/yocto-zedboard-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-06-29T14:49:47+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -194,10 +194,10 @@ git clone -b zeus https://github.com/openembedded/meta-openembedded.git
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Change the default target</span>
-$ <span class="nb">echo</span> <span class="s2">&#34;MACHINE??=\&#34;zedboard-zynq7\&#34;&#34;</span> &gt; conf/local.conf
+$ <span class="nb">echo</span> <span class="s2">&#34;MACHINE??=\&#34;zedboard-zynq7\&#34;&#34;</span> &gt;&gt; conf/local.conf
 <span class="c1"># Add a few lines</span>
 $ <span class="nb">echo</span> <span class="s2">&#34;IMAGE_FEATURES += \&#34;package-management\&#34;&#34;</span> &gt; conf/local.conf
-$ <span class="nb">echo</span> <span class="s2">&#34;DISTRO_HOSTNAME = \&#34;zynq\&#34;&#34;</span> &gt; conf/local.conf
+$ <span class="nb">echo</span> <span class="s2">&#34;DISTRO_HOSTNAME = \&#34;zynq\&#34;&#34;</span> &gt;&gt; conf/local.conf
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -339,8 +339,8 @@ Revision        : 0003
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-06-29&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/97a88c5f4174ac17ca5cd7721bac46a96943389e" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) 97a88c5f4174ac17ca5cd7721bac46a96943389e: Modify terminal outputs">
-                                <i class="fas fa-hashtag fa-fw"></i>97a88c5</a></span>
+                <span>The article was updated on 2020-06-29&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/9f4c7ab90ce54afdbb09aaae2ae83da3990c381c" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) 9f4c7ab90ce54afdbb09aaae2ae83da3990c381c: Fix typo">
+                                <i class="fas fa-hashtag fa-fw"></i>9f4c7ab</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
