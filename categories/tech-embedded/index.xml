@@ -4,6 +4,15 @@
         <link>https://pcotret.github.io/categories/tech-embedded/</link>
         <description>Tech notes / Embedded - Category - Pascal Cotret @ ENSTA Bretagne</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-embedded/" rel="self" type="application/rss+xml" /><item>
+    <title>Activate Coresight components in a Yocto environment for the Zedboard board</title>
+    <link>https://pcotret.github.io/coresight-zedboard/</link>
+    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
+    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
+Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
+Activate Coresight components - Hardware side 😨]]></description>
+</item><item>
     <title>Quick start guide for SimulIDE as an Arduino simulator</title>
     <link>https://pcotret.github.io/simulide/</link>
     <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
@@ -53,14 +62,5 @@ How does memory alignment work for variables of a structured type? Let&rsquo;s f
     <description><![CDATA[1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
  Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
  An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1.]]></description>
-</item><item>
-    <title>Activate Coresight components in a Yocto environment for the Zedboard board</title>
-    <link>https://pcotret.github.io/coresight-zedboard/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
-    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
-Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
-Activate Coresight components - Hardware side 😨]]></description>
 </item></channel>
 </rss>

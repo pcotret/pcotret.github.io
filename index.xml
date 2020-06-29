@@ -4,6 +4,15 @@
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 02 Aug 2019 11:04:49 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Activate Coresight components in a Yocto environment for the Zedboard board</title>
+    <link>https://pcotret.github.io/coresight-zedboard/</link>
+    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
+    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
+Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
+Activate Coresight components - Hardware side 😨]]></description>
+</item><item>
     <title>Arduino Due vs. embedded C - ARM reversing</title>
     <link>https://pcotret.github.io/arduino_due_reverse/</link>
     <pubDate>Sun, 03 May 2020 00:00:00 &#43;0800</pubDate>
@@ -79,13 +88,5 @@ De bas en haut :
     <description><![CDATA[Lattice iCEcube2 has not been updated for a while&hellip;
 Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&rsquo;t ask me why&hellip;)
 1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!]]></description>
-</item><item>
-    <title>LateX tips</title>
-    <link>https://pcotret.github.io/latex_tips/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/latex_tips/</guid>
-    <description><![CDATA[Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
-1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &#34;^##&#34; Makefile; all: pdflatex ${FILENAME}.]]></description>
 </item></channel>
 </rss>

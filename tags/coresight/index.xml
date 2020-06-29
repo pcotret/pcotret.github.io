@@ -3,10 +3,10 @@
         <title>coresight - Tag - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/tags/coresight/</link>
         <description>coresight - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/tags/coresight/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/coresight/" rel="self" type="application/rss+xml" /><item>
     <title>Activate Coresight components in a Yocto environment for the Zedboard board</title>
     <link>https://pcotret.github.io/coresight-zedboard/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/coresight-zedboard/</guid>
     <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
