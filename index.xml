@@ -4,7 +4,7 @@
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 02 Aug 2019 11:04:49 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
-    <title>Activate Coresight components in a Yocto environment for the Zedboard board</title>
+    <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
     <link>https://pcotret.github.io/coresight-zedboard/</link>
     <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>

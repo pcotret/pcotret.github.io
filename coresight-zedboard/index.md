@@ -1,4 +1,4 @@
-# Activate Coresight components in a Yocto environment for the Zedboard board
+# Activate Coresight components in a Yocto environment for the Zedboard
 
 
 ## Activate Coresight components - Software side - Method #1
