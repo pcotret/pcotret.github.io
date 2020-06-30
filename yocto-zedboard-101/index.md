@@ -66,7 +66,7 @@ Once complete the images for the target machine will be available in the output 
 We need to modify `uEnv.txt` a little bit according to a Xilinx layer [README-booting.md](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/README.booting.md#preparing-sdmmc)
 
 ```bash
-echo "ramdisk_image=core-image-minimal-zedboard-zynq7.cpio.gz.u-boot" > tmp/deploy/images/zedboard-zynq7/uEnv.txt
+echo "ramdisk_image=core-image-minimal-zedboard-zynq7.cpio.gz.u-boot" >> tmp/deploy/images/zedboard-zynq7/uEnv.txt
 ```
 
 ## 2. Creating the SD card
