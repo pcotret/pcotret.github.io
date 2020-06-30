@@ -9,9 +9,8 @@
     <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/coresight-zedboard/</guid>
-    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
-Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
-Activate Coresight components - Hardware side 😨]]></description>
+    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
+1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
 </item><item>
     <title>Arduino Due vs. embedded C - ARM reversing</title>
     <link>https://pcotret.github.io/arduino_due_reverse/</link>

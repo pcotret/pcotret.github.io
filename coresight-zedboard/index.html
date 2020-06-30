@@ -7,18 +7,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Activate Coresight components in a Yocto environment for the Zedboard - Pascal Cotret @ ENSTA Bretagne</title>
         <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Activate Coresight components in a Yocto environment for the Zedboard" />
-<meta property="og:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
-Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
-Activate Coresight components - Hardware side 😨" />
+<meta property="og:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
+1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/coresight-zedboard/" />
 <meta property="article:published_time" content="2020-06-29T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-06-30T09:06:56+02:00" />
+<meta property="article:modified_time" content="2020-06-30T10:10:37+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Activate Coresight components in a Yocto environment for the Zedboard"/>
-<meta name="twitter:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/
-Customize a linux-xlnx kernel uImage The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual core-image-minimal image with Yocto tools. Fortunately, we can do it on a linux-xlnx image!
-Activate Coresight components - Hardware side 😨"/>
+<meta name="twitter:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
+1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​"/>
 <meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
 <meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -36,8 +34,8 @@ Activate Coresight components - Hardware side 😨"/>
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "yocto, zedboard, coresight","wordcount":  63 ,
-        "url": "https:\/\/pcotret.github.io\/coresight-zedboard\/","datePublished": "2020-06-29T00:00:00+08:00","dateModified": "2020-06-30T09:06:56+02:00","publisher": {
+            },"genre": "posts","keywords": "yocto, zedboard, coresight","wordcount":  267 ,
+        "url": "https:\/\/pcotret.github.io\/coresight-zedboard\/","datePublished": "2020-06-29T00:00:00+08:00","dateModified": "2020-06-30T10:10:37+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -97,8 +95,8 @@ Activate Coresight components - Hardware side 😨"/>
                                 <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-29>2020-06-29</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 63 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>about 267 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -117,17 +115,101 @@ Activate Coresight components - Hardware side 😨"/>
 </nav></div>
             </div><div class="content" id="content"><h2 id="activate-coresight-components---software-side---method-1">Activate Coresight components - Software side - Method #1</h2>
 <h3 id="generate-a-core-image-minimal">Generate a <code>core-image-minimal</code></h3>
-<p>Just follow <a href="https://pcotret.github.io/yocto-zedboard-101/">https://pcotret.github.io/yocto-zedboard-101/</a></p>
+<p>Just follow <a href="https://pcotret.github.io/yocto-zedboard-101/">https://pcotret.github.io/yocto-zedboard-101/</a>. When booting this image:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
+
+zedboard-zynq7 login: root
+root@zedboard-zynq7:~# ls /sys/bus/
+amba          container     event_source  i2c           media         nvmem         scsi          soc           usb
+clockevents   cpu           gpio          iio           mmc           pci           sdio          spi           virtio
+clocksource   edac          hid           mdio_bus      mmc_rpmb      platform      serio         ulpi          workqueue
+</code></pre></td></tr></table>
+</div>
+</div><p>No Coresight components 😢 ​</p>
 <h3 id="customize-a-linux-xlnx-kernel-uimage">Customize a <code>linux-xlnx</code> kernel <code>uImage</code></h3>
 <p>The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual <code>core-image-minimal</code> image with Yocto tools. Fortunately, we can do it on a <code>linux-xlnx</code> image!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bitbake linux-xlnx -c menuconfig
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/menu.png"
+        data-srcset="/img/menu.png, /img/menu.png 1.5x, /img/menu.png 2x"
+        data-sizes="auto"
+        alt="menu"
+        title="menu" /></p>
+<p>Go to <code>Kernel hacking =&gt; CoreSight Tracing Support</code> and enable the components you need (everything is enabled here). Then, save and exit.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/menu-coresight.png"
+        data-srcset="/img/menu-coresight.png, /img/menu-coresight.png 1.5x, /img/menu-coresight.png 2x"
+        data-sizes="auto"
+        alt="menu-coresight"
+        title="menu-coresight" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bitbake linux-xlnx -c compile -f
+bitbake linux-xlnx -c deploy
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, you should have a new <code>uImage</code> file in <code>build/tmp/deploy/images/zedboard-zynq7</code>. Just replace it in the first partititon of the SD card and boot the board.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
+
+zedboard-zynq7 login: root
+root@zedboard-zynq7:/sys/bus/coresight# ll       
+drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jan  <span class="m">1</span>  <span class="m">1970</span> devices
+drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jun <span class="m">29</span> 21:56 drivers
+-rw-r--r--    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_autoprobe
+--w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_probe
+--w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 uevent
+root@zedboard-zynq7:/sys/bus/coresight# ll devices/
+</code></pre></td></tr></table>
+</div>
+</div><p>We can see some Coresight support in the kernel but no devices detected&hellip;</p>
 <h2 id="activate-coresight-components---hardware-side">Activate Coresight components - Hardware side</h2>
 <p>😨</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-06-30&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/c4bf7c0c22b942be186fb7604aaa8067d8c3fc80" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) c4bf7c0c22b942be186fb7604aaa8067d8c3fc80: Update coresight-zedboard.md">
-                                <i class="fas fa-hashtag fa-fw"></i>c4bf7c0</a></span>
+                <span>The article was updated on 2020-06-30&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/5e4080c2e2bc019b5d937f16765781711f614d63" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) 5e4080c2e2bc019b5d937f16765781711f614d63: Update coresight-zedboard.md, menu-coresight.png, and menu.png">
+                                <i class="fas fa-hashtag fa-fw"></i>5e4080c</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
