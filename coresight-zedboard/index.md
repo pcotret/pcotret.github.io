@@ -311,7 +311,7 @@ Furthermore, this has been updated only in the `5.6` release of the Linux kernel
  };
 ```
 As a consequence, we need to clone the `master` branch of [linux-xlnx](https://github.com/Xilinx/linux-xlnx/branches) in order to get a correct device tree.
-This can be done by modifying a parameter in [machine-include-default.inc](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/conf/machine/include/machine-xilinx-default.inc):
+This can be done by modifying a parameter in [machine-xilinx-default.inc](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/conf/machine/include/machine-xilinx-default.inc):
 ```diff
 # Kernel Configuration
 - PREFERRED_PROVIDER_virtual/kernel ??= "linux-xlnx"
