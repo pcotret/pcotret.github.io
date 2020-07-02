@@ -75,7 +75,7 @@ XILINX_DEFAULT_KERNEL_microblaze := "linux-yocto"
 XILINX_DEFAULT_KERNEL_zynqmp := "linux-yocto"
 PREFERRED_PROVIDER_virtual/kernel ??= "${XILINX_DEFAULT_KERNEL}"
 ```
- 
+
 According to the BitBake files, it will clone the `xlnx_rebase_v4.19` branch of the Linux kernel provided by Xilinx ([https://github.com/Xilinx/linux-xlnx/tree/xlnx_rebase_v4.19](https://github.com/Xilinx/linux-xlnx/tree/xlnx_rebase_v4.19)).
 
 [https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2019.2.bb](https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2019.2.bb):
@@ -320,4 +320,46 @@ This can be done by modifying a parameter in [machine-xilinx-default.inc](https:
 + PREFERRED_PROVIDER_virtual/kernel ??= "linux-xlnx-dev"
 ```
 This information was given in a kernel recipe file of the [meta-xilinx](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx-dev.bb) layer.
+
+### Configuration of Coresight components in Vivado
+
+> TO BE COMPLETED
+
+![t1](./img/tpiu1.png)
+
+![t2](./img/tpiu2.png)
+
+### Compilation of the FSBL (*First Stage Boot Loader*)
+
+> TO BE COMPLETED
+
+```bash
+hsi
+hsi% set hwdsgn [open_hw_design my_hw/my_hw.sdk/system_wrapper.hdf]
+hsi% generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl -compile -sw fsbl -dir my_fsbl
+```
+
+The FSBL will generate library for various components including Coresight ! :wink:
+
+> [...]
+> **Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src**
+
+This library, provided by Xilinx contains three functions:
+
+```c
+void XCoresightPs_DccSendByte(u32 BaseAddress, u8 Data); // Write
+u8 XCoresightPs_DccRecvByte(u32 BaseAddress);            // Read
+static INLINE u32 XCoresightPs_DccGetStatus(void);       // Get status
+```
+
+### Generation of the boot binary
+
+> TODO
+
+This step will be performed by `bootgen`: this tool combines the FSBL with the UBOOT binary.
+
+```bash
+bootgen -image bootgen.bif -o boot.bin
+```
+
 
