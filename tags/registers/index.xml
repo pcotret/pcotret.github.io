@@ -1,24 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>registers on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/registers/</link>
-    <description>Recent content in registers on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/registers/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Register windows in SPARC</title>
-      <link>https://pcotret.github.io/sparc_window_registers/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/sparc_window_registers/</guid>
-      <description>128 registers available in SPARC. Each window is divided in 3 areas:  8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07)    1 2 3 4 5 6 7  input // Function F1 local output	input // Save instruction (F2 called in F1) 	local output	input // Save instruction (F3 called in F2) 	local output   As you can see, each time a function is called in another, the registers window &amp;ldquo;slides&amp;rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>registers - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/registers/</link>
+        <description>registers - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/registers/" rel="self" type="application/rss+xml" /><item>
+    <title>Register windows in SPARC</title>
+    <link>https://pcotret.github.io/sparc_window_registers/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/sparc_window_registers/</guid>
+    <description><![CDATA[128 registers available in SPARC. Each window is divided in 3 areas:  8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07)    1 2 3 4 5 6 7  input // Function F1 local output	input // Save instruction (F2 called in F1) 	local output	input // Save instruction (F3 called in F2) 	local output   As you can see, each time a function is called in another, the registers window &ldquo;slides&rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.]]></description>
+</item></channel>
 </rss>

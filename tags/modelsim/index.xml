@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>modelsim on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/modelsim/</link>
-    <description>Recent content in modelsim on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/modelsim/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Running Modelsim on a 64-bit Ubuntu</title>
-      <link>https://pcotret.github.io/modelsim-ubuntu/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/modelsim-ubuntu/</guid>
-      <description>Install Modelsim on a 64-bit (x)Ubuntu 1 2  wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run   However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
-1 2 3 4  sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386   Next, we need to build a free version of FreeType:</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>modelsim - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/modelsim/</link>
+        <description>modelsim - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/modelsim/" rel="self" type="application/rss+xml" /><item>
+    <title>Running Modelsim on a 64-bit Ubuntu</title>
+    <link>https://pcotret.github.io/modelsim-ubuntu/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/modelsim-ubuntu/</guid>
+    <description><![CDATA[Install Modelsim on a 64-bit (x)Ubuntu 1 2  wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run   However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
+1 2 3 4  sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386   Next, we need to build a free version of FreeType:]]></description>
+</item></channel>
 </rss>

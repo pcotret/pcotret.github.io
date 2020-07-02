@@ -1,26 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>pcb on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/pcb/</link>
-    <description>Recent content in pcb on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/pcb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Comment faire des PCB avec des produits basiques</title>
-      <link>https://pcotret.github.io/pcb-maison/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/pcb-maison/</guid>
-      <description>Update 03/2018 : autre technique dans le labo d&amp;rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pcb - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/pcb/</link>
+        <description>pcb - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/pcb/" rel="self" type="application/rss+xml" /><item>
+    <title>Comment faire des PCB avec des produits basiques</title>
+    <link>https://pcotret.github.io/pcb-maison/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/pcb-maison/</guid>
+    <description><![CDATA[Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
 De bas en haut :
- méthode de l&amp;rsquo;imprimante laser mais trop chauffé méthode de l&amp;rsquo;imprimante laser mais mal décollé méthode de l&amp;rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &amp;ldquo;industrielle&amp;rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&amp;rsquo;acide. Je testerai avec du verni à ongle pour voir&amp;hellip; masque réalisé au marqueur indélébile  Méthode de l&amp;rsquo;imprimante laser : on imprime sur du papier le typon qu&amp;rsquo;on souhaite réaliser.</description>
-    </item>
-    
-  </channel>
+ méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.]]></description>
+</item></channel>
 </rss>

@@ -1,55 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tech notes / Misc. on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/categories/tech-misc/</link>
-    <description>Recent content in Tech notes / Misc. on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://pcotret.github.io/categories/tech-misc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Comment faire des PCB avec des produits basiques</title>
-      <link>https://pcotret.github.io/pcb-maison/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/pcb-maison/</guid>
-      <description>Update 03/2018 : autre technique dans le labo d&amp;rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tech notes / Misc. - Category - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/categories/tech-misc/</link>
+        <description>Tech notes / Misc. - Category - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-misc/" rel="self" type="application/rss+xml" /><item>
+    <title>Comment faire des PCB avec des produits basiques</title>
+    <link>https://pcotret.github.io/pcb-maison/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/pcb-maison/</guid>
+    <description><![CDATA[Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
 De bas en haut :
- méthode de l&amp;rsquo;imprimante laser mais trop chauffé méthode de l&amp;rsquo;imprimante laser mais mal décollé méthode de l&amp;rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &amp;ldquo;industrielle&amp;rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&amp;rsquo;acide. Je testerai avec du verni à ongle pour voir&amp;hellip; masque réalisé au marqueur indélébile  Méthode de l&amp;rsquo;imprimante laser : on imprime sur du papier le typon qu&amp;rsquo;on souhaite réaliser.</description>
-    </item>
-    
-    <item>
-      <title>Image processing</title>
-      <link>https://pcotret.github.io/image_scripts/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/image_scripts/</guid>
-      <description>Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
-1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &amp;#34;C:\Program Files\Inkscape\inkscape.exe&amp;#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&amp;#34;%%~dpnf.png&amp;#34; ^  --file=&amp;#34;%%~f&amp;#34; )   Resize an image with Inkscape 1  for %%f in (*.</description>
-    </item>
-    
-    <item>
-      <title>LateX tips</title>
-      <link>https://pcotret.github.io/latex_tips/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/latex_tips/</guid>
-      <description>Using ttfamily with bfseries in a listing Default font doesn&amp;rsquo;t implement bold style:
-1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &amp;#34;^##&amp;#34; Makefile; all: pdflatex ${FILENAME}.</description>
-    </item>
-    
-    <item>
-      <title>Marp to PDF</title>
-      <link>https://pcotret.github.io/marp-to-pdf/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/marp-to-pdf/</guid>
-      <description>Here is a way to convert Marp slides in PDF with emojis:
-1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  </description>
-    </item>
-    
-  </channel>
+ méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.]]></description>
+</item><item>
+    <title>Image processing</title>
+    <link>https://pcotret.github.io/image_scripts/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/image_scripts/</guid>
+    <description><![CDATA[Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
+1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.]]></description>
+</item><item>
+    <title>LateX tips</title>
+    <link>https://pcotret.github.io/latex_tips/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/latex_tips/</guid>
+    <description><![CDATA[Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
+1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &#34;^##&#34; Makefile; all: pdflatex ${FILENAME}.]]></description>
+</item><item>
+    <title>Marp to PDF</title>
+    <link>https://pcotret.github.io/marp-to-pdf/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/marp-to-pdf/</guid>
+    <description><![CDATA[Here is a way to convert Marp slides in PDF with emojis:
+1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  ]]></description>
+</item></channel>
 </rss>

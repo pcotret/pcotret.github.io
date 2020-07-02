@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>settings on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/settings/</link>
-    <description>Recent content in settings on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/settings/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Xilinx settings in `~/.bashrc`</title>
-      <link>https://pcotret.github.io/xilinx_bashrc/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
-      <description>Just because I&amp;rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
-Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>settings - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/settings/</link>
+        <description>settings - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/settings/" rel="self" type="application/rss+xml" /><item>
+    <title>Xilinx settings in `~/.bashrc`</title>
+    <link>https://pcotret.github.io/xilinx_bashrc/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
+    <description><![CDATA[Just because I&rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
+Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.]]></description>
+</item></channel>
 </rss>

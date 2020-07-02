@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/coresight-zedboard/" />
 <meta property="article:published_time" content="2020-06-29T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-07-01T17:54:18+02:00" />
+<meta property="article:modified_time" content="2020-07-02T09:30:29+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Activate Coresight components in a Yocto environment for the Zedboard"/>
 <meta name="twitter:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
@@ -34,8 +34,8 @@
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "yocto, zedboard, coresight","wordcount":  1381 ,
-        "url": "https:\/\/pcotret.github.io\/coresight-zedboard\/","datePublished": "2020-06-29T00:00:00+08:00","dateModified": "2020-07-01T17:54:18+02:00","publisher": {
+            },"genre": "posts","keywords": "yocto, zedboard, coresight","wordcount":  1375 ,
+        "url": "https:\/\/pcotret.github.io\/coresight-zedboard\/","datePublished": "2020-06-29T00:00:00+08:00","dateModified": "2020-07-02T09:30:29+02:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -95,7 +95,7 @@
                                 <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-29>2020-06-29</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 1381 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 1375 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>7 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -353,6 +353,51 @@ KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</
 </div><p>This is mainly due to the fact that the kernel version in the <a href="https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb" target="_blank" rel="noopener noreffer">meta-xilinx</a> layer has been updated later in the <code>master branch</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-diff" data-lang="diff">commit 48998ea5b79af13fb1b181037cd3a12990463e8a
+Author: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
+Date:   Fri Feb 21 11:20:37 2020 -0800
+
+    Update KERNEL_VERSION to 5.4
+    
+    Update KERNEL_VERSION to 5.4
+    
+    Signed-off-by: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
+
+<span class="gh">diff --git a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span><span class="gh">index 58f163c..2b8763a 100644
+</span><span class="gh"></span><span class="gd">--- a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span><span class="gd"></span><span class="gi">+++ b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
+</span><span class="gu"></span><span class="gd">-LINUX_VERSION = &#34;4.19&#34;
+</span><span class="gd"></span><span class="gi">+LINUX_VERSION = &#34;5.4&#34;
+</span><span class="gi"></span> KBRANCH ?= &#34;xlnx_rebase_v4.19&#34;
+ SRCREV ?= &#34;b983d5fd71d4feaf494cdbe0593ecc29ed471cb8&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>Furthermore, this has been updated only in the <code>5.6</code> release of the Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
@@ -503,55 +548,9 @@ KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</
 </span><span class="lnt">148
 </span><span class="lnt">149
 </span><span class="lnt">150
-</span><span class="lnt">151
-</span><span class="lnt">152
-</span><span class="lnt">153
-</span><span class="lnt">154
-</span><span class="lnt">155
-</span><span class="lnt">156
-</span><span class="lnt">157
-</span><span class="lnt">158
-</span><span class="lnt">159
-</span><span class="lnt">160
-</span><span class="lnt">161
-</span><span class="lnt">162
-</span><span class="lnt">163
-</span><span class="lnt">164
-</span><span class="lnt">165
-</span><span class="lnt">166
-</span><span class="lnt">167
-</span><span class="lnt">168
-</span><span class="lnt">169
-</span><span class="lnt">170
-</span><span class="lnt">171
-</span><span class="lnt">172
-</span><span class="lnt">173
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">commit 48998ea5b79af13fb1b181037cd3a12990463e8a
-Author: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
-Date:   Fri Feb 21 11:20:37 2020 -0800
-
-    Update KERNEL_VERSION to 5.4
-    
-    Update KERNEL_VERSION to 5.4
-    
-    Signed-off-by: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
-
-<span class="gh">diff --git a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gh">index 58f163c..2b8763a 100644
-</span><span class="gh"></span><span class="gd">--- a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gd"></span><span class="gi">+++ b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
-</span><span class="gu"></span><span class="gd">-LINUX_VERSION = &#34;4.19&#34;
-</span><span class="gd"></span><span class="gi">+LINUX_VERSION = &#34;5.4&#34;
-</span><span class="gi"></span> KBRANCH ?= &#34;xlnx_rebase_v4.19&#34;
- SRCREV ?= &#34;b983d5fd71d4feaf494cdbe0593ecc29ed471cb8&#34;
-``̀
-
-Furthermore, this has been updated only in the `5.6` release of the Linux kernel: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master
-```diff
-<span class="gd">--- a/arch/arm/boot/dts/zynq-7000.dtsi
+<pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">--- a/arch/arm/boot/dts/zynq-7000.dtsi
 </span><span class="gd"></span><span class="gi">+++ b/arch/arm/boot/dts/zynq-7000.dtsi
 </span><span class="gi"></span><span class="gu">@@ -59,6 +59,39 @@
 </span><span class="gu"></span> 		regulator-always-on;
@@ -722,8 +721,8 @@ This can be done by modifying a parameter in <a href="https://github.com/Xilinx/
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-07-01&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/87ac1e5f45e04a7d0d69ec41f838b8eea4f69b88" target="_blank" title="commit by Pascal COTRET(cotretpa@tdell5821.ensieta.ecole) 87ac1e5f45e04a7d0d69ec41f838b8eea4f69b88: fix typo">
-                                <i class="fas fa-hashtag fa-fw"></i>87ac1e5</a></span>
+                <span>The article was updated on 2020-07-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/0111644bc6e508fb51df18315ff603f8b2eabc8d" target="_blank" title="commit by Pascal Cotret(pascal.cotret@ensta-bretagne.fr) 0111644bc6e508fb51df18315ff603f8b2eabc8d: update">
+                                <i class="fas fa-hashtag fa-fw"></i>0111644</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>

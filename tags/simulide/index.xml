@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>simulide on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/simulide/</link>
-    <description>Recent content in simulide on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/simulide/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Quick start guide for SimulIDE as an Arduino simulator</title>
-      <link>https://pcotret.github.io/simulide/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/simulide/</guid>
-      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>simulide - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/simulide/</link>
+        <description>simulide - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/simulide/" rel="self" type="application/rss+xml" /><item>
+    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+    <link>https://pcotret.github.io/simulide/</link>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/simulide/</guid>
+    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
+</item></channel>
 </rss>

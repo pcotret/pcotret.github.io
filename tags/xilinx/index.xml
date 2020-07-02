@@ -1,36 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>xilinx on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/xilinx/</link>
-    <description>Recent content in xilinx on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/xilinx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
-      <link>https://pcotret.github.io/fpga-env-101/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/fpga-env-101/</guid>
-      <description>Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&amp;rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>xilinx - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/xilinx/</link>
+        <description>xilinx - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/xilinx/" rel="self" type="application/rss+xml" /><item>
+    <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
+    <link>https://pcotret.github.io/fpga-env-101/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/fpga-env-101/</guid>
+    <description><![CDATA[Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
   Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.</description>
-    </item>
-    
-    <item>
-      <title>Xilinx settings in `~/.bashrc`</title>
-      <link>https://pcotret.github.io/xilinx_bashrc/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
-      <description>Just because I&amp;rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
-Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.</description>
-    </item>
-    
-  </channel>
+1  source /opt/Xilinx/Vivado/2018.]]></description>
+</item><item>
+    <title>Xilinx settings in `~/.bashrc`</title>
+    <link>https://pcotret.github.io/xilinx_bashrc/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
+    <description><![CDATA[Just because I&rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
+Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.]]></description>
+</item></channel>
 </rss>
