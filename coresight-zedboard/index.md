@@ -19,12 +19,12 @@ clocksource   edac          hid           mdio_bus      mmc_rpmb      platform  
 
 No Coresight components :cry: ​
 
-### Customize a `linux-xlnx` kernel `uImage`
+### Customize a `linux-xlnx-dev` kernel `uImage`
 
-The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual `core-image-minimal` image with Yocto tools. Fortunately, we can do it on a `linux-xlnx` image!
+The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual `core-image-minimal` image with Yocto tools. Fortunately, we can do it on a `linux-xlnx-dev` image!
 
 ```bash
-bitbake linux-xlnx -c menuconfig
+bitbake linux-xlnx-dev -c menuconfig
 ```
 
 ![menu](./img/menu.png)
@@ -34,8 +34,8 @@ Go to `Kernel hacking => CoreSight Tracing Support` and enable the components yo
 ![menu-coresight](./img/menu-coresight.png)
 
 ```bash
-bitbake linux-xlnx -c compile -f
-bitbake linux-xlnx -c deploy
+bitbake linux-xlnx-dev -c compile -f
+bitbake linux-xlnx-dev -c deploy
 ```
 
 Now, you should have a new `uImage` file in `build/tmp/deploy/images/zedboard-zynq7`. Just replace it in the first partititon of the SD card and boot the board.
@@ -321,45 +321,34 @@ This can be done by modifying a parameter in [machine-xilinx-default.inc](https:
 ```
 This information was given in a kernel recipe file of the [meta-xilinx](https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx-dev.bb) layer.
 
-### Configuration of Coresight components in Vivado
+### Recompiling everything...
 
-> TO BE COMPLETED
+Now that we've found when and where the device tree has been updated with Coresight components, we have two tasks to do:
 
-![t1](./img/tpiu1.png)
+- Recompile a default `core-image-minimal` with `linux-xlnx-dev` kernel.
+- Customize `linux-xlnx-dev` in order to include Coresight drivers.
 
-![t2](./img/tpiu2.png)
-
-### Compilation of the FSBL (*First Stage Boot Loader*)
-
-> TO BE COMPLETED
+Then, once everything is copied on the SD card:
 
 ```bash
-hsi
-hsi% set hwdsgn [open_hw_design my_hw/my_hw.sdk/system_wrapper.hdf]
-hsi% generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl -compile -sw fsbl -dir my_fsbl
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 5.4.0-xilinx-dev (oe-user@oe-host) (gcc version 9.2.0 (GCC)) #1 SMP PREEMPT Mon Jul 6 16:40:45 UTC 2020
+[...]
+coresight etm0: PTM 1.0 initialized
+coresight etm1: PTM 1.0 initialized
+fpga_manager fpga0: Xilinx Zynq FPGA Manager registered
+[...]
+Starting syslogd/klogd: done
+
+Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0
+
+zedboard-zynq7 login: root
+root@zedboard-zynq7:~# ls /sys/bus/coresight/devices/
+etb0         etm0         etm1         funnel0      replicator0  tpiu0
 ```
 
-The FSBL will generate library for various components including Coresight ! :wink:
+Yay, we can see Coresight components on the Zedboard! :dark_sunglasses:
 
-> [...]
-> **Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src**
-
-This library, provided by Xilinx contains three functions:
-
-```c
-void XCoresightPs_DccSendByte(u32 BaseAddress, u8 Data); // Write
-u8 XCoresightPs_DccRecvByte(u32 BaseAddress);            // Read
-static INLINE u32 XCoresightPs_DccGetStatus(void);       // Get status
-```
-
-### Generation of the boot binary
-
-> TODO
-
-This step will be performed by `bootgen`: this tool combines the FSBL with the UBOOT binary.
-
-```bash
-bootgen -image bootgen.bif -o boot.bin
-```
-
-
+[![asciicast](https://asciinema.org/a/345848.png)](https://asciinema.org/a/345848)
