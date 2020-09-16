@@ -1,41 +1,52 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tech notes / Hardware - Category - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/categories/tech-hardware/</link>
-        <description>Tech notes / Hardware - Category - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-hardware/" rel="self" type="application/rss+xml" /><item>
-    <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
-    <link>https://pcotret.github.io/fpga-env-101/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/fpga-env-101/</guid>
-    <description><![CDATA[Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech notes / Hardware on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/categories/tech-hardware/</link>
+    <description>Recent content in Tech notes / Hardware on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://pcotret.github.io/categories/tech-hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
+      <link>https://pcotret.github.io/fpga-env-101/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/fpga-env-101/</guid>
+      <description>Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&amp;rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
   Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.]]></description>
-</item><item>
-    <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
-    <link>https://pcotret.github.io/lattice-ubuntu/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
-    <description><![CDATA[Lattice iCEcube2 has not been updated for a while&hellip;
-Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&rsquo;t ask me why&hellip;)
-1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!]]></description>
-</item><item>
-    <title>Running Modelsim on a 64-bit Ubuntu</title>
-    <link>https://pcotret.github.io/modelsim-ubuntu/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/modelsim-ubuntu/</guid>
-    <description><![CDATA[Install Modelsim on a 64-bit (x)Ubuntu 1 2  wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run   However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
-1 2 3 4  sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386   Next, we need to build a free version of FreeType:]]></description>
-</item><item>
-    <title>Xilinx settings in `~/.bashrc`</title>
-    <link>https://pcotret.github.io/xilinx_bashrc/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
-    <description><![CDATA[Just because I&rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
-Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.]]></description>
-</item></channel>
+1  source /opt/Xilinx/Vivado/2018.</description>
+    </item>
+    
+    <item>
+      <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
+      <link>https://pcotret.github.io/lattice-ubuntu/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
+      <description>Lattice iCEcube2 has not been updated for a while&amp;hellip;
+Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&amp;rsquo;t ask me why&amp;hellip;)
+1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!</description>
+    </item>
+    
+    <item>
+      <title>Running Modelsim on a 64-bit Ubuntu</title>
+      <link>https://pcotret.github.io/modelsim-ubuntu/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/modelsim-ubuntu/</guid>
+      <description>Install Modelsim on a 64-bit (x)Ubuntu 1 2  wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run   However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
+1 2 3 4  sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386   Next, we need to build a free version of FreeType:</description>
+    </item>
+    
+    <item>
+      <title>Xilinx settings in `~/.bashrc`</title>
+      <link>https://pcotret.github.io/xilinx_bashrc/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
+      <description>Just because I&amp;rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
+Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.</description>
+    </item>
+    
+  </channel>
 </rss>

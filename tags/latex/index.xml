@@ -1,15 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>latex - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/latex/</link>
-        <description>latex - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/latex/" rel="self" type="application/rss+xml" /><item>
-    <title>LateX tips</title>
-    <link>https://pcotret.github.io/latex_tips/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/latex_tips/</guid>
-    <description><![CDATA[Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
-1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &#34;^##&#34; Makefile; all: pdflatex ${FILENAME}.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/latex/</link>
+    <description>Recent content in latex on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LateX tips</title>
+      <link>https://pcotret.github.io/latex_tips/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/latex_tips/</guid>
+      <description>Using ttfamily with bfseries in a listing Default font doesn&amp;rsquo;t implement bold style:
+1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &amp;#34;^##&amp;#34; Makefile; all: pdflatex ${FILENAME}.</description>
+    </item>
+    
+  </channel>
 </rss>

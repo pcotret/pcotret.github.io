@@ -1,15 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>marp - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/marp/</link>
-        <description>marp - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/marp/" rel="self" type="application/rss+xml" /><item>
-    <title>Marp to PDF</title>
-    <link>https://pcotret.github.io/marp-to-pdf/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/marp-to-pdf/</guid>
-    <description><![CDATA[Here is a way to convert Marp slides in PDF with emojis:
-1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  ]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>marp on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/marp/</link>
+    <description>Recent content in marp on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/marp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Marp to PDF</title>
+      <link>https://pcotret.github.io/marp-to-pdf/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/marp-to-pdf/</guid>
+      <description>Here is a way to convert Marp slides in PDF with emojis:
+1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  </description>
+    </item>
+    
+  </channel>
 </rss>
