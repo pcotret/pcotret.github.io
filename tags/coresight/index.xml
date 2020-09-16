@@ -1,21 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>coresight on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/coresight/</link>
-    <description>Recent content in coresight on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/coresight/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
-      <link>https://pcotret.github.io/coresight-zedboard/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/coresight-zedboard/</guid>
-      <description>Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>coresight - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/coresight/</link>
+        <description>coresight - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/coresight/" rel="self" type="application/rss+xml" /><item>
+    <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
+    <link>https://pcotret.github.io/coresight-zedboard/</link>
+    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
+    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
+1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
+</item></channel>
 </rss>

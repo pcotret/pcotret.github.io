@@ -16,4 +16,8 @@ In order to test a PCAP with a given dictionary:
 aircrack-ng -w <wordlist> <wireshark_file>
 ```
 
+You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
 
+### Wireshark captures
+https://wiki.wireshark.org/SampleCaptures
+One of them should work with a short dictionary. Find it :wink:
