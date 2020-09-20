@@ -11,7 +11,7 @@
 <meta property="og:description" content="Pascal Cotret @ ENSTA Bretagne" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2020-09-16T23:44:22+02:00" />
+<meta property="og:updated_time" content="2020-09-20T21:55:09+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pascal Cotret @ ENSTA Bretagne"/>
 <meta name="twitter:description" content="Pascal Cotret @ ENSTA Bretagne"/>
@@ -74,7 +74,19 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-645858" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-2786ea" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/buffer-overflow-raspberrypi/">Buffer overflow on ARM architecture</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-01-01>2020-01-01</time>
+        </span>&nbsp;
+            <span class="post-category">included in<a href="/categories/tech-embedded/">
+                        <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
+                    </a></span></div><div class="content">Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
+An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.</div><div class="post-footer">
+        <a href="/buffer-overflow-raspberrypi/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/buffer/">buffer</a>,&nbsp;<a href="/tags/raspberry/">raspberry</a>,&nbsp;<a href="/tags/overflow/">overflow</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/pcb-maison/">Comment faire des PCB avec des produits basiques</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
@@ -138,18 +150,6 @@ Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/poo
         <a href="/latex_tips/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/latex/">latex</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/marp-to-pdf/">Marp to PDF</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-01-01>2020-01-01</time>
-        </span>&nbsp;
-            <span class="post-category">included in<a href="/categories/tech-misc/">
-                        <i class="far fa-folder fa-fw"></i>Tech notes / Misc.
-                    </a></span></div><div class="content">Here is a way to convert Marp slides in PDF with emojis:
-1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  </div><div class="post-footer">
-        <a href="/marp-to-pdf/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/marp/">marp</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -175,6 +175,6 @@ Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/poo
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-645858":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"typeit":[["id-645858"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-2786ea":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"typeit":[["id-2786ea"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

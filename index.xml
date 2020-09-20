@@ -3,7 +3,14 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Building Wireshark from source</title>
+    <link>https://pcotret.github.io/wireshark_build/</link>
+    <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/wireshark_build/</guid>
+    <description><![CDATA[Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   ]]></description>
+</item><item>
     <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
     <link>https://pcotret.github.io/coresight-zedboard/</link>
     <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
@@ -79,14 +86,5 @@ De bas en haut :
     <description><![CDATA[Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
   Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
 1  source /opt/Xilinx/Vivado/2018.]]></description>
-</item><item>
-    <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
-    <link>https://pcotret.github.io/lattice-ubuntu/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
-    <description><![CDATA[Lattice iCEcube2 has not been updated for a while&hellip;
-Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&rsquo;t ask me why&hellip;)
-1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!]]></description>
 </item></channel>
 </rss>
