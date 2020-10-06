@@ -3,7 +3,14 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Cisco cheatsheet</title>
+    <link>https://pcotret.github.io/cisco_cheatsheet/</link>
+    <pubDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/cisco_cheatsheet/</guid>
+    <description><![CDATA[Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode.]]></description>
+</item><item>
     <title>Building Wireshark from source</title>
     <link>https://pcotret.github.io/wireshark_build/</link>
     <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
@@ -77,14 +84,5 @@ De bas en haut :
     <guid>https://pcotret.github.io/image_scripts/</guid>
     <description><![CDATA[Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
 1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.]]></description>
-</item><item>
-    <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
-    <link>https://pcotret.github.io/fpga-env-101/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/fpga-env-101/</guid>
-    <description><![CDATA[Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.]]></description>
 </item></channel>
 </rss>

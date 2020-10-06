@@ -1,21 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>networks - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/networks/</link>
-        <description>networks - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/networks/" rel="self" type="application/rss+xml" /><item>
+        <title>cisco - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/cisco/</link>
+        <description>cisco - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/cisco/" rel="self" type="application/rss+xml" /><item>
     <title>Cisco cheatsheet</title>
     <link>https://pcotret.github.io/cisco_cheatsheet/</link>
     <pubDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/cisco_cheatsheet/</guid>
     <description><![CDATA[Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode.]]></description>
-</item><item>
-    <title>Building Wireshark from source</title>
-    <link>https://pcotret.github.io/wireshark_build/</link>
-    <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/wireshark_build/</guid>
-    <description><![CDATA[Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   ]]></description>
 </item></channel>
 </rss>

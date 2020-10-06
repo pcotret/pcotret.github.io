@@ -11,7 +11,7 @@
 <meta property="og:description" content="Pascal Cotret @ ENSTA Bretagne" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2020-09-20T21:55:09+02:00" />
+<meta property="og:updated_time" content="2020-10-06T17:54:15+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pascal Cotret @ ENSTA Bretagne"/>
 <meta name="twitter:description" content="Pascal Cotret @ ENSTA Bretagne"/>
@@ -74,7 +74,18 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-e85c01" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-c01c65" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/cisco_cheatsheet/">Cisco cheatsheet</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-10-06>2020-10-06</time>
+        </span>&nbsp;
+            <span class="post-category">included in<a href="/categories/tech-networks/">
+                        <i class="far fa-folder fa-fw"></i>Tech notes / Networks
+                    </a></span></div><div class="content">Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode.</div><div class="post-footer">
+        <a href="/cisco_cheatsheet/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cisco/">cisco</a>,&nbsp;<a href="/tags/networks/">networks</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/wireshark_build/">Building Wireshark from source</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
@@ -134,20 +145,6 @@ Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loo
         <a href="/simulide/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/simulide/">simulide</a>,&nbsp;<a href="/tags/arduino/">arduino</a>,&nbsp;<a href="/tags/simulation/">simulation</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/aircrack-101/">Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-01-01>2020-01-01</time>
-        </span>&nbsp;
-            <span class="post-category">included in<a href="/categories/tech-security/">
-                        <i class="far fa-folder fa-fw"></i>Tech notes / Security
-                    </a></span></div><div class="content">Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
-Dictionary-based attack In order to test a PCAP with a given dictionary:
-1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-Wireshark captures https://wiki.wireshark.org/SampleCaptures One of them should work with a short dictionary.</div><div class="post-footer">
-        <a href="/aircrack-101/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/aircrack/">aircrack</a>,&nbsp;<a href="/tags/security/">security</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -173,6 +170,6 @@ Wireshark captures https://wiki.wireshark.org/SampleCaptures One of them should 
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-e85c01":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"typeit":[["id-e85c01"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-c01c65":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"typeit":[["id-c01c65"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

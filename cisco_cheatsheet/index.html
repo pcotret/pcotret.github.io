@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Cisco cheatsheet - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Cisco cheatsheet" />
+<meta property="og:description" content="Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/cisco_cheatsheet/" />
+<meta property="article:published_time" content="2020-10-06T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-10-06T17:54:15+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cisco cheatsheet"/>
+<meta name="twitter:description" content="Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode."/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/cisco_cheatsheet/" /><link rel="prev" href="https://pcotret.github.io/wireshark_build/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Cisco cheatsheet",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/cisco_cheatsheet\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "cisco, networks","wordcount":  1617 ,
+        "url": "https:\/\/pcotret.github.io\/cisco_cheatsheet\/","datePublished": "2020-10-06T00:00:00+08:00","dateModified": "2020-10-06T17:54:15+02:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/pcotret.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Cisco cheatsheet</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tech-networks/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Networks
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-10-06>2020-10-06</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 1617 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>8 min&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-configuration-commands">Basic Configuration Commands</a></li>
+    <li><a href="#troubleshooting-commands">Troubleshooting Commands</a></li>
+    <li><a href="#routing-and-vlan-commands">Routing and VLAN Commands</a></li>
+    <li><a href="#dhcp-commands">DHCP Commands</a></li>
+    <li><a href="#security-commands">Security Commands</a></li>
+    <li><a href="#monitoring-and-logging-commands">Monitoring and Logging Commands</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="basic-configuration-commands">Basic Configuration Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>enable</strong></td>
+<td>Logs you into enable mode, which is also known as user exec mode or privileged mode</td>
+</tr>
+<tr>
+<td><strong>configure terminal</strong></td>
+<td>Logs you into configuration mode</td>
+</tr>
+<tr>
+<td><strong>interface</strong> <em>fastethernet/number</em></td>
+<td>Enters interface configuration mode for the specified fast ethernet interface</td>
+</tr>
+<tr>
+<td><strong>reload</strong></td>
+<td>An exec mode command that reboots a Cisco switch or router</td>
+</tr>
+<tr>
+<td><strong>hostname</strong> <em>name</em></td>
+<td>Sets a host name to the current Cisco network device</td>
+</tr>
+<tr>
+<td><strong>copy</strong> <em>from-location to-location</em></td>
+<td>An enable mode command that copies files from one file location to another</td>
+</tr>
+<tr>
+<td><strong>copy running-config startup-config</strong></td>
+<td>An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes</td>
+</tr>
+<tr>
+<td><strong>copy startup-config running-config</strong></td>
+<td>An enable mode command that merges the startup config with the currently active config in RAM</td>
+</tr>
+<tr>
+<td><strong>write erase****erase startup-config</strong></td>
+<td>An enable mode command that deletes the startup config</td>
+</tr>
+<tr>
+<td><strong>ip address</strong> <em>ip-address mask</em></td>
+<td>Assigns an IP address and a subnet mask</td>
+</tr>
+<tr>
+<td><strong>shutdown****no shutdown</strong></td>
+<td>Used in interface configuration mode. “Shutdown” shuts down the interface, while “no shutdown” brings up the interface.</td>
+</tr>
+<tr>
+<td><strong>ip default-gateway</strong> <em>ip_address</em></td>
+<td>Sets the default gateway on a Cisco device</td>
+</tr>
+<tr>
+<td><strong>show running-config</strong></td>
+<td>An enable mode command that displays the current configuration</td>
+</tr>
+<tr>
+<td><strong>description</strong> <em>name-string</em></td>
+<td>A config interface command to describe or name an interface</td>
+</tr>
+<tr>
+<td><strong>show running-config interface</strong> <em>interface slot/number</em></td>
+<td>An enable mode command to display the running configuration for a specific interface</td>
+</tr>
+<tr>
+<td><strong>show ip interface</strong> <em>[type number]</em></td>
+<td>Displays the usability status of interfaces that are configured for IP</td>
+</tr>
+<tr>
+<td><strong>ip name-server</strong> <em>serverip-1 serverip-2</em></td>
+<td>A configure mode command that sets the IP addresses of DNS servers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting-commands">Troubleshooting Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ping</strong> <em>{hostname | system-address} [source source-address]</em></td>
+<td>Used in enable mode to diagnose basic network connectivity</td>
+</tr>
+<tr>
+<td><strong>speed</strong> <em>{10 | 100 | 1000 | auto}</em></td>
+<td>An interface mode command that manually sets the speed to the specified value or negotiates it automatically</td>
+</tr>
+<tr>
+<td><strong>duplex</strong> <em>{auto | full | half}</em></td>
+<td>An interface mode command that manually sets duplex to half, full or auto</td>
+</tr>
+<tr>
+<td><strong>cdp run****no cdp run</strong></td>
+<td>A configuration mode command that enables or disables Cisco Discovery Protocol (CDP) for the device</td>
+</tr>
+<tr>
+<td><strong>show mac address-table</strong></td>
+<td>Displays the MAC address table</td>
+</tr>
+<tr>
+<td><strong>show cdp</strong></td>
+<td>Shows whether CDP is enabled globally</td>
+</tr>
+<tr>
+<td><strong>show cdp neighbors</strong>*[detail]*</td>
+<td>Lists summary information about each neighbor connected to this device; the  “detail” option lists detailed information about each neighbor</td>
+</tr>
+<tr>
+<td><strong>show interfaces</strong></td>
+<td>Displays detailed information about interface status, settings and counters</td>
+</tr>
+<tr>
+<td><strong>show interface status</strong></td>
+<td>Displays the interface line status</td>
+</tr>
+<tr>
+<td><strong>show interfaces switchport</strong></td>
+<td>Displays a large variety of configuration settings and current operational status, including VLAN trunking details.</td>
+</tr>
+<tr>
+<td><strong>show interfaces trunk</strong></td>
+<td>Lists information about the currently operational trunks and the VLANs supported by those trunks</td>
+</tr>
+<tr>
+<td><strong>show vlan****show vlan brief</strong></td>
+<td>Lists each VLAN and all interfaces assigned to that VLAN but does not include trunks</td>
+</tr>
+<tr>
+<td><strong>show vtp status</strong></td>
+<td>Lists the current VTP status, including the current mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="routing-and-vlan-commands">Routing and VLAN Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ip route</strong><em>network-number network-mask {ip-address | interface}</em></td>
+<td>Sets a static route in the IP routing table</td>
+</tr>
+<tr>
+<td><strong>router rip</strong></td>
+<td>Enables a Routing Information Protocol (RIP) routing process, which places you in router configuration mode</td>
+</tr>
+<tr>
+<td><strong>network</strong> <em>ip-address</em></td>
+<td>In router configuration mode, associates a network with a RIP routing process</td>
+</tr>
+<tr>
+<td><strong>version 2</strong></td>
+<td>In router configuration mode, configures the software to receive and send only RIP version 2 packets</td>
+</tr>
+<tr>
+<td><strong>no auto-summary</strong></td>
+<td>In router configuration mode, disables automatic summarization</td>
+</tr>
+<tr>
+<td><strong>default-information originate</strong></td>
+<td>In router configuration mode, generates a default route into RIP</td>
+</tr>
+<tr>
+<td><strong>passive-interface</strong> <em>interface</em></td>
+<td>In router configuration mode, sets only that interface to passive RIP  mode. In passive RIP mode, RIP routing updates are accepted by, but not  sent out of, the specified interface.</td>
+</tr>
+<tr>
+<td><strong>show ip rip database</strong></td>
+<td>Displays the contents of the RIP routing database</td>
+</tr>
+<tr>
+<td><strong>ip nat</strong> <em>[inside | outside]</em></td>
+<td>An interface configuration mode command to designate that traffic  originating from or destined for the interface is subject to NAT</td>
+</tr>
+<tr>
+<td><strong>ip nat inside source</strong> <em>{list{access-list-number | access-list-name}} interface type number[overload]</em></td>
+<td>A configuration mode command to establish dynamic source translation. Use of the “list” keyword enables you to use an ACL to identify the traffic that will be subject to NAT. The “overload” option enables the router  to use one global address for many local addresses.</td>
+</tr>
+<tr>
+<td><strong>ip nat inside source static</strong> <em>local-ip global-ip</em></td>
+<td>A configuration mode command to establish a static translation between an inside local address and an inside global address</td>
+</tr>
+<tr>
+<td><strong>vlan</strong></td>
+<td>Creates a VLAN and enters VLAN configuration mode for further definitions</td>
+</tr>
+<tr>
+<td><strong>switchport access vlan</strong></td>
+<td>Sets the VLAN that the interface belongs to.</td>
+</tr>
+<tr>
+<td><strong>switchport trunk encapsulation dot1q</strong></td>
+<td>Specifies 802.1Q encapsulation on the trunk link.</td>
+</tr>
+<tr>
+<td><strong>switchport access</strong></td>
+<td>Assigns this port to a VLAN</td>
+</tr>
+<tr>
+<td><strong>vlan vlan-id</strong> <em>[name vlan-name]</em></td>
+<td>Configures a specific VLAN name (1 to 32 characters)</td>
+</tr>
+<tr>
+<td><strong>switchport mode</strong> <em>{ access | trunk }</em></td>
+<td>Configures the VLAN membership mode of a port. The access port is set to access  unconditionally and operates as a non-trunking, single VLAN interface  that sends and receives non-encapsulated (non-tagged) frames. An access  port can be assigned to only one VLAN. The trunk port sends and  receives encapsulated (tagged) frames that identify the VLAN of  origination. A trunk is a point-to-point link between two switches or  between a switch and a router.</td>
+</tr>
+<tr>
+<td><strong>switchport trunk</strong> <em>{encapsulation { dot1q }</em></td>
+<td>Sets the trunk characteristics when the interface is in trunking mode. In  this mode, the switch supports simultaneous tagged and untagged traffic  on a port.</td>
+</tr>
+<tr>
+<td><strong>encapsulation dot1q vlan-id</strong></td>
+<td>A configuration mode command that defines the matching criteria to map  802.1Q frames ingress on an interface to the appropriate service  instance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dhcp-commands">DHCP Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ip address dhcp</strong></td>
+<td>A configuration mode command to acquire an IP address on an interface via DHCP</td>
+</tr>
+<tr>
+<td><strong>ip dhcp pool name</strong></td>
+<td>A configuration mode command to configure a DHCP address pool on a DHCP server and enter DHCP pool configuration mode</td>
+</tr>
+<tr>
+<td><strong>domain-name</strong> <em>domain</em></td>
+<td>Used in DHCP pool configuration mode to specify the domain name for a DHCP client</td>
+</tr>
+<tr>
+<td><strong>network</strong> <em>network-number [mask]</em></td>
+<td>Used in DHCP pool configuration mode to configure the network number and  mask for a DHCP address pool primary or secondary subnet on a Cisco IOS  DHCP server</td>
+</tr>
+<tr>
+<td><strong>ip dhcp excluded-address</strong> <em>ip-address [last-ip-address]</em></td>
+<td>A configuration mode command to specify IP addresses that a DHCP server should not assign to DHCP clients</td>
+</tr>
+<tr>
+<td><strong>ip helper-address</strong> <em>address</em></td>
+<td>An interface configuration mode command to enable forwarding of UDP broadcasts, including BOOTP, received on an interface</td>
+</tr>
+<tr>
+<td><strong>default-router</strong> <em>address[address2 &hellip; address8]</em></td>
+<td>Used in DHCP pool configuration mode to specify the default router list for a DHCP client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-commands">Security Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>password</strong><em>pass-value</em></td>
+<td>Lists the password that is required if the login command (with no other parameters) is conﬁgured</td>
+</tr>
+<tr>
+<td><strong>username</strong> <em>name</em> <strong>password</strong> <em>pass-value</em></td>
+<td>A global command that deﬁnes one of possibly multiple user names and  associated passwords used for user authentication. It is used when  the login local line conﬁguration command has been used.</td>
+</tr>
+<tr>
+<td><strong>enable password</strong> <em>pass-value</em></td>
+<td>A configuration mode command that deﬁnes the password required when using the <strong>enable</strong> command</td>
+</tr>
+<tr>
+<td><strong>enable secret</strong><em>pass-value</em></td>
+<td>A configuration mode command that sets this Cisco device password that is required for any user to enter enable mode</td>
+</tr>
+<tr>
+<td><strong>service password-encryption</strong></td>
+<td>A configuration mode command that directs the Cisco IOS software to  encrypt the passwords, CHAP secrets, and similar data saved in its  configuration file</td>
+</tr>
+<tr>
+<td><strong>ip domain-name</strong> <em>name</em></td>
+<td>Conﬁgures a DNS domain name</td>
+</tr>
+<tr>
+<td><strong>crypto key generate rsa</strong></td>
+<td>A configuration mode command that creates and stores (in a hidden location in ﬂash memory) the keys that are required by SSH</td>
+</tr>
+<tr>
+<td><strong>transport input</strong> <em>{telnet | ssh}</em></td>
+<td>Used in vty line conﬁguration mode, deﬁnes whether Telnet or SSH access is  allowed into this switch. Both values can be specified in a single  command to allow both Telnet and SSH access (default settings).</td>
+</tr>
+<tr>
+<td><strong>access-list</strong> <em>access-list-number {deny | permit} source [source-wildcard] [log]</em></td>
+<td>A configuration mode command that defines a standard IP access list</td>
+</tr>
+<tr>
+<td><strong>access-class</strong></td>
+<td>Restricts incoming and outgoing connections between a particular vty (into a  basic Cisco device) and the addresses in an access list</td>
+</tr>
+<tr>
+<td><strong>ip access-list</strong> <em>{standard | extended} {access-list-name | access-list-number}</em></td>
+<td>A configuration mode command that defines an IP access list by name or number</td>
+</tr>
+<tr>
+<td><strong>permit source</strong> <em>[source-wildcard]</em></td>
+<td>Used in ACL configuration mode to set conditions to allow a packet to pass a named IP ACL. To remove a permit condition from an ACL, use  the “no” form of this command.</td>
+</tr>
+<tr>
+<td><strong>deny source</strong> <em>[source-wildcard]</em></td>
+<td>Used in ACL configuration mode to set conditions in a named IP ACL that will deny packets. To remove a deny condition from an ACL, use the “no” form of this command.</td>
+</tr>
+<tr>
+<td><strong>ntp peer</strong> <em><ip-address></em></td>
+<td>Used in global configuration mode to configure the software clock to synchronize a peer or to be synchronized by a peer</td>
+</tr>
+<tr>
+<td><strong>switchport port-security</strong></td>
+<td>Used in interface configuration mode to enable port security on the interface</td>
+</tr>
+<tr>
+<td><strong>switchport port-security maximum maximum</strong></td>
+<td>Used in interface configuration mode to set the maximum number of secure MAC addresses on the port</td>
+</tr>
+<tr>
+<td><strong>switchport port-security mac-address</strong> <em>{mac-addr | {sticky [mac-addr]}}</em></td>
+<td>Used in interface configuration mode to add a MAC address to the list of  secure MAC addresses. The “sticky” option configures the MAC addresses  as sticky on the interface.</td>
+</tr>
+<tr>
+<td><strong>switchport port-security violation</strong> <em>{shutdown | restrict | protect}</em></td>
+<td>Used in interface configuration mode to set the action to be taken when a security violation is detected</td>
+</tr>
+<tr>
+<td><strong>show port security</strong> <em>[interface interface-id]</em></td>
+<td>Displays information about security options configured on the interface</td>
+</tr>
+</tbody>
+</table>
+<h2 id="monitoring-and-logging-commands">Monitoring and Logging Commands</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>logging</strong> <em>ip address</em></td>
+<td>Configures the IP address of the host that will receive the system logging (syslog) messages</td>
+</tr>
+<tr>
+<td><strong>logging trap level</strong></td>
+<td>Used in configuration mode to limit messages that are logged to the syslog  servers based on severity. Specify the number or name of the desired  severity level at which messages should be logged.</td>
+</tr>
+<tr>
+<td><strong>show logging</strong></td>
+<td>Enable mode command that displays the state of system logging (syslog) and the contents of the standard system logging buffer.</td>
+</tr>
+<tr>
+<td><strong>terminal monitor</strong></td>
+<td>An enable mode command that tells Cisco IOS to send a copy of all syslog  messages, including debug messages, to the Telnet or SSH user who issues this command</td>
+</tr>
+</tbody>
+</table>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-10-06&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/fb696f3ad4e28803504924946d0942a3d6fd2c38" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) fb696f3ad4e28803504924946d0942a3d6fd2c38: cisco">
+                                <i class="fas fa-hashtag fa-fw"></i>fb696f3</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/cisco_cheatsheet/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cisco/">cisco</a>,&nbsp;<a href="/tags/networks/">networks</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/wireshark_build/" class="prev" rel="prev" title="Building Wireshark from source"><i class="fas fa-angle-left fa-fw"></i>Building Wireshark from source</a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
