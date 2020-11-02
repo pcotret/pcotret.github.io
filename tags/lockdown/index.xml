@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>lockdown - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/lockdown/</link>
+        <description>lockdown - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/lockdown/" rel="self" type="application/rss+xml" /><item>
+    <title>Lockdown setup - Working an IPEVO document camera</title>
+    <link>https://pcotret.github.io/document-camera/</link>
+    <pubDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/document-camera/</guid>
+    <description><![CDATA[As most of us, we&rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
+Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
+Software Go to https://www.ipevo.com/software/visualizer#download
+As you can see, the IPEVO visualizer is supported by several platforms:
+In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
+</item></channel>
+</rss>

@@ -3,7 +3,18 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Lockdown setup - Working an IPEVO document camera</title>
+    <link>https://pcotret.github.io/document-camera/</link>
+    <pubDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/document-camera/</guid>
+    <description><![CDATA[As most of us, we&rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
+Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
+Software Go to https://www.ipevo.com/software/visualizer#download
+As you can see, the IPEVO visualizer is supported by several platforms:
+In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
+</item><item>
     <title>Cisco cheatsheet</title>
     <link>https://pcotret.github.io/cisco_cheatsheet/</link>
     <pubDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</pubDate>
@@ -76,13 +87,5 @@ An example of buffer overflow Initial state  We have a binary without its source
     <description><![CDATA[Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
 De bas en haut :
  méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.]]></description>
-</item><item>
-    <title>Image processing</title>
-    <link>https://pcotret.github.io/image_scripts/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/image_scripts/</guid>
-    <description><![CDATA[Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
-1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.]]></description>
 </item></channel>
 </rss>
