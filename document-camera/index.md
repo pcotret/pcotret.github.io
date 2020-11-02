@@ -29,7 +29,7 @@ You can explore the toolbar on the left side to get options on the resolution, c
 
 ## Working with the Linux binary
 
-There's a DEB package for Debian-based distros. It's a bit "ugly" as it copies a JAR file in `\usr\bin\`. In other words, to run the Linux binary:
+There's a DEB package for Debian-based distros. It's a bit "ugly" as it copies a JAR file in `/usr/bin/`. In other words, to run the Linux binary:
 
 ```bash
 java -jar /usr/bin/visualizer-1.1.3.37.jar 
