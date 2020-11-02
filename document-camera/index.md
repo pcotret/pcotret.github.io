@@ -1,4 +1,4 @@
-# Lockdown setup - Working an IPEVO document camera
+# Lockdown setup - Working with an IPEVO document camera
 
 
 As most of us, we're working from home for some time. Here is a quick start guide for the [IPEVO V4K](https://www.ipevo.com/products/v4k) document camera.
