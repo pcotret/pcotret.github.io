@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://pcotret.github.io/document-camera/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/document-camera/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/cisco_cheatsheet/</loc><lastmod>2020-10-06T17:54:15&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/wireshark_build/</loc><lastmod>2020-09-20T21:55:09&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/coresight-zedboard/</loc><lastmod>2020-07-07T11:24:47&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -25,11 +25,11 @@
             <loc>https://pcotret.github.io/talks/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/xilinx_bashrc/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/yocto-zedboard-101/</loc><lastmod>2020-07-07T11:24:47&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/categories/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/tags/lockdown/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/posts/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/tags/</loc><lastmod>2020-11-02T23:45:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/categories/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/lockdown/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/posts/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/</loc><lastmod>2020-11-02T23:46:49&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/cisco/</loc><lastmod>2020-10-06T17:54:15&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/networks/</loc><lastmod>2020-10-06T17:54:15&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/wireshark/</loc><lastmod>2020-09-20T21:55:09&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

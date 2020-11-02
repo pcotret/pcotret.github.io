@@ -49,7 +49,7 @@ By default, the camera stream is horizontally flipped. Even if there's an offici
 
 ## Including the camera stream in a Discord meeting
 
-Solution is similar to Microsoft Teams. However, Discord a less buggy software for group meetings compared to Microsoft Teams. With [OBS studio](https://obsproject.com/), we can easily get a cool setup with slides, document camera and even the presenter face if needed :blush:
+Solution is similar to Microsoft Teams. However, Discord is a less buggy software on Linux for group meetings compared to Microsoft Teams. With [OBS studio](https://obsproject.com/), we can easily get a cool setup with slides, document camera and even the presenter face if needed :blush:
 
 ![img5](./img/cam-img5.jpg)
 
