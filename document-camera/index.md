@@ -25,7 +25,7 @@ Maybe the easiest solution: there's a plugin for Google Chrome at https://chrome
 
 ![img2](./img/cam-img2.jpg)
 
-You can explore the toolbar on the left side to get options on the resolution, camerat rotation and so on. You can even draw with basics color on it.
+You can explore the toolbar on the left side to get options on the resolution, camera rotation and so on. You can even draw with basics color on it.
 
 ## Working with the Linux binary
 
