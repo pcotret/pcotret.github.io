@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/image_scripts/" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta property="article:modified_time" content="2020-11-11T17:46:07+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Image processing"/>
 <meta name="twitter:description" content="Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
@@ -34,8 +34,8 @@
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "scripts","wordcount":  76 ,
-        "url": "https:\/\/pcotret.github.io\/image_scripts\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+            },"genre": "posts","keywords": "scripts","wordcount":  108 ,
+        "url": "https:\/\/pcotret.github.io\/image_scripts\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-11-11T17:46:07+01:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -122,7 +122,7 @@
                                 <i class="far fa-folder fa-fw"></i>Tech notes / Misc.
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 76 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 108 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -133,6 +133,7 @@
   <ul>
     <li><a href="#convert-an-svg-to-png-in-commande-line-using-inkscape-on-windows">Convert an SVG to PNG in commande line using Inkscape (on Windows)</a></li>
     <li><a href="#resize-an-image-with-inkscape">Resize an image with Inkscape</a></li>
+    <li><a href="#convert-a-dia-diagram-in-eps-then-pdf">Convert a Dia diagram in EPS then PDF</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="convert-an-svg-to-png-in-commande-line-using-inkscape-on-windows">Convert an SVG to PNG in commande line using Inkscape (on Windows)</h2>
@@ -174,12 +175,33 @@
 <pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="k">for</span> <span class="p">%</span><span class="k">%</span><span class="n">f</span> <span class="k">in</span> <span class="p">(*.</span><span class="n">png</span><span class="p">)</span> <span class="k">do</span> <span class="n">convert</span><span class="p">.</span><span class="n">exe</span> <span class="p">%</span><span class="k">%</span><span class="n">f</span> <span class="n">-resize</span> <span class="n">384x384</span> <span class="n">-background</span> <span class="n">black</span> <span class="n">-gravity</span> <span class="n">center</span> <span class="n">-extent</span> <span class="n">384x384</span> <span class="p">%</span><span class="k">%</span><span class="n">f</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id="convert-a-dia-diagram-in-eps-then-pdf">Convert a Dia diagram in EPS then PDF</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nv">filename</span><span class="o">=</span><span class="k">$(</span>basename -- <span class="nv">$1</span><span class="k">)</span>
+<span class="nv">extension</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nv">filename</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> <span class="nv">$filename</span>
+dia -e <span class="nv">$filename</span>.eps -t eps <span class="nv">$1</span>
+epstopdf --outfile<span class="o">=</span><span class="nv">$filename</span>.pdf <span class="nv">$filename</span>.eps
+</code></pre></td></tr></table>
+</div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
-                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+                <span>The article was updated on 2020-11-11&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/b45d65145e45ba6318d241dfd0eb8229c18d85c8" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) b45d65145e45ba6318d241dfd0eb8229c18d85c8: Script Dia =&gt; EPS =&gt; PDF">
+                                <i class="fas fa-hashtag fa-fw"></i>b45d651</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
