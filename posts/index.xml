@@ -15,13 +15,6 @@ Software Go to https://www.ipevo.com/software/visualizer#download
 As you can see, the IPEVO visualizer is supported by several platforms:
 In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
 </item><item>
-    <title>Cisco cheatsheet</title>
-    <link>https://pcotret.github.io/cisco_cheatsheet/</link>
-    <pubDate>Tue, 06 Oct 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/cisco_cheatsheet/</guid>
-    <description><![CDATA[Basic Configuration Commands    Command Purpose     enable Logs you into enable mode, which is also known as user exec mode or privileged mode   configure terminal Logs you into configuration mode   interface fastethernet/number Enters interface configuration mode for the specified fast ethernet interface   reload An exec mode command that reboots a Cisco switch or router   hostname name Sets a host name to the current Cisco network device   copy from-location to-location An enable mode command that copies files from one file location to another   copy running-config startup-config An enable mode command that saves the active config, replacing the startup config when a Cisco network device initializes   copy startup-config running-config An enable mode command that merges the startup config with the currently active config in RAM   write erase****erase startup-config An enable mode command that deletes the startup config   ip address ip-address mask Assigns an IP address and a subnet mask   shutdown****no shutdown Used in interface configuration mode.]]></description>
-</item><item>
     <title>Building Wireshark from source</title>
     <link>https://pcotret.github.io/wireshark_build/</link>
     <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
@@ -87,5 +80,13 @@ An example of buffer overflow Initial state  We have a binary without its source
     <description><![CDATA[Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
 De bas en haut :
  méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.]]></description>
+</item><item>
+    <title>Image processing</title>
+    <link>https://pcotret.github.io/image_scripts/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/image_scripts/</guid>
+    <description><![CDATA[Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
+1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.]]></description>
 </item></channel>
 </rss>
