@@ -31,13 +31,13 @@ help:
 	@grep -e "^##" Makefile;
 all:
 	pdflatex ${FILENAME}.tex
-	bibtex ${BIBNAME}
+	bibtex ${FILENAME}
 	pdflatex ${FILENAME}.tex
 	pdflatex ${FILENAME}.tex
 clean:
-	rm *.aux *.bbl *.blg *.log *.gz *.tns *.out
+	rm *.aux *.bbl *.blg *.log *.out *.snm *.toc *.vrb *.xml main-blx.bib *.nav
 clean_pdf:
-	rm *.pdf
+	rm ${FILENAME}.pdf
 clean_all: clean clean_pdf
 ```
 
