@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CTF - Category - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/categories/ctf/</link>
+        <description>CTF - Category - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+    <title>Brixel CTF</title>
+    <link>https://pcotret.github.io/brixel-ctf/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/brixel-ctf/</guid>
+    <description><![CDATA[Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
+It was quite nice with challenge in several categories.
+https://ctf.brixel.space/]]></description>
+</item><item>
+    <title>Ice CTF</title>
+    <link>https://pcotret.github.io/ice-ctf/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/ice-ctf/</guid>
+    <description><![CDATA[IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
+https://icec.tf/]]></description>
+</item></channel>
+</rss>

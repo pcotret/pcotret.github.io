@@ -3,7 +3,24 @@
         <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Brixel CTF</title>
+    <link>https://pcotret.github.io/brixel-ctf/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/brixel-ctf/</guid>
+    <description><![CDATA[Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
+It was quite nice with challenge in several categories.
+https://ctf.brixel.space/]]></description>
+</item><item>
+    <title>Ice CTF</title>
+    <link>https://pcotret.github.io/ice-ctf/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/ice-ctf/</guid>
+    <description><![CDATA[IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
+https://icec.tf/]]></description>
+</item><item>
     <title>Lockdown setup - Working with an IPEVO document camera</title>
     <link>https://pcotret.github.io/document-camera/</link>
     <pubDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</pubDate>
@@ -71,22 +88,5 @@ Wireshark captures https://wiki.wireshark.org/SampleCaptures One of them should 
     <guid>https://pcotret.github.io/buffer-overflow-raspberrypi/</guid>
     <description><![CDATA[Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
 An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.]]></description>
-</item><item>
-    <title>Comment faire des PCB avec des produits basiques</title>
-    <link>https://pcotret.github.io/pcb-maison/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/pcb-maison/</guid>
-    <description><![CDATA[Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
-De bas en haut :
- méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.]]></description>
-</item><item>
-    <title>Image processing</title>
-    <link>https://pcotret.github.io/image_scripts/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/image_scripts/</guid>
-    <description><![CDATA[Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
-1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.]]></description>
 </item></channel>
 </rss>

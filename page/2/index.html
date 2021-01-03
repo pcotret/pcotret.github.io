@@ -11,7 +11,7 @@
 <meta property="og:description" content="Pascal Cotret @ ENSTA Bretagne" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2020-11-11T17:46:07+01:00" />
+<meta property="og:updated_time" content="2021-01-03T00:00:00+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pascal Cotret @ ENSTA Bretagne"/>
 <meta name="twitter:description" content="Pascal Cotret @ ENSTA Bretagne"/>
@@ -37,7 +37,7 @@
             <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/ctf"> CTF </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw"></i>
@@ -80,7 +80,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         Cancel
                     </a>
-                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/ctf" title="">CTF</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -101,7 +101,31 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-e72061" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://www.root-me.org/Pa0x73cal" title="Root Me" target="_blank" rel="noopener noreffer me"><i class="fab fa-font-awesome-flag fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-cdaf1e" class="typeit"></div></h2><div class="social-links"><a href="Pa0x73cal" rel=" me"></a><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://gitlab.com/pcotret" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="skype:%25!%28EXTRA%20string=p.cotret%29" title="Skype" rel=" me"><i class="fab fa-skype fa-fw"></i></a><a href="mailto:prenom[dot]nom[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/arduino_reverse/">Arduino vs. embedded C - AVR reversing</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-05-01>2020-05-01</time>
+        </span>&nbsp;
+            <span class="post-category">included in<a href="/categories/articles/">
+                        <i class="far fa-folder fa-fw"></i>Articles
+                    </a></span></div><div class="content">As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.</div><div class="post-footer">
+        <a href="/arduino_reverse/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/arduino/">arduino</a>,&nbsp;<a href="/tags/embedded/">embedded</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/simulide/">Quick start guide for SimulIDE as an Arduino simulator</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-04-30>2020-04-30</time>
+        </span>&nbsp;
+            <span class="post-category">included in<a href="/categories/tech-embedded/">
+                        <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
+                    </a></span></div><div class="content">The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.</div><div class="post-footer">
+        <a href="/simulide/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/simulide/">simulide</a>,&nbsp;<a href="/tags/arduino/">arduino</a>,&nbsp;<a href="/tags/simulation/">simulation</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/aircrack-101/">Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
@@ -153,32 +177,6 @@ De bas en haut :
         <a href="/image_scripts/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/scripts/">scripts</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/fpga-env-101/">Installing a Xilinx FPGA environment for an Ubuntu-based machine</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-01-01>2020-01-01</time>
-        </span>&nbsp;
-            <span class="post-category">included in<a href="/categories/tech-hardware/">
-                        <i class="far fa-folder fa-fw"></i>Tech notes / Hardware
-                    </a></span></div><div class="content">Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.</div><div class="post-footer">
-        <a href="/fpga-env-101/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/xilinx/">xilinx</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/lattice-ubuntu/">Installing Lattice iCEcube2 FPGA tools on Ubuntu</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-01-01>2020-01-01</time>
-        </span>&nbsp;
-            <span class="post-category">included in<a href="/categories/tech-hardware/">
-                        <i class="far fa-folder fa-fw"></i>Tech notes / Hardware
-                    </a></span></div><div class="content">Lattice iCEcube2 has not been updated for a while&hellip;
-Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&rsquo;t ask me why&hellip;)
-1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!</div><div class="post-footer">
-        <a href="/lattice-ubuntu/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/lattice/">lattice</a>,&nbsp;<a href="/tags/ubuntu/">ubuntu</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -204,6 +202,6 @@ Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/poo
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-e72061":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"search":{"lunrIndexURL":"/index.json","noResultsFound":"No results found","type":"lunr"},"typeit":[["id-e72061"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-cdaf1e":"Brest, Finistère, Bretagne"},"headerMode":{"desktop":"fixed","mobile":"auto"},"search":{"lunrIndexURL":"/index.json","noResultsFound":"No results found","type":"lunr"},"typeit":[["id-cdaf1e"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
