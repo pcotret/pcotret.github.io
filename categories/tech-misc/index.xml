@@ -37,7 +37,8 @@ De bas en haut :
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/latex_tips/</guid>
-    <description><![CDATA[Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
+    <description><![CDATA[Generating random numbers in LateX The following code will generate a random number within a range for each compilation
+1 2 3 4 5  \pgfmathsetseed{\number\pdfrandomseed} \newcommand{\thecmd}[2]{ \pgfmathsetmacro{\thenum}{int(random(#1,#2))} \thenum }   Using ttfamily with bfseries in a listing Default font doesn&rsquo;t implement bold style:
 1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &#34;^##&#34; Makefile; all: pdflatex ${FILENAME}.]]></description>
 </item><item>
     <title>Marp to PDF</title>

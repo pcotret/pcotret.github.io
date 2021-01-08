@@ -1,7 +1,20 @@
 # LateX tips
 
 
+## Generating random numbers in LateX
+
+The following code will generate a random number within a range for each compilation
+
+```tex
+\pgfmathsetseed{\number\pdfrandomseed}
+\newcommand{\thecmd}[2]{ 
+	\pgfmathsetmacro{\thenum}{int(random(#1,#2))}
+	\thenum
+}
+```
+
 ## Using `ttfamily` with `bfseries` in a listing
+
 Default font doesn't implement bold style:
 ```latex
 \renewcommand{\ttdefault}{pcr}
