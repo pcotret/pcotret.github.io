@@ -5,39 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Brixel CTF - Pascal Cotret @ ENSTA Bretagne</title>
-        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Brixel CTF" />
-<meta property="og:description" content="Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
-It was quite nice with challenge in several categories.
-https://ctf.brixel.space/" />
+        <title>OWASP BWA VM settings - Pascal Cotret @ ENSTA Bretagne</title>
+        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="OWASP BWA VM settings" />
+<meta property="og:description" content="Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
+Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
+Just access the IP address in your browser and you&rsquo;re ready to go!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/brixel-ctf/" />
-<meta property="article:published_time" content="2021-01-03T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-01-03T19:56:33+01:00" />
+<meta property="og:url" content="https://pcotret.github.io/owasp-bwa/" />
+<meta property="article:published_time" content="2021-01-17T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-01-17T22:24:32+01:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Brixel CTF"/>
-<meta name="twitter:description" content="Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
-It was quite nice with challenge in several categories.
-https://ctf.brixel.space/"/>
+<meta name="twitter:title" content="OWASP BWA VM settings"/>
+<meta name="twitter:description" content="Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
+Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
+Just access the IP address in your browser and you&rsquo;re ready to go!"/>
 <meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
 <meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/brixel-ctf/" /><link rel="prev" href="https://pcotret.github.io/ice-ctf/" /><link rel="next" href="https://pcotret.github.io/owasp-bwa/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/owasp-bwa/" /><link rel="prev" href="https://pcotret.github.io/brixel-ctf/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Brixel CTF",
+        "headline": "OWASP BWA VM settings",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/pcotret.github.io\/brixel-ctf\/"
+            "@id": "https:\/\/pcotret.github.io\/owasp-bwa\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/pcotret.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "web, crypto, stegano","wordcount":  14 ,
-        "url": "https:\/\/pcotret.github.io\/brixel-ctf\/","datePublished": "2021-01-03T00:00:00+08:00","dateModified": "2021-01-03T19:56:33+01:00","publisher": {
+            },"genre": "posts","keywords": "owasp, security","wordcount":  44 ,
+        "url": "https:\/\/pcotret.github.io\/owasp-bwa\/","datePublished": "2021-01-17T00:00:00+08:00","dateModified": "2021-01-17T22:24:32+01:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -118,35 +118,66 @@ https://ctf.brixel.space/"/>
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Brixel CTF</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">OWASP BWA VM settings</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
-                    <span class="post-category">included in<a href="/categories/ctf/">
-                                <i class="far fa-folder fa-fw"></i>CTF
+                    <span class="post-category">included in<a href="/categories/tech-security/">
+                                <i class="far fa-folder fa-fw"></i>Tech notes / Security
                             </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2021-01-03>2021-01-03</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 14 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2021-01-17>2021-01-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 44 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>Brixel CTF writeups: <a href="https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020">https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020</a></p>
-<p>It was quite nice with challenge in several categories.</p>
-<p><a href="https://ctf.brixel.space/">https://ctf.brixel.space/</a></p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#network-settings">Network settings</a></li>
+    <li><a href="#vm-startup">VM startup</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Download the OWASP BWA VM: <a href="https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/">https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/</a></p>
+<h2 id="network-settings">Network settings</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/vm.png"
+        data-srcset="/img/vm.png, /img/vm.png 1.5x, /img/vm.png 2x"
+        data-sizes="auto"
+        alt="vm_settings"
+        title="vm_settings" /></p>
+<h2 id="vm-startup">VM startup</h2>
+<p>Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/vm_start.png"
+        data-srcset="/img/vm_start.png, /img/vm_start.png 1.5x, /img/vm_start.png 2x"
+        data-sizes="auto"
+        alt="vm_start"
+        title="vm_start" /></p>
+<p>Just access the IP address in your browser and you&rsquo;re ready to go!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/img/owasp.png"
+        data-srcset="/img/owasp.png, /img/owasp.png 1.5x, /img/owasp.png 2x"
+        data-sizes="auto"
+        alt="browser"
+        title="browser" /></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2021-01-03&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/bac81e94e4eeb2f2d36c7195c007e98816bb240a" target="_blank" title="commit by Pascal @ ENSTA(pascal.cotret@gmail.com) bac81e94e4eeb2f2d36c7195c007e98816bb240a: update">
-                                <i class="fas fa-hashtag fa-fw"></i>bac81e9</a></span>
+                <span>The article was updated on 2021-01-17&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a58610ca4545b7f8dc3d5e422509623ce21e7e5f" target="_blank" title="commit by Pascal @ ENSTA(pascal.cotret@gmail.com) a58610ca4545b7f8dc3d5e422509623ce21e7e5f: owasp bwa">
+                                <i class="fas fa-hashtag fa-fw"></i>a58610c</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/brixel-ctf/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/owasp-bwa/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -155,14 +186,13 @@ https://ctf.brixel.space/"/>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">web</a>,&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/stegano/">stegano</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/owasp/">owasp</a>,&nbsp;<a href="/tags/security/">security</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ice-ctf/" class="prev" rel="prev" title="Ice CTF"><i class="fas fa-angle-left fa-fw"></i>Ice CTF</a>
-            <a href="/owasp-bwa/" class="next" rel="next" title="OWASP BWA VM settings">OWASP BWA VM settings<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/brixel-ctf/" class="prev" rel="prev" title="Brixel CTF"><i class="fas fa-angle-left fa-fw"></i>Brixel CTF</a></div>
 </div>
 </article></div>
             </main></div>
