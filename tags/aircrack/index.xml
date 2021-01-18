@@ -12,6 +12,6 @@
     <description><![CDATA[Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
 1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-Wireshark captures https://wiki.wireshark.org/SampleCaptures One of them should work with a short dictionary.]]></description>
+One of them should work with a short dictionary. Find it 😉]]></description>
 </item></channel>
 </rss>
