@@ -6,11 +6,7 @@
     <description>Recent content in security on Pascal Cotret @ ENSTA Bretagne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OWASP BWA VM settings</title>
       <link>https://pcotret.github.io/owasp-bwa/</link>
@@ -28,7 +24,7 @@ Just access the IP address in your browser and you&amp;rsquo;re ready to go!</de
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
       
       <guid>https://pcotret.github.io/aircrack-101/</guid>
-      <description>Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&amp;lsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
+      <description>Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&amp;rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
 1  aircrack-ng -w &amp;lt;wordlist&amp;gt; &amp;lt;wireshark_file&amp;gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
 One of them should work with a short dictionary. Find it 😉</description>

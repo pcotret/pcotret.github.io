@@ -6,11 +6,7 @@
     <description>Recent content in yocto on Pascal Cotret @ ENSTA Bretagne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/yocto/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/yocto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
       <link>https://pcotret.github.io/coresight-zedboard/</link>

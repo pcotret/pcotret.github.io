@@ -6,11 +6,7 @@
     <description>Recent content in gns3 on Pascal Cotret @ ENSTA Bretagne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://pcotret.github.io/tags/gns3/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/gns3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My first topology</title>
       <link>https://pcotret.github.io/first_topology/</link>

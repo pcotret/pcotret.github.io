@@ -5,11 +5,7 @@
     <link>https://pcotret.github.io/categories/ctf/</link>
     <description>Recent content in CTF on Pascal Cotret @ ENSTA Bretagne</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://pcotret.github.io/categories/ctf/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://pcotret.github.io/categories/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brixel CTF</title>
       <link>https://pcotret.github.io/brixel-ctf/</link>
