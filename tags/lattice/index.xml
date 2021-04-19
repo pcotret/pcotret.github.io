@@ -1,16 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>lattice - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/lattice/</link>
-        <description>lattice - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/lattice/" rel="self" type="application/rss+xml" /><item>
-    <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
-    <link>https://pcotret.github.io/lattice-ubuntu/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
-    <description><![CDATA[Lattice iCEcube2 has not been updated for a while&hellip;
-Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&rsquo;t ask me why&hellip;)
-1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lattice on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/lattice/</link>
+    <description>Recent content in lattice on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pcotret.github.io/tags/lattice/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
+      <link>https://pcotret.github.io/lattice-ubuntu/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
+      <description>Lattice iCEcube2 has not been updated for a while&amp;hellip;
+Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&amp;rsquo;t ask me why&amp;hellip;)
+1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!</description>
+    </item>
+    
+  </channel>
 </rss>

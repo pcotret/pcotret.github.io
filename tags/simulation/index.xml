@@ -1,27 +1,39 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>simulation - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/simulation/</link>
-        <description>simulation - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/simulation/" rel="self" type="application/rss+xml" /><item>
-    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
-    <link>https://pcotret.github.io/simulide/</link>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/simulide/</guid>
-    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
-</item><item>
-    <title>My first topology</title>
-    <link>https://pcotret.github.io/first_topology/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/first_topology/</guid>
-    <description><![CDATA[Mainly based on an official tutorial (link).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>simulation on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/simulation/</link>
+    <description>Recent content in simulation on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pcotret.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+      <link>https://pcotret.github.io/simulide/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/simulide/</guid>
+      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.</description>
+    </item>
+    
+    <item>
+      <title>My first topology</title>
+      <link>https://pcotret.github.io/first_topology/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/first_topology/</guid>
+      <description>Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+ Topology creation Take two c7200 routers and add them to the schematic by a &amp;ldquo;drag and drop&amp;rdquo;.
 We can see our two routers:
-Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.]]></description>
-</item></channel>
+Use the link icon in order to&amp;hellip; &amp;hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.</description>
+    </item>
+    
+  </channel>
 </rss>

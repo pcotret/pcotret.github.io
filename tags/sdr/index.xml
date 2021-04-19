@@ -1,14 +1,24 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>sdr - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/sdr/</link>
-        <description>sdr - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/sdr/" rel="self" type="application/rss+xml" /><item>
-    <title>OrangePi4SDR</title>
-    <link>https://pcotret.github.io/orangepi4sdr/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/orangepi4sdr/</guid>
-    <description><![CDATA[The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sdr on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/sdr/</link>
+    <description>Recent content in sdr on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pcotret.github.io/tags/sdr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OrangePi4SDR</title>
+      <link>https://pcotret.github.io/orangepi4sdr/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/orangepi4sdr/</guid>
+      <description>The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www.</description>
+    </item>
+    
+  </channel>
 </rss>

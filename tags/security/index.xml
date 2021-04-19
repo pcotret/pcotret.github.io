@@ -1,26 +1,38 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>security - Tag - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/tags/security/</link>
-        <description>security - Tag - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/security/" rel="self" type="application/rss+xml" /><item>
-    <title>OWASP BWA VM settings</title>
-    <link>https://pcotret.github.io/owasp-bwa/</link>
-    <pubDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/owasp-bwa/</guid>
-    <description><![CDATA[Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Pascal Cotret @ ENSTA Bretagne</title>
+    <link>https://pcotret.github.io/tags/security/</link>
+    <description>Recent content in security on Pascal Cotret @ ENSTA Bretagne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://pcotret.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OWASP BWA VM settings</title>
+      <link>https://pcotret.github.io/owasp-bwa/</link>
+      <pubDate>Sun, 17 Jan 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/owasp-bwa/</guid>
+      <description>Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
 Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
-Just access the IP address in your browser and you&rsquo;re ready to go!]]></description>
-</item><item>
-    <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
-    <link>https://pcotret.github.io/aircrack-101/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/aircrack-101/</guid>
-    <description><![CDATA[Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
+Just access the IP address in your browser and you&amp;rsquo;re ready to go!</description>
+    </item>
+    
+    <item>
+      <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
+      <link>https://pcotret.github.io/aircrack-101/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://pcotret.github.io/aircrack-101/</guid>
+      <description>Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&amp;lsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
-1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-One of them should work with a short dictionary. Find it 😉]]></description>
-</item></channel>
+1  aircrack-ng -w &amp;lt;wordlist&amp;gt; &amp;lt;wireshark_file&amp;gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
+One of them should work with a short dictionary. Find it 😉</description>
+    </item>
+    
+  </channel>
 </rss>
