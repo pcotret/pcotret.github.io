@@ -15,7 +15,7 @@ Go to https://www.ipevo.com/software/visualizer#download
 
 As you can see, the IPEVO visualizer is supported by several platforms:
 
-![img1](./img/cam-img1.jpg)
+![img1](../img/cam-img1.jpg)
 
 In the following parts, we'll try to work with the Linux binary and the Chrome plugin
 
@@ -23,7 +23,7 @@ In the following parts, we'll try to work with the Linux binary and the Chrome p
 
 Maybe the easiest solution: there's a plugin for Google Chrome at https://chrome.google.com/webstore/detail/ipevo-visualizer/knibbpmgfkaginjkddpmmpcnknegecok
 
-![img2](./img/cam-img2.jpg)
+![img2](../img/cam-img2.jpg)
 
 You can explore the toolbar on the left side to get options on the resolution, camera rotation and so on. You can even draw with basics color on it.
 
@@ -41,21 +41,21 @@ The interface is similar to the Google Chrome plugin. Some additional options fo
 
 https://s3-us-west-1.amazonaws.com/files.ipevo.com/download/doc/step_by_step_guide-microsoft_teams.pdf
 
-![img3](./img/cam-img3.jpg)
+![img3](../img/cam-img3.jpg)
 
 By default, the camera stream is horizontally flipped. Even if there's an official guide from Ipevo, the only solution is to share the camera software as there's no option to flip the camera in Microsoft Teams... 
 
-![img4](./img/cam-img4.jpg)
+![img4](../img/cam-img4.jpg)
 
 ## Including the camera stream in a Discord meeting
 
 Solution is similar to Microsoft Teams. However, Discord is a less buggy software on Linux for group meetings compared to Microsoft Teams. With [OBS studio](https://obsproject.com/), we can easily get a cool setup with slides, document camera and even the presenter face if needed :blush:
 
-![img5](./img/cam-img5.jpg)
+![img5](../img/cam-img5.jpg)
 
 Lockdown setup with the document camera on the right side over a book and a cutting mat:
 
-![img6](./img/cam-img6.jpg)
+![img6](../img/cam-img6.jpg)
 
 ## References
 

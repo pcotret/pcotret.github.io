@@ -27,11 +27,11 @@ The idea is to create a custom kernel where the support of Coresight components 
 bitbake linux-xlnx-dev -c menuconfig
 ```
 
-![menu](./img/menu.png)
+![menu](../img/menu.png)
 
 Go to `Kernel hacking => CoreSight Tracing Support` and enable the components you need (everything is enabled here). Then, save and exit.
 
-![menu-coresight](./img/menu-coresight.png)
+![menu-coresight](../img/menu-coresight.png)
 
 ```bash
 bitbake linux-xlnx-dev -c compile -f

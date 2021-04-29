@@ -10,7 +10,7 @@
 
 ## Sample program
 
-![](./img/arduino_blink.jpg)
+![](../img/arduino_blink.jpg)
 
 We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.
 
@@ -123,11 +123,11 @@ At first sight, it's clearly easier. Step-by-step instruction decoding:
 
 **ldi r24, 0x20:** according to the AVR ISA [1], `ldi` load the value `0x20` in `r24` which is a General Purpose Working Register of the Arduino.
 
-![registers](./img/registers.jpg)
+![registers](../img/registers.jpg)
 
 **out 0x04, r24:** this instruction write the value stored in `r24` at the address `0x04` (the address of `DDRB` according to [2]). `0x20=0b100000`: `DDRB5` is set to 1 :wink:
 
-![mapping](./img/mapping.jpg)
+![mapping](../img/mapping.jpg)
 
 **out 0x05, r24:** same thing, for `PORTB`.
 

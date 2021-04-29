@@ -6,7 +6,7 @@
 
 ## Sample program
 
-![](./img/arduino-due.jpg)
+![](../img/arduino-due.jpg)
 
 We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
 
@@ -109,7 +109,7 @@ Here is a part of the Arduino objdump. The assembly code is really long for such
 74 }
 ```
 
-![mapping](./img/mapping-sam3x.jpg)
+![mapping](../img/mapping-sam3x.jpg)
 
 At first sight, it's clearly easier. Step-by-step instruction decoding using mainly [2] and [6]:
 
@@ -119,7 +119,7 @@ At first sight, it's clearly easier. Step-by-step instruction decoding using mai
 - **mov.w	r2, #4294967295**. Move the immediate value `4294967295` in register 2. `4294967295` = `0xFFFFFFFF` (hex). In this case, we put all bits to **1**. It doesn't really matter as only the 27th has been enabled :wink:
 - **str	r2, [r3, #56]**. Store the value of `r2` in `r3` with offset=56 (or `0x38` in hexadecimal). According to the register mapping: `PIO_ODSR` is at the offset `0x0038`.
 
-![sam3x](./img/registers-sam3x.jpg)
+![sam3x](../img/registers-sam3x.jpg)
 
 ## Conclusion
 

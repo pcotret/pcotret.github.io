@@ -40,19 +40,19 @@ Once this step is done, disconnect and reconnect your µSD card. You should see 
 
 Your µSD card is ready to boot on the OrangePiMini2 !
 
-![opi](./img/opi-img1.jpg)
+![opi](../img/opi-img1.jpg)
 
 ## First boot
 
 At first power-up, when asked for login/password, just use `orangepi`/`orangepi` (be careful, it is configured with a QWERTY keyboard layout by default). You should see a terminal like this:
 
-![opi](./img/opi-img2.jpg)
+![opi](../img/opi-img2.jpg)
 
 ### Disk resize
 
 The first step is to resize partitions to fit the maximum capacity of your µSD card. OrangePi already prepared a tool. Type `sudo fs_resize`:
 
-![opi](./img/opi-img2.jpg)
+![opi](../img/opi-img2.jpg)
 
 Then, reboot using `sudo reboot`.
 
@@ -60,12 +60,12 @@ Then, reboot using `sudo reboot`.
 
 As this is a minimal Debian image, it does not come with a GUI but you can install whatever you want. In this tutorial, LXDE has been chosen for installation. Thanks to OrangePi, there are already some scripts to install some GUIs such as LXDE, XFCE or Mate (a Gnome2 fork).
 
-![opi](./img/opi-img4.jpg)
+![opi](../img/opi-img4.jpg)
 
 - Type `cd /usr/local/bin`.
 - Type `sudo install_lxde_desktop` and wait a few minutes...
 
-![opi](./img/opi-img5.jpg)
+![opi](../img/opi-img5.jpg)
 
 Reboot one last time...
 
@@ -73,7 +73,7 @@ Reboot one last time...
 
 Tada ! After the login screen (still `orangepi`/`orangepi`), you get a fully functional desktop: you can install whatever you want. In the above figure, the goal was to install GQRX, Gnuradio and some other tools: it run quite smoothly ! (especially compared to RaspberryPis).
 
-![opi](./img/opi-img6.jpg)
+![opi](../img/opi-img6.jpg)
 
 In this configuration, following binaries were installed:
 
@@ -86,4 +86,3 @@ sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr* hackrf gpredict gq
 1. Orangepi website. http://www.orangepi.org/.
 2. [Orangepimini2](http://www.orangepi.org/orangepimini2/). 
 3. [5v/2a power supply](https://www.amazon.fr/Alimentation-Chargeur-secteur-Adaptateur-switcher/dp/B00P0XXYJG/ref=sr_1_3?ie=UTF8&qid=1447018191&sr=8-3&keywords=5v+2A).
-
