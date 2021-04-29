@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Arduino vs. embedded C - AVR reversing - Pascal Cotret @ ENSTA Bretagne</title>
-        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Arduino vs. embedded C - AVR reversing" />
+        <title>Arduino vs. embedded C - AVR reversing - Pascal Cotret @ ENSTA Bretagne</title><meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Arduino vs. embedded C - AVR reversing" />
 <meta property="og:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
  Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/arduino_reverse/" />
-<meta property="article:published_time" content="2020-05-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:26:24+02:00" />
+<meta property="og:url" content="https://pcotret.github.io/arduino_reverse/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-05-01T00:00:00&#43;08:00" />
+<meta property="article:modified_time" content="2021-04-19T15:58:14&#43;02:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arduino vs. embedded C - AVR reversing"/>
 <meta name="twitter:description" content="As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
@@ -29,28 +29,16 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/arduino_reverse\/"
-        },"image": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/cover.png",
-                "width":  800 ,
-                "height":  600 
-            },"genre": "posts","keywords": "arduino, embedded","wordcount":  679 ,
-        "url": "https:\/\/pcotret.github.io\/arduino_reverse\/","datePublished": "2020-05-01T00:00:00+08:00","dateModified": "2020-05-02T00:26:24+02:00","publisher": {
-                "@type": "Organization",
-                "name": "xxxx",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/logo.png",
-                "width":  127 ,
-                "height":  40 
-                }
-            },"author": {
+        },"genre": "posts","keywords": "arduino, embedded","wordcount":  683 ,
+        "url": "https:\/\/pcotret.github.io\/arduino_reverse\/","datePublished": "2020-05-01T00:00:00+08:00","dateModified": "2021-04-19T15:58:14+02:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
                 "@type": "Person",
                 "name": "Pascal"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -117,14 +105,10 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Arduino vs. embedded C - AVR reversing</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
-                    <span class="post-category">included in<a href="/categories/articles/">
-                                <i class="far fa-folder fa-fw"></i>Articles
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-01>2020-05-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 679 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>4 min&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-05-01">2020-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;683 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -162,12 +146,12 @@
 <h2 id="sample-program">Sample program</h2>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/arduino_blink.jpg"
-        data-srcset="/img/arduino_blink.jpg, /img/arduino_blink.jpg 1.5x, /img/arduino_blink.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/arduino_blink.jpg"
+        data-srcset="./img/arduino_blink.jpg, ./img/arduino_blink.jpg 1.5x, ./img/arduino_blink.jpg 2x"
         data-sizes="auto"
-        alt="/img/arduino_blink.jpg"
-        title="/img/arduino_blink.jpg" /></p>
+        alt="./img/arduino_blink.jpg"
+        title="./img/arduino_blink.jpg" /></p>
 <p>We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.</p>
 <h3 id="arduino">Arduino</h3>
 <div class="highlight"><div class="chroma">
@@ -234,8 +218,8 @@ total <span class="m">4</span>
 ./led-embedded:
 total <span class="m">4</span>
 -rw-r--r-- <span class="m">1</span> pascal pascal <span class="m">81</span> mai    <span class="m">1</span> 13:00 led-embedded.ino
-$ arduino-cli compile --fqbn arduino:avr:uno led-arduino
-$ arduino-cli compile --fqbn arduino:avr:uno led-embedded
+$ arduino-cli compile --fqbn arduino:avr:uno --output-dir led-arduino led-arduino
+$ arduino-cli compile --fqbn arduino:avr:uno --output-dir led-embedded led-embedded
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="binary-comparison">Binary comparison</h2>
@@ -264,8 +248,8 @@ $ arduino-cli compile --fqbn arduino:avr:uno led-embedded
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ avr-objdump -S led-arduino/led-arduino.arduino.avr.uno.elf &gt; led-arduino.asm
-$ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded.asm
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ avr-objdump -S led-arduino/led-arduino.ino.elf &gt; led-arduino.asm
+$ avr-objdump -S led-embedded/led-embedded.ino.elf &gt; led-embedded.asm
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="arduino-binary">Arduino binary</h3>
@@ -360,20 +344,20 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
 <p><strong>ldi r24, 0x20:</strong> according to the AVR ISA [1], <code>ldi</code> load the value <code>0x20</code> in <code>r24</code> which is a General Purpose Working Register of the Arduino.</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/registers.jpg"
-        data-srcset="/img/registers.jpg, /img/registers.jpg 1.5x, /img/registers.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/registers.jpg"
+        data-srcset="./img/registers.jpg, ./img/registers.jpg 1.5x, ./img/registers.jpg 2x"
         data-sizes="auto"
-        alt="registers"
+        alt="./img/registers.jpg"
         title="registers" /></p>
 <p><strong>out 0x04, r24:</strong> this instruction write the value stored in <code>r24</code> at the address <code>0x04</code> (the address of <code>DDRB</code> according to [2]). <code>0x20=0b100000</code>: <code>DDRB5</code> is set to 1 😉</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/mapping.jpg"
-        data-srcset="/img/mapping.jpg, /img/mapping.jpg 1.5x, /img/mapping.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/mapping.jpg"
+        data-srcset="./img/mapping.jpg, ./img/mapping.jpg 1.5x, ./img/mapping.jpg 2x"
         data-sizes="auto"
-        alt="mapping"
+        alt="./img/mapping.jpg"
         title="mapping" /></p>
 <p><strong>out 0x05, r24:</strong> same thing, for <code>PORTB</code>.</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -387,8 +371,8 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/57135ec48ec314606a58cd8489da9ad620071f1f" target="_blank" title="commit by Pascal(pascal@ensta-laptop) 57135ec48ec314606a58cd8489da9ad620071f1f: update">
-                                <i class="fas fa-hashtag fa-fw"></i>57135ec</a></span>
+                <span>Updated on 2021-04-19&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/10832e94231432fe73613c90e238fdbf486130bb" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 10832e94231432fe73613c90e238fdbf486130bb: update for recent arduino-cli">
+                                    <i class="fas fa-hashtag fa-fw"></i>10832e9</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -420,7 +404,5 @@ $ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf &gt; led-embedded
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"lunrIndexURL":"/index.json","noResultsFound":"No results found","type":"lunr"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

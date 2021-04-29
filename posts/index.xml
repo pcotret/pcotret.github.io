@@ -1,278 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/posts/</link>
-    <description>Recent content in Posts on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OWASP BWA VM settings</title>
-      <link>https://pcotret.github.io/owasp-bwa/</link>
-      <pubDate>Sun, 17 Jan 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/owasp-bwa/</guid>
-      <description>Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/posts/</link>
+        <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>OWASP BWA VM settings</title>
+    <link>https://pcotret.github.io/owasp-bwa/</link>
+    <pubDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/owasp-bwa/</guid>
+    <description><![CDATA[Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
 Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
-Just access the IP address in your browser and you&amp;rsquo;re ready to go!</description>
-    </item>
-    
-    <item>
-      <title>Brixel CTF</title>
-      <link>https://pcotret.github.io/brixel-ctf/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/brixel-ctf/</guid>
-      <description>Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
+Just access the IP address in your browser and you&rsquo;re ready to go!]]></description>
+</item><item>
+    <title>Brixel CTF</title>
+    <link>https://pcotret.github.io/brixel-ctf/</link>
+    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/brixel-ctf/</guid>
+    <description><![CDATA[Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
 It was quite nice with challenge in several categories.
-https://ctf.brixel.space/</description>
-    </item>
-    
-    <item>
-      <title>Ice CTF</title>
-      <link>https://pcotret.github.io/ice-ctf/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/ice-ctf/</guid>
-      <description>IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
-https://icec.tf/</description>
-    </item>
-    
-    <item>
-      <title>Lockdown setup - Working with an IPEVO document camera</title>
-      <link>https://pcotret.github.io/document-camera/</link>
-      <pubDate>Mon, 02 Nov 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/document-camera/</guid>
-      <description>As most of us, we&amp;rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
-Installation Hardware The camera itself is a plug-and-play device: it&amp;rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
+https://ctf.brixel.space/]]></description>
+</item><item>
+    <title>Ice CTF</title>
+    <link>https://pcotret.github.io/ice-ctf/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/ice-ctf/</guid>
+    <description><![CDATA[IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
+https://icec.tf/]]></description>
+</item><item>
+    <title>Lockdown setup - Working with an IPEVO document camera</title>
+    <link>https://pcotret.github.io/document-camera/</link>
+    <pubDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/document-camera/</guid>
+    <description><![CDATA[As most of us, we&rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
+Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
 Software Go to https://www.ipevo.com/software/visualizer#download
 As you can see, the IPEVO visualizer is supported by several platforms:
-In the following parts, we&amp;rsquo;ll try to work with the Linux binary and the Chrome plugin</description>
-    </item>
-    
-    <item>
-      <title>Building Wireshark from source</title>
-      <link>https://pcotret.github.io/wireshark_build/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/wireshark_build/</guid>
-      <description>Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   </description>
-    </item>
-    
-    <item>
-      <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
-      <link>https://pcotret.github.io/coresight-zedboard/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/coresight-zedboard/</guid>
-      <description>Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​</description>
-    </item>
-    
-    <item>
-      <title>Arduino Due vs. embedded C - ARM reversing</title>
-      <link>https://pcotret.github.io/arduino_due_reverse/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/arduino_due_reverse/</guid>
-      <description>arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
-Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&amp;gt;PIO_PER = 1&amp;lt;&amp;lt;27; /* Enable port PB27 */ PIOB-&amp;gt;PIO_OER = 1&amp;lt;&amp;lt;27; /* Configure PB27 as output */ PIOB-&amp;gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR .</description>
-    </item>
-    
-    <item>
-      <title>Arduino vs. embedded C - AVR reversing</title>
-      <link>https://pcotret.github.io/arduino_reverse/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/arduino_reverse/</guid>
-      <description>As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.</description>
-    </item>
-    
-    <item>
-      <title>Quick start guide for SimulIDE as an Arduino simulator</title>
-      <link>https://pcotret.github.io/simulide/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/simulide/</guid>
-      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.</description>
-    </item>
-    
-    <item>
-      <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
-      <link>https://pcotret.github.io/aircrack-101/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/aircrack-101/</guid>
-      <description>Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&amp;rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
+In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
+</item><item>
+    <title>Building Wireshark from source</title>
+    <link>https://pcotret.github.io/wireshark_build/</link>
+    <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/wireshark_build/</guid>
+    <description><![CDATA[Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   ]]></description>
+</item><item>
+    <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
+    <link>https://pcotret.github.io/coresight-zedboard/</link>
+    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
+    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
+1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
+</item><item>
+    <title>Arduino Due vs. embedded C - ARM reversing</title>
+    <link>https://pcotret.github.io/arduino_due_reverse/</link>
+    <pubDate>Sun, 03 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/arduino_due_reverse/</guid>
+    <description><![CDATA[arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
+Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR .]]></description>
+</item><item>
+    <title>Arduino vs. embedded C - AVR reversing</title>
+    <link>https://pcotret.github.io/arduino_reverse/</link>
+    <pubDate>Fri, 01 May 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/arduino_reverse/</guid>
+    <description><![CDATA[As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
+ Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.]]></description>
+</item><item>
+    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+    <link>https://pcotret.github.io/simulide/</link>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/simulide/</guid>
+    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
+</item><item>
+    <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
+    <link>https://pcotret.github.io/aircrack-101/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/aircrack-101/</guid>
+    <description><![CDATA[Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
-1  aircrack-ng -w &amp;lt;wordlist&amp;gt; &amp;lt;wireshark_file&amp;gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-One of them should work with a short dictionary. Find it 😉</description>
-    </item>
-    
-    <item>
-      <title>Buffer overflow on ARM architecture</title>
-      <link>https://pcotret.github.io/buffer-overflow-raspberrypi/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/buffer-overflow-raspberrypi/</guid>
-      <description>Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
-An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&amp;rsquo;s interesting stuff or even dead code in it.</description>
-    </item>
-    
-    <item>
-      <title>Comment faire des PCB avec des produits basiques</title>
-      <link>https://pcotret.github.io/pcb-maison/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/pcb-maison/</guid>
-      <description>Update 03/2018 : autre technique dans le labo d&amp;rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
-De bas en haut :
- méthode de l&amp;rsquo;imprimante laser mais trop chauffé méthode de l&amp;rsquo;imprimante laser mais mal décollé méthode de l&amp;rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &amp;ldquo;industrielle&amp;rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&amp;rsquo;acide. Je testerai avec du verni à ongle pour voir&amp;hellip; masque réalisé au marqueur indélébile  Méthode de l&amp;rsquo;imprimante laser : on imprime sur du papier le typon qu&amp;rsquo;on souhaite réaliser.</description>
-    </item>
-    
-    <item>
-      <title>Image processing</title>
-      <link>https://pcotret.github.io/image_scripts/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/image_scripts/</guid>
-      <description>Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
-1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &amp;#34;C:\Program Files\Inkscape\inkscape.exe&amp;#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&amp;#34;%%~dpnf.png&amp;#34; ^  --file=&amp;#34;%%~f&amp;#34; )   Resize an image with Inkscape 1  for %%f in (*.</description>
-    </item>
-    
-    <item>
-      <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
-      <link>https://pcotret.github.io/fpga-env-101/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/fpga-env-101/</guid>
-      <description>Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&amp;rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.</description>
-    </item>
-    
-    <item>
-      <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
-      <link>https://pcotret.github.io/lattice-ubuntu/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/lattice-ubuntu/</guid>
-      <description>Lattice iCEcube2 has not been updated for a while&amp;hellip;
-Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb   Going through the interface issue Lattice iCEcube2 license takes into account the MAC address of the computer. In order to work, the interface must be labeled as eth0 as stated on the TinyFPGA forum (don&amp;rsquo;t ask me why&amp;hellip;)
-1 2  $ sudo ip link add eth0 type dummy $ sudo ip link set eth0 address 10:65:30:ee:48:9a   Now, iCEcube2 should work!</description>
-    </item>
-    
-    <item>
-      <title>LateX tips</title>
-      <link>https://pcotret.github.io/latex_tips/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/latex_tips/</guid>
-      <description>Generating random numbers in LateX The following code will generate a random number within a range for each compilation
-1 2 3 4 5  \pgfmathsetseed{\number\pdfrandomseed} \newcommand{\thecmd}[2]{ \pgfmathsetmacro{\thenum}{int(random(#1,#2))} \thenum }   Using ttfamily with bfseries in a listing Default font doesn&amp;rsquo;t implement bold style:
-1 2 3 4  \renewcommand{\ttdefault}{pcr} \begin{lstlisting}[basicstyle=\ttfamily\bfseries] y:=2 \end{lstlisting}   Makefile to compile a LateX project 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  ## Here is a simple Makefile for a basic LaTeX flow with a bibliography ## make help: ## print this menu ## make all: ## compile the stuff ## make clean: ## remove temporary files ## make clean_pdf: ## remove the output PDF file ## make clean_all: ## remove EVERYTHING # Variables FILENAME=mainfile BIBNAME=mainfile help: @grep -e &amp;#34;^##&amp;#34; Makefile; all: pdflatex ${FILENAME}.</description>
-    </item>
-    
-    <item>
-      <title>Marp to PDF</title>
-      <link>https://pcotret.github.io/marp-to-pdf/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/marp-to-pdf/</guid>
-      <description>Here is a way to convert Marp slides in PDF with emojis:
-1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  </description>
-    </item>
-    
-    <item>
-      <title>Memory alignment</title>
-      <link>https://pcotret.github.io/memory-alignment/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/memory-alignment/</guid>
-      <description>This note was inspired by a work of Samuele Giraudo (LIGM, Université Paris-Est Marne-la-Vallée)
-http://igm.univ-mlv.fr/~giraudo/Enseignements/
-Memory alignment https://en.wikipedia.org/wiki/Data_structure_alignment
-Memory alignment of a given data is the way this data is organized in the memory. For instance, an array of n elements of type T is organized as a continuous array of sizeof(T) * n bytes.
-How does memory alignment work for variables of a structured type? Let&amp;rsquo;s find out 😊</description>
-    </item>
-    
-    <item>
-      <title>My first topology</title>
-      <link>https://pcotret.github.io/first_topology/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/first_topology/</guid>
-      <description>Mainly based on an official tutorial (link).
-A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
-In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &amp;ldquo;drag and drop&amp;rdquo;.
-We can see our two routers:
-Use the link icon in order to&amp;hellip; &amp;hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.</description>
-    </item>
-    
-    <item>
-      <title>OrangePi4SDR</title>
-      <link>https://pcotret.github.io/orangepi4sdr/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/orangepi4sdr/</guid>
-      <description>The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www.</description>
-    </item>
-    
-    <item>
-      <title>Register windows in SPARC</title>
-      <link>https://pcotret.github.io/sparc_window_registers/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/sparc_window_registers/</guid>
-      <description>128 registers available in SPARC. Each window is divided in 3 areas:  8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07)    1 2 3 4 5 6 7  input // Function F1 local output	input // Save instruction (F2 called in F1) 	local output	input // Save instruction (F3 called in F2) 	local output   As you can see, each time a function is called in another, the registers window &amp;ldquo;slides&amp;rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.</description>
-    </item>
-    
-    <item>
-      <title>Running Modelsim on a 64-bit Ubuntu</title>
-      <link>https://pcotret.github.io/modelsim-ubuntu/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/modelsim-ubuntu/</guid>
-      <description>Install Modelsim on a 64-bit (x)Ubuntu 1 2  wget http://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_installers/ModelSimSetup-13.1.0.162.run chmod +x ModelSimSetup-13.1.0.162.run   However, the free version of Modelsim Altera Edition is 32-bit only. We need to install some dependencies:
-1 2 3 4  sudo dpkg --add-architecture i386 sudo apt-get update sudo apt-get install build-essential sudo apt-get install gcc-multilib g++-multilib lib32z1 lib32stdc++6 lib32gcc1 expat:i386 fontconfig:i386 libfreetype6:i386 libexpat1:i386 libc6:i386 libgtk-3-0:i386 libcanberra0:i386 libpng16-16:i386 libice6:i386 libsm6:i386 libncurses5:i386 zlib1g:i386 libx11-6:i386 libxau6:i386 libxdmcp6:i386 libxext6:i386 libxft2:i386 libxrender1:i386 libxt6:i386 libxtst6:i386   Next, we need to build a free version of FreeType:</description>
-    </item>
-    
-    <item>
-      <title>Talks</title>
-      <link>https://pcotret.github.io/talks/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/talks/</guid>
-      <description>DevFest Bout du Monde - 28/02/2020  How to describe hardware code in Python down to the processor. Quick note about the license mess in the embedded world (in 🇫🇷). Con website and slides.
- Toulouse Hacking Convention - 09/03/2018  Results of a research project (link). Con website and slides.
- </description>
-    </item>
-    
-    <item>
-      <title>Xilinx settings in `~/.bashrc`</title>
-      <link>https://pcotret.github.io/xilinx_bashrc/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
-      <description>Just because I&amp;rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
-Requirements  Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic  These lines have to be added at the end of your ~/.</description>
-    </item>
-    
-    <item>
-      <title>Yocto on the Zedboard 101</title>
-      <link>https://pcotret.github.io/yocto-zedboard-101/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/yocto-zedboard-101/</guid>
-      <description>1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
- Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
- An image is a collection of baked recipes (packages) A &amp;lsquo;recipe&amp;rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1.</description>
-    </item>
-    
-  </channel>
+1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
+One of them should work with a short dictionary. Find it 😉]]></description>
+</item></channel>
 </rss>

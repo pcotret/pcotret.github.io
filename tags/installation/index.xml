@@ -1,22 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>installation on Pascal Cotret @ ENSTA Bretagne</title>
-    <link>https://pcotret.github.io/tags/installation/</link>
-    <description>Recent content in installation on Pascal Cotret @ ENSTA Bretagne</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Talks</title>
-      <link>https://pcotret.github.io/talks/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://pcotret.github.io/talks/</guid>
-      <description>DevFest Bout du Monde - 28/02/2020  How to describe hardware code in Python down to the processor. Quick note about the license mess in the embedded world (in 🇫🇷). Con website and slides.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>installation - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/installation/</link>
+        <description>installation - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/installation/" rel="self" type="application/rss+xml" /><item>
+    <title>Talks</title>
+    <link>https://pcotret.github.io/talks/</link>
+    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/talks/</guid>
+    <description><![CDATA[DevFest Bout du Monde - 28/02/2020  How to describe hardware code in Python down to the processor. Quick note about the license mess in the embedded world (in 🇫🇷). Con website and slides.
  Toulouse Hacking Convention - 09/03/2018  Results of a research project (link). Con website and slides.
- </description>
-    </item>
-    
-  </channel>
+ ]]></description>
+</item></channel>
 </rss>

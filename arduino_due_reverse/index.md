@@ -43,8 +43,8 @@ total 4
 ./led-embedded:
 total 4
 -rw-r--r-- 1 pascal pascal 81 mai    1 13:00 led-embedded.ino
-$ arduino-cli compile --fqbn arduino:sam:arduino_due_x led-arduino
-$ arduino-cli compile --fqbn arduino:sam:arduino_due_x led-embedded
+$ arduino-cli compile --fqbn arduino:sam:arduino_due_x --output-dir led-arduino led-arduino
+$ arduino-cli compile --fqbn arduino:sam:arduino_due_x --output-dir led-embedded led-embedded
 ```
 
 ## Binary comparison
@@ -60,8 +60,8 @@ The embedded C code is 5 times smaller than the Arduino one which is  a bit "wei
 ## Reversing binaries
 
 ```bash
-$ arm-none-eabi-objdump -S led-arduino/led-arduino.arduino.sam.arduino_due_x.elf > led-arduino.asm
-$ arm-none-eabi-objdump -S led-embedded/led-embedded.arduino.sam.arduino_due_x.elf > led-embedded.asm
+$ arm-none-eabi-objdump -S led-arduino/led-arduino.ino.elf > led-arduino.asm
+$ arm-none-eabi-objdump -S led-embedded/led-embedded.ino.elf > led-embedded.asm
 ```
 
 ### Arduino binary

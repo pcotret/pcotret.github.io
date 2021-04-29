@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>OrangePi4SDR - Pascal Cotret @ ENSTA Bretagne</title>
-        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="OrangePi4SDR" />
+        <title>OrangePi4SDR - Pascal Cotret @ ENSTA Bretagne</title><meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="OrangePi4SDR" />
 <meta property="og:description" content="The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB&#43; and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/orangepi4sdr/" />
-<meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta property="og:url" content="https://pcotret.github.io/orangepi4sdr/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-01T00:00:00&#43;08:00" />
+<meta property="article:modified_time" content="2020-05-02T00:10:21&#43;02:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="OrangePi4SDR"/>
 <meta name="twitter:description" content="The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB&#43; and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www."/>
@@ -27,28 +27,16 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/orangepi4sdr\/"
-        },"image": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/cover.png",
-                "width":  800 ,
-                "height":  600 
-            },"genre": "posts","keywords": "sdr, orangepi","wordcount":  592 ,
+        },"genre": "posts","keywords": "sdr, orangepi","wordcount":  592 ,
         "url": "https:\/\/pcotret.github.io\/orangepi4sdr\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
-                "@type": "Organization",
-                "name": "xxxx",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/logo.png",
-                "width":  127 ,
-                "height":  40 
-                }
-            },"author": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
                 "@type": "Person",
                 "name": "Pascal"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -115,14 +103,10 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">OrangePi4SDR</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
-                    <span class="post-category">included in<a href="/categories/tech-embedded/">
-                                <i class="far fa-folder fa-fw"></i>Tech notes / Embedded
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 592 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-embedded/"><i class="far fa-folder fa-fw"></i>Tech notes / Embedded</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;592 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -193,42 +177,42 @@
 <p>Your µSD card is ready to boot on the OrangePiMini2 !</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img1.jpg"
-        data-srcset="/img/opi-img1.jpg, /img/opi-img1.jpg 1.5x, /img/opi-img1.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img1.jpg"
+        data-srcset="./img/opi-img1.jpg, ./img/opi-img1.jpg 1.5x, ./img/opi-img1.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img1.jpg"
         title="opi" /></p>
 <h2 id="first-boot">First boot</h2>
 <p>At first power-up, when asked for login/password, just use <code>orangepi</code>/<code>orangepi</code> (be careful, it is configured with a QWERTY keyboard layout by default). You should see a terminal like this:</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img2.jpg"
-        data-srcset="/img/opi-img2.jpg, /img/opi-img2.jpg 1.5x, /img/opi-img2.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img2.jpg"
+        data-srcset="./img/opi-img2.jpg, ./img/opi-img2.jpg 1.5x, ./img/opi-img2.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img2.jpg"
         title="opi" /></p>
 <h3 id="disk-resize">Disk resize</h3>
 <p>The first step is to resize partitions to fit the maximum capacity of your µSD card. OrangePi already prepared a tool. Type <code>sudo fs_resize</code>:</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img2.jpg"
-        data-srcset="/img/opi-img2.jpg, /img/opi-img2.jpg 1.5x, /img/opi-img2.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img2.jpg"
+        data-srcset="./img/opi-img2.jpg, ./img/opi-img2.jpg 1.5x, ./img/opi-img2.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img2.jpg"
         title="opi" /></p>
 <p>Then, reboot using <code>sudo reboot</code>.</p>
 <h2 id="desktop-install">Desktop install</h2>
 <p>As this is a minimal Debian image, it does not come with a GUI but you can install whatever you want. In this tutorial, LXDE has been chosen for installation. Thanks to OrangePi, there are already some scripts to install some GUIs such as LXDE, XFCE or Mate (a Gnome2 fork).</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img4.jpg"
-        data-srcset="/img/opi-img4.jpg, /img/opi-img4.jpg 1.5x, /img/opi-img4.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img4.jpg"
+        data-srcset="./img/opi-img4.jpg, ./img/opi-img4.jpg 1.5x, ./img/opi-img4.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img4.jpg"
         title="opi" /></p>
 <ul>
 <li>Type <code>cd /usr/local/bin</code>.</li>
@@ -236,22 +220,22 @@
 </ul>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img5.jpg"
-        data-srcset="/img/opi-img5.jpg, /img/opi-img5.jpg 1.5x, /img/opi-img5.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img5.jpg"
+        data-srcset="./img/opi-img5.jpg, ./img/opi-img5.jpg 1.5x, ./img/opi-img5.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img5.jpg"
         title="opi" /></p>
 <p>Reboot one last time&hellip;</p>
 <h2 id="result">Result</h2>
 <p>Tada ! After the login screen (still <code>orangepi</code>/<code>orangepi</code>), you get a fully functional desktop: you can install whatever you want. In the above figure, the goal was to install GQRX, Gnuradio and some other tools: it run quite smoothly ! (especially compared to RaspberryPis).</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
-        data-src="/img/opi-img6.jpg"
-        data-srcset="/img/opi-img6.jpg, /img/opi-img6.jpg 1.5x, /img/opi-img6.jpg 2x"
+        src="/svg/loading.min.svg"
+        data-src="./img/opi-img6.jpg"
+        data-srcset="./img/opi-img6.jpg, ./img/opi-img6.jpg 1.5x, ./img/opi-img6.jpg 2x"
         data-sizes="auto"
-        alt="opi"
+        alt="./img/opi-img6.jpg"
         title="opi" /></p>
 <p>In this configuration, following binaries were installed:</p>
 <div class="highlight"><div class="chroma">
@@ -272,8 +256,8 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
-                                <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+                <span>Updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
+                                    <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -305,7 +289,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"lunrIndexURL":"/index.json","noResultsFound":"No results found","type":"lunr"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

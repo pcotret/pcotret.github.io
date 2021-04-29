@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark - Pascal Cotret @ ENSTA Bretagne</title>
-        <meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark" />
+        <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark - Pascal Cotret @ ENSTA Bretagne</title><meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark" />
 <meta property="og:description" content="Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
 1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
 One of them should work with a short dictionary. Find it 😉" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/aircrack-101/" />
-<meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2021-01-18T16:40:29+01:00" />
+<meta property="og:url" content="https://pcotret.github.io/aircrack-101/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-01T00:00:00&#43;08:00" />
+<meta property="article:modified_time" content="2021-01-18T16:40:29&#43;01:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark"/>
 <meta name="twitter:description" content="Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
@@ -33,28 +33,16 @@ One of them should work with a short dictionary. Find it 😉"/>
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/aircrack-101\/"
-        },"image": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/cover.png",
-                "width":  800 ,
-                "height":  600 
-            },"genre": "posts","keywords": "aircrack, security","wordcount":  77 ,
+        },"genre": "posts","keywords": "aircrack, security","wordcount":  77 ,
         "url": "https:\/\/pcotret.github.io\/aircrack-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2021-01-18T16:40:29+01:00","publisher": {
-                "@type": "Organization",
-                "name": "xxxx",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https:\/\/pcotret.github.io\/logo.png",
-                "width":  127 ,
-                "height":  40 
-                }
-            },"author": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
                 "@type": "Person",
                 "name": "Pascal"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -121,14 +109,10 @@ One of them should work with a short dictionary. Find it 😉"/>
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;
-                    <span class="post-category">included in<a href="/categories/tech-security/">
-                                <i class="far fa-folder fa-fw"></i>Tech notes / Security
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-01>2020-01-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 77 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-security/"><i class="far fa-folder fa-fw"></i>Tech notes / Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;77 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -169,8 +153,8 @@ One of them should work with a short dictionary. Find it 😉"/>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2021-01-18&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a972666257f8c8f8dde8a6e7857eb96cafb8fc53" target="_blank" title="commit by Pascal @ ENSTA(pascal.cotret@gmail.com) a972666257f8c8f8dde8a6e7857eb96cafb8fc53: update url">
-                                <i class="fas fa-hashtag fa-fw"></i>a972666</a></span>
+                <span>Updated on 2021-01-18&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a972666257f8c8f8dde8a6e7857eb96cafb8fc53" target="_blank" title="commit by Pascal @ ENSTA(pascal.cotret@gmail.com) a972666257f8c8f8dde8a6e7857eb96cafb8fc53: update url">
+                                    <i class="fas fa-hashtag fa-fw"></i>a972666</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -202,7 +186,5 @@ One of them should work with a short dictionary. Find it 😉"/>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":"fixed","mobile":"auto"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"lunrIndexURL":"/index.json","noResultsFound":"No results found","type":"lunr"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

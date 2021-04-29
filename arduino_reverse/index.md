@@ -47,8 +47,8 @@ total 4
 ./led-embedded:
 total 4
 -rw-r--r-- 1 pascal pascal 81 mai    1 13:00 led-embedded.ino
-$ arduino-cli compile --fqbn arduino:avr:uno led-arduino
-$ arduino-cli compile --fqbn arduino:avr:uno led-embedded
+$ arduino-cli compile --fqbn arduino:avr:uno --output-dir led-arduino led-arduino
+$ arduino-cli compile --fqbn arduino:avr:uno --output-dir led-embedded led-embedded
 ```
 
 ## Binary comparison
@@ -64,8 +64,8 @@ The embedded C code is 5 times smaller than the Arduino one which is  a bit "wei
 ## Reversing binaries
 
 ```bash
-$ avr-objdump -S led-arduino/led-arduino.arduino.avr.uno.elf > led-arduino.asm
-$ avr-objdump -S led-embedded/led-embedded.arduino.avr.uno.elf > led-embedded.asm
+$ avr-objdump -S led-arduino/led-arduino.ino.elf > led-arduino.asm
+$ avr-objdump -S led-embedded/led-embedded.ino.elf > led-embedded.asm
 ```
 
 ### Arduino binary
