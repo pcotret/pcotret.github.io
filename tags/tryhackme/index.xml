@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>CTF - Category - Pascal Cotret @ ENSTA Bretagne</title>
-        <link>https://pcotret.github.io/categories/ctf/</link>
-        <description>CTF - Category - Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+        <title>tryhackme - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/tryhackme/</link>
+        <description>tryhackme - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/tryhackme/" rel="self" type="application/rss+xml" /><item>
     <title>TryHackMe free rooms</title>
     <link>https://pcotret.github.io/tryhackme/</link>
     <pubDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</pubDate>
@@ -11,22 +11,5 @@
     <guid>https://pcotret.github.io/tryhackme/</guid>
     <description><![CDATA[Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&hellip;
  Level 1 - Intro  OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting  Introductory CTFs to get your feet wet  Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan  Level 2 - Tooling  Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning  More introductory CTFs  Vulnversity - https://tryhackme.]]></description>
-</item><item>
-    <title>Brixel CTF</title>
-    <link>https://pcotret.github.io/brixel-ctf/</link>
-    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/brixel-ctf/</guid>
-    <description><![CDATA[Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
-It was quite nice with challenge in several categories.
-https://ctf.brixel.space/]]></description>
-</item><item>
-    <title>Ice CTF</title>
-    <link>https://pcotret.github.io/ice-ctf/</link>
-    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/ice-ctf/</guid>
-    <description><![CDATA[IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
-https://icec.tf/]]></description>
 </item></channel>
 </rss>

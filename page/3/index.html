@@ -100,6 +100,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://pcotret.gitlab.io" title="GitLab" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw"></i></a><a href="https://www.root-me.org/Pa0x73cal" title="Root Me" target="_blank" rel="noopener noreffer me"><i class="fas fa-flag-checkered fa-fw"></i></a><a href="https://www.newbiecontest.org/index.php?page=info_membre&amp;id=88970" title="Newbie Contest" target="_blank" rel="noopener noreffer me"><i class="fas fa-dragon fa-fw"></i></a><a href="https://cryptohack.org/user/Pa0x73cal" title="CryptoHack" target="_blank" rel="noopener noreffer me"><i class="fas fa-robot fa-fw"></i></a><a href="mailto:echo%20@gmail.com%20%7c%20sed%20%27s/%5e/firstname.lastname/%27" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/pcb-maison/">Comment faire des PCB avec des produits basiques</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-01-01">2020-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-misc/"><i class="far fa-folder fa-fw"></i>Tech notes / Misc.</a></span></div><div class="content">Update 03/2018 : autre technique dans le labo d&rsquo;Heliox (propre aussi !) https://www.youtube.com/watch?v=8joLK039fjk
+De bas en haut :
+ méthode de l&rsquo;imprimante laser mais trop chauffé méthode de l&rsquo;imprimante laser mais mal décollé méthode de l&rsquo;imprimante laser repassé au marqueur indélébile (meilleur résultat pour application &ldquo;industrielle&rdquo;) masque réalisé au typex, pas terrible car le blanco se décolle pendant le bain d&rsquo;acide. Je testerai avec du verni à ongle pour voir&hellip; masque réalisé au marqueur indélébile  Méthode de l&rsquo;imprimante laser : on imprime sur du papier le typon qu&rsquo;on souhaite réaliser.</div><div class="post-footer">
+        <a href="/pcb-maison/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pcb/">pcb</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/image_scripts/">Image processing</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-01-01">2020-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-misc/"><i class="far fa-folder fa-fw"></i>Tech notes / Misc.</a></span></div><div class="content">Convert an SVG to PNG in commande line using Inkscape (on Windows) Change export-height if you want a bigger image:
 1 2 3 4 5 6 7 8 9 10 11  @echo off for %%f in (%*) do ( echo %%~f &#34;C:\Program Files\Inkscape\inkscape.exe&#34; ^  -z ^  --export-background-opacity=0 ^  --export-height=48 ^  --export-png=&#34;%%~dpnf.png&#34; ^  --file=&#34;%%~f&#34; )   Resize an image with Inkscape 1  for %%f in (*.</div><div class="post-footer">
@@ -132,15 +139,6 @@ Installing an old libpng package 1 2  wget http://security.ubuntu.com/ubuntu/poo
 1  npx @marp-team/marp-cli main.md -o output.pdf --allow-local-files    https://github.com/marp-team/marp-cli nodejs must be installed  </div><div class="post-footer">
         <a href="/marp-to-pdf/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/marp/">marp</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/memory-alignment/">Memory alignment</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-01-01">2020-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-embedded/"><i class="far fa-folder fa-fw"></i>Tech notes / Embedded</a></span></div><div class="content">This note was inspired by a work of Samuele Giraudo (LIGM, Université Paris-Est Marne-la-Vallée)
-http://igm.univ-mlv.fr/~giraudo/Enseignements/
-Memory alignment https://en.wikipedia.org/wiki/Data_structure_alignment
-Memory alignment of a given data is the way this data is organized in the memory. For instance, an array of n elements of type T is organized as a continuous array of sizeof(T) * n bytes.
-How does memory alignment work for variables of a structured type? Let&rsquo;s find out 😊</div><div class="post-footer">
-        <a href="/memory-alignment/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/memory/">memory</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

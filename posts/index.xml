@@ -3,7 +3,15 @@
         <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>TryHackMe free rooms</title>
+    <link>https://pcotret.github.io/tryhackme/</link>
+    <pubDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/tryhackme/</guid>
+    <description><![CDATA[Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&hellip;
+ Level 1 - Intro  OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting  Introductory CTFs to get your feet wet  Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan  Level 2 - Tooling  Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning  More introductory CTFs  Vulnversity - https://tryhackme.]]></description>
+</item><item>
     <title>OWASP BWA VM settings</title>
     <link>https://pcotret.github.io/owasp-bwa/</link>
     <pubDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</pubDate>
@@ -79,15 +87,5 @@ Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loo
     <guid>https://pcotret.github.io/simulide/</guid>
     <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
  Downloading tools  SimulIDE : v0.3.12-SR8 for the latest version. Download the Lin64.tar.gz or the Win32.zip archive depending of your operating system.]]></description>
-</item><item>
-    <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
-    <link>https://pcotret.github.io/aircrack-101/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/aircrack-101/</guid>
-    <description><![CDATA[Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
-Dictionary-based attack In order to test a PCAP with a given dictionary:
-1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-One of them should work with a short dictionary. Find it 😉]]></description>
 </item></channel>
 </rss>
