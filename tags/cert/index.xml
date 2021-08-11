@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>cert - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <link>https://pcotret.github.io/tags/cert/</link>
+        <description>cert - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 11 Aug 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/cert/" rel="self" type="application/rss+xml" /><item>
+    <title>RCTS CERT CTF</title>
+    <link>https://pcotret.github.io/rcts-cert/</link>
+    <pubDate>Wed, 11 Aug 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/rcts-cert/</guid>
+    <description><![CDATA[RCTS CERT CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/rcts-cert-2021
+https://defendingthesoc.ctf.cert.rcts.pt/]]></description>
+</item></channel>
+</rss>
