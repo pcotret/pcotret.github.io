@@ -9,10 +9,9 @@
 <meta property="og:description" content="arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
 Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/arduino_due_reverse/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-03T00:00:00&#43;08:00" />
-<meta property="article:modified_time" content="2021-04-29T12:41:51&#43;02:00" />
-
+<meta property="og:url" content="https://pcotret.github.io/arduino_due_reverse/" />
+<meta property="article:published_time" content="2020-05-03T00:00:00+08:00" />
+<meta property="article:modified_time" content="2021-04-29T12:41:51+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arduino Due vs. embedded C - ARM reversing"/>
 <meta name="twitter:description" content="arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.

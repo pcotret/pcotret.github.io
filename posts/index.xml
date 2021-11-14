@@ -3,7 +3,14 @@
         <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 11 Aug 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 14 Nov 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Unlock your Brain OSINT CTF 2021</title>
+    <link>https://pcotret.github.io/unlock2021/</link>
+    <pubDate>Sun, 14 Nov 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/unlock2021/</guid>
+    <description><![CDATA[Unlock Your Brain OSINT CTF https://github.com/pcotret/ctf-writeups/tree/master/uybhys-2021 This year, it was again an OSINT related CTF made by the OSINT-FR community]]></description>
+</item><item>
     <title>RCTS CERT CTF</title>
     <link>https://pcotret.github.io/rcts-cert/</link>
     <pubDate>Wed, 11 Aug 2021 00:00:00 &#43;0800</pubDate>
@@ -79,13 +86,5 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
     <guid>https://pcotret.github.io/arduino_due_reverse/</guid>
     <description><![CDATA[arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
 Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR .]]></description>
-</item><item>
-    <title>Arduino vs. embedded C - AVR reversing</title>
-    <link>https://pcotret.github.io/arduino_reverse/</link>
-    <pubDate>Fri, 01 May 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/arduino_reverse/</guid>
-    <description><![CDATA[As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a really simple program compiled with both methods for the Arduino Uno.
- Prerequisites  arduino-cli: Command Line Interface for Arduino AVR cross compiler: sudo apt install gcc-avr Optional: an Arduino simulator such as SimulIDE  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port 13 (or PORT PB5) on the Arduino Uno.]]></description>
 </item></channel>
 </rss>
