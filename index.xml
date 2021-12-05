@@ -3,9 +3,18 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 14 Nov 2021 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://pcotret.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>HEXA OSINT CTF 2021</title>
+    <link>https://pcotret.github.io/haxe_osint_2021/</link>
+    <pubDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/haxe_osint_2021/</guid>
+    <description><![CDATA[https://hexactf.ctfd.io/
+An OSINT-based CTF done by Sopra and &ldquo;La Fabrique Défense&rdquo; (French DoD entity)
+Some writeups are here: https://github.com/pcotret/ctf-writeups/tree/master/hexa-2021]]></description>
+</item><item>
     <title>Unlock your Brain OSINT CTF 2021</title>
     <link>https://pcotret.github.io/unlock2021/</link>
     <pubDate>Sun, 14 Nov 2021 00:00:00 &#43;0800</pubDate>
@@ -80,13 +89,5 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
     <guid>https://pcotret.github.io/coresight-zedboard/</guid>
     <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
 1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
-</item><item>
-    <title>Arduino Due vs. embedded C - ARM reversing</title>
-    <link>https://pcotret.github.io/arduino_due_reverse/</link>
-    <pubDate>Sun, 03 May 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/arduino_due_reverse/</guid>
-    <description><![CDATA[arduino-cli: Command Line Interface for Arduino ARM cross compiler: sudo apt install gcc-arm-none-eabi  Sample program We want to create the most simple program which goal is to light on the built-in LED, located at port PB27 on the Arduino Due.
-Arduino 1 2 3 4 5 6 7 8  void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); }   Embedded C 1 2 3 4 5 6 7  int main() { PIOB-&gt;PIO_PER = 1&lt;&lt;27; /* Enable port PB27 */ PIOB-&gt;PIO_OER = 1&lt;&lt;27; /* Configure PB27 as output */ PIOB-&gt;PIO_ODSR = 0xFFFFFFFF; /* Write 1 in all PORTB ports */ return 0; }   Codes and compilation 1 2 3 4 5 6 7 8 9  $ ls -lR .]]></description>
 </item></channel>
 </rss>
