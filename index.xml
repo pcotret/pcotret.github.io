@@ -3,9 +3,18 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://pcotret.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>OSINT 101</title>
+    <link>https://pcotret.github.io/osint101/</link>
+    <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/osint101/</guid>
+    <description><![CDATA[OSINT 101 Some ressources to get into OSINT:
+ https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy  CTFs:
+ https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges  ]]></description>
+</item><item>
     <title>HEXA OSINT CTF 2021</title>
     <link>https://pcotret.github.io/haxe_osint_2021/</link>
     <pubDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</pubDate>
@@ -81,13 +90,5 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
     <author>Author</author>
     <guid>https://pcotret.github.io/wireshark_build/</guid>
     <description><![CDATA[Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   ]]></description>
-</item><item>
-    <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
-    <link>https://pcotret.github.io/coresight-zedboard/</link>
-    <pubDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/coresight-zedboard/</guid>
-    <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
 </item></channel>
 </rss>
