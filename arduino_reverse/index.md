@@ -94,7 +94,7 @@ void init()
 [...]
 ```
 
-Here is a part of the Arduino objdump. The assembly code is really long for such a program... It is easy to understand when we look at the source code of `pinMode()` and `digitalWrite()` (https://github.com/arduino/ArduinoCore-avr/blob/master/cores/arduino/wiring_digital.c). It does not only write a value into a register...
+Here is a part of the Arduino objdump. The assembly code is really long for such a program... It is easy to understand when we look at the source code of `pinMode()` and `digitalWrite()` https://github.com/arduino/ArduinoCore-avr/blob/master/cores/arduino/wiring_digital.c. It does not only write a value into a register...
 
 Garretlab made an analysis of both functions:
 
