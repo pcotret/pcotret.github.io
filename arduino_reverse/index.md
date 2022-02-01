@@ -4,7 +4,7 @@
 > As I was teaching some embedded C basics, I was asked what are some benefits of embedded C over the classic Arduino language for an Arduino-based board. This article tries to see what we can do by reversing a **really** simple program compiled with both methods for the Arduino Uno.
 
 ## Prerequisites
-- [`arduino-cli`](https://github.com/arduino/arduino-cli): Command Line Interface for Arduino
+- [`arduino-cli`](https://github.com/arduino/arduino-cli): Command Line Interface for Arduino. You will need to install the AVR toolchain as well: `arduino-cli core install arduino:avr `
 - AVR cross compiler: `sudo apt install gcc-avr`
 - Optional: an Arduino simulator such as [SimulIDE](https://simulide.blogspot.com/)
 
