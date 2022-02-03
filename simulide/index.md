@@ -5,7 +5,7 @@
 
 ## Downloading tools
 
-- [SimulIDE](https://simulide.blogspot.com/) : [v0.3.12-SR8](https://www.patreon.com/posts/simulide-0-3-12-35657927) for the latest version. Download the **Lin64.tar.gz** or the **Win32.zip** archive depending of your operating system. 
+- [SimulIDE](https://www.simulide.com/p/downloads.html) : Download the **Lin64 AppImage** or the **Win32.zip** archive depending of your operating system. 
 - [Arduino](https://www.arduino.cc/en/Main/Software). Download the **Windows ZIP for non admin install** or the **Linux 64 bits** archive.
 
 Extract softwares in a directory. You should get something similar to this:
@@ -14,7 +14,7 @@ Extract softwares in a directory. You should get something similar to this:
 
 ## Example: blinking LEDs on an Arduino Uno
 
-In order to execute SimulIDE, run the executable at: `SimulIDE_0.3.12-SR8_Win32/bin`
+In order to execute SimulIDE, run the executable at: `<simulide_dir>/bin` (on Windows)
 
 ![image-20200422204251027](../img/simulide-img2.jpg)
 
@@ -24,17 +24,17 @@ Here is the main interface :
 
 ### Schematic settings (red rectangle)
 
-| 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|
-| New | Open | Save | Save as | Run simulation |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|
+| SimulIDE settings | Switch between already opened files | New file | Open | Save | Save as | Run simulation | Pause |
 
 ### Code editor settings (blue rectangle)
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-|---|---|---|---|---|---|---|
-| New | Open | Save | Save as | Find/Replace | Compile | Upload |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|
+| Code settings | Switch between already opened files | New file | Open | Save | Save as | Compile | Download on the Arduino |
 
-Open the LED fadding example (`SimulIDE_0.3.12-SR8_Win32/share/simulide/examples/Arduino/ledFadding`)
+Open the LED fadding example (`<simulide_dir>/share/simulide/examples/Arduino/ledFadding`)
 
 - `.simu` file for the schematic.
 - `.ino` file for the code.
@@ -43,7 +43,7 @@ Open the LED fadding example (`SimulIDE_0.3.12-SR8_Win32/share/simulide/examples
 
 ![image-20200422210236017](../img/simulide-img4.jpg)
 
-Right click on the `ledFadding.ino` and click `Set Compiler Path`. Select the directory where you have the Arduino executable (`./simul_ide/arduino-1.8.12` in the screenshot below).
+Right click on the `ledFadding.ino` and click `Compiler Settings`. Select the directory where you have the Arduino executable (`./simul_ide/arduino-1.8.12` in the screenshot below).
 
 ![image-20200422210353987](../img/simulide-img5.jpg)
 
@@ -57,11 +57,13 @@ Now, just click on the red button in the upper left toolbar:
 
 > Hint: if you need a serial monitor, right click on the Arduino and select **Open Serial Monitor**.
 
-## Mac port of SimulIDE
+> Hint: if you need something like a real-time monitor, right click on the Arduino and select **Open MCU Monitor**. You'll be able to check register contents in real-time when the simulation is running !
 
-Could not get the internal code editor working. Just a few things to be aware of:
+![mcu](../img/simulide-img8.jpg)
 
-![mac](../img/simulide-img8.png)
+## Alaternative compiler configuration
+
+Sometimes, compiler settings are a bit painful. It amy be easier to compile the binary in the default Arduino IDE and export the HEX file to be loaded in the simulator.
 
 - Compile the binary in the Arduino editor. Then click on `Sketch => Export compiled binary`.
 - Then, right click on the Arduino and select `Load firmware` and look for the `*.hex` file just compiled close to the Arduino project file.
