@@ -3,7 +3,7 @@
 
 > Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
 
-## Prerequisites
+## Prerequisites
 
 ```bash
 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386
@@ -94,3 +94,4 @@ Now, you can launch Libero SoC:
 ```bash
 /opt/microsemi/Libero_SoC_v2021.3/Libero/bin
 ```
+
