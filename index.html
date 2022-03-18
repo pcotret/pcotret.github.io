@@ -10,7 +10,7 @@
 <meta property="og:description" content="Pascal Cotret @ ENSTA Bretagne" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2022-02-03T10:15:37+01:00" />
+<meta property="og:updated_time" content="2022-03-18T16:36:16+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pascal Cotret @ ENSTA Bretagne"/>
 <meta name="twitter:description" content="Pascal Cotret @ ENSTA Bretagne"/>
@@ -100,6 +100,15 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://www.root-me.org/Pa0x73cal" title="Root Me" target="_blank" rel="noopener noreffer me"><i class="fas fa-flag-checkered fa-fw"></i></a><a href="mailto:echo%20@gmail.com%20%7c%20sed%20%27s/%5e/firstname.lastname/%27" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/microsemi_ubuntu/">Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div><div class="content">Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
+ ## Prerequisites
+1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
+1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:</div><div class="post-footer">
+        <a href="/microsemi_ubuntu/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/microsemi/">microsemi</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/osint101/">OSINT 101</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-01-11">2022-01-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-misc/"><i class="far fa-folder fa-fw"></i>Tech notes / Misc.</a></span></div><div class="content">OSINT 101 Some ressources to get into OSINT:
  https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy  CTFs:
@@ -130,13 +139,6 @@ https://defendingthesoc.ctf.cert.rcts.pt/</div><div class="post-footer">
  Level 1 - Intro  OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting  Introductory CTFs to get your feet wet  Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan  Level 2 - Tooling  Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning  More introductory CTFs  Vulnversity - https://tryhackme.</div><div class="post-footer">
         <a href="/tryhackme/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/free/">free</a>,&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/hack/">hack</a>,&nbsp;<a href="/tags/tryhackme/">tryhackme</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/owasp-bwa/">OWASP BWA VM settings</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-01-17">2021-01-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-security/"><i class="far fa-folder fa-fw"></i>Tech notes / Security</a></span></div><div class="content">Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
-Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
-Just access the IP address in your browser and you&rsquo;re ready to go!</div><div class="post-footer">
-        <a href="/owasp-bwa/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/owasp/">owasp</a>,&nbsp;<a href="/tags/security/">security</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -153,7 +155,7 @@ Just access the IP address in your browser and you&rsquo;re ready to go!</div><d
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/5/">5</a>
+                        <a href="/page/6/">6</a>
                     </span>
                 </li></ul></div></div>
             </main></div>

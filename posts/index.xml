@@ -3,7 +3,18 @@
         <title>All Posts - Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
+    <link>https://pcotret.github.io/microsemi_ubuntu/</link>
+    <pubDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
+    <description><![CDATA[Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
+ ## Prerequisites
+1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
+1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
+</item><item>
     <title>OSINT 101</title>
     <link>https://pcotret.github.io/osint101/</link>
     <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
@@ -81,12 +92,5 @@ Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s re
 Software Go to https://www.ipevo.com/software/visualizer#download
 As you can see, the IPEVO visualizer is supported by several platforms:
 In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
-</item><item>
-    <title>Building Wireshark from source</title>
-    <link>https://pcotret.github.io/wireshark_build/</link>
-    <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/wireshark_build/</guid>
-    <description><![CDATA[Prerequisites for Ubuntu 20 1 2  sudo apt install libgcrypt20-dev libglib2.0-dev libc-ares-dev libssh-dev libpcap-dev \ libsystemd-dev qtbase5-dev qttools5-dev qtmultimedia5-dev   Download and build 1 2 3 4 5 6 7  git clone https://gitlab.com/wireshark/wireshark cd wireshark mkdir build cd build cmake .. make sudo make install   ]]></description>
 </item></channel>
 </rss>

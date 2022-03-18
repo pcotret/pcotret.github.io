@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS - Pascal Cotret @ ENSTA Bretagne</title><meta name="Description" content="Pascal Cotret @ ENSTA Bretagne"><meta property="og:title" content="Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS" />
+<meta property="og:description" content="Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
+ ## Prerequisites
+1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
+1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pcotret.github.io/microsemi_ubuntu/" />
+<meta property="article:published_time" content="2022-03-18T00:00:00+08:00" />
+<meta property="article:modified_time" content="2022-03-18T16:36:16+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS"/>
+<meta name="twitter:description" content="Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
+ ## Prerequisites
+1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
+1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:"/>
+<meta name="application-name" content="Pascal Cotret @ ENSTA Bretagne">
+<meta name="apple-mobile-web-app-title" content="Pascal Cotret @ ENSTA Bretagne"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/microsemi_ubuntu/" /><link rel="prev" href="https://pcotret.github.io/osint101/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/pcotret.github.io\/microsemi_ubuntu\/"
+        },"genre": "posts","keywords": "fpga, microsemi","wordcount":  370 ,
+        "url": "https:\/\/pcotret.github.io\/microsemi_ubuntu\/","datePublished": "2022-03-18T00:00:00+08:00","dateModified": "2022-03-18T16:36:16+01:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
+                "@type": "Person",
+                "name": "Pascal"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/categories/talks/"> Talks </a><a class="menu-item" href="/categories/articles/"> Articles </a><a class="menu-item" href="/categories/ctf"> CTF </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pascal Cotret @ ENSTA Bretagne">Pascal Cotret @ ENSTA Bretagne</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/categories/talks/" title="">Talks</a><a class="menu-item" href="/categories/articles/" title="">Articles</a><a class="menu-item" href="/categories/ctf" title="">CTF</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;370 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#get-license">Get License</a></li>
+    <li><a href="#install-libero">Install Libero</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>Mostly based on this great tutorial : <a href="https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html">https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html</a></p>
+</blockquote>
+<p>## Prerequisites</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386
+</code></pre></td></tr></table>
+</div>
+</div><p>You may need other QT related packages in their i386 flavour.</p>
+<h2 id="get-license">Get License</h2>
+<p>Create a directory for the license server (here I use <code>~/.local/share/microsemi/license</code>)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir --p /home/USERNAME/.local/share/microsemi/license
+</code></pre></td></tr></table>
+</div>
+</div><p>Download the &ldquo;Linux Daemon&rdquo; from <a href="https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads">https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads</a> to the license directory and extract it with:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar xf Linux_Licensing_Daemon.tar.Z
+</code></pre></td></tr></table>
+</div>
+</div><p>Create an account on <a href="https://www.microsemi.com">https://www.microsemi.com</a> and request a &ldquo;Libero Silver 1Yr Floating License for Windows/Linux Server&rdquo;. You have to enter your MAC address (12 hexadecimal digits without colons), which you can get by typing</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ip link <span class="p">|</span> grep ether
+</code></pre></td></tr></table>
+</div>
+</div><p>The license file is sent via email. Store the license file <code>License.dat</code> in the license directory.</p>
+<p>Now the first four lines of the license file must be edited, but <em>not the rest of the file</em>. In the first line, replace <code>&lt;put.hostname.here&gt;</code> by <code>localhost</code>. In lines 2 to 4 replace <code>PATH</code> by the absolute path to the license daemon directory. The first 4 lines schould then look like that:</p>
+<pre><code>SERVER localhost 112233445566 1702
+DAEMON actlmgrd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/actlmgrd
+DAEMON mgcld /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/mgcld
+VENDOR snpslmd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/snpslmd
+</code></pre>
+<p>The license manager requires that <code>/usr/tmp</code> exists (otherwise you get &ldquo;FlexNet Licensing error:-25,234&rdquo;)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ln -s /tmp /usr/tmp
+</code></pre></td></tr></table>
+</div>
+</div><p>Install the depedencies</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install lsb
+</code></pre></td></tr></table>
+</div>
+</div><p>And start the license server with</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Linux_Licensing_Daemon/lmgrd -c License.dat -log /tmp/lmgrd.log
+</code></pre></td></tr></table>
+</div>
+</div><p>If you get a &ldquo;file not found&rdquo; error, install lsb.</p>
+<p>On my system I have the problem that the license works only for a few minutes.
+I don&rsquo;t know why, but when I start Libero a second time after a few minutes,
+it doesn&rsquo;t recognise the license. Stopping and restarting the license server
+helps:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Linux_Licensing_Daemon/lmdown -c License.dat -q
+Linux_Licensing_Daemon/lmgrd -c License.dat -log /tmp/lmgrd.log
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-libero">Install Libero</h2>
+<p>Download &ldquo;Libero SoC v2021.3 for Linux&rdquo; from <a href="https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads">https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads</a>.</p>
+<p>The downloaded binary is a self-extracting archive built with InstallAnywhere. Before executing it, set its execute bit must be set and some dependencies have to be installed:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x Libero_SoC_v2021.3_lin.bin
+./Libero_SoC_v2021.3_lin.bin
+</code></pre></td></tr></table>
+</div>
+</div><p>Before actually starting Libero, some environment variables have to be set:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span>1702@localhost
+<span class="nb">export</span> <span class="nv">SNPSLMD_LICENSE_FILE</span><span class="o">=</span>1702@localhost
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/lib/i386-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/usr/lib
+</code></pre></td></tr></table>
+</div>
+</div><p>Now, you can launch Libero SoC:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">/opt/microsemi/Libero_SoC_v2021.3/Libero/bin
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-03-18&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/72dfc9b5b1f7c6c48e180281125e752b2c2a6b55" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 72dfc9b5b1f7c6c48e180281125e752b2c2a6b55: microsemi tutorial">
+                                    <i class="fas fa-hashtag fa-fw"></i>72dfc9b</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/microsemi_ubuntu/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/microsemi/">microsemi</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/osint101/" class="prev" rel="prev" title="OSINT 101"><i class="fas fa-angle-left fa-fw"></i>OSINT 101</a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
