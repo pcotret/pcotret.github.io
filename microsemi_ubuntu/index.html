@@ -13,7 +13,7 @@ Get License Create a directory for the license server (here I use ~/.local/share
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/microsemi_ubuntu/" />
 <meta property="article:published_time" content="2022-03-18T00:00:00+08:00" />
-<meta property="article:modified_time" content="2022-03-18T16:38:37+01:00" />
+<meta property="article:modified_time" content="2022-04-27T13:51:42+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS"/>
 <meta name="twitter:description" content="Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
@@ -32,8 +32,8 @@ Get License Create a directory for the license server (here I use ~/.local/share
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/microsemi_ubuntu\/"
-        },"genre": "posts","keywords": "fpga, microsemi","wordcount":  369 ,
-        "url": "https:\/\/pcotret.github.io\/microsemi_ubuntu\/","datePublished": "2022-03-18T00:00:00+08:00","dateModified": "2022-03-18T16:38:37+01:00","publisher": {
+        },"genre": "posts","keywords": "fpga, microsemi","wordcount":  426 ,
+        "url": "https:\/\/pcotret.github.io\/microsemi_ubuntu\/","datePublished": "2022-03-18T00:00:00+08:00","dateModified": "2022-04-27T13:51:42+02:00","publisher": {
             "@type": "Organization",
             "name": "xxxx"},"author": {
                 "@type": "Person",
@@ -109,7 +109,7 @@ Get License Create a directory for the license server (here I use ~/.local/share
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;369 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;426 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -120,6 +120,7 @@ Get License Create a directory for the license server (here I use ~/.local/share
   <ul>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#get-license">Get License</a></li>
+    <li><a href="#known-issues">Known issues</a></li>
     <li><a href="#install-libero">Install Libero</a></li>
   </ul>
 </nav></div>
@@ -213,7 +214,28 @@ helps:</p>
 Linux_Licensing_Daemon/lmgrd -c License.dat -log /tmp/lmgrd.log
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="install-libero">Install Libero</h2>
+</div><h2 id="known-issues">Known issues</h2>
+<p>Let&rsquo;s have a look at the first lines of the license file again:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">SERVER localhost <span class="m">112233445566</span> <span class="m">1702</span>
+DAEMON actlmgrd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/actlmgrd
+DAEMON mgcld /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/mgcld
+VENDOR snpslmd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/snpslmd
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>actlmgrd</code>must be a 32-bit daemon.</li>
+<li><code>mgcld</code> and <code>snpslmd</code> must be 64-bits daemons.</li>
+</ul>
+<p>Don&rsquo;t ask me why, we went through several problems until finding this solution.</p>
+<h2 id="install-libero">Install Libero</h2>
 <p>Download &ldquo;Libero SoC v2021.3 for Linux&rdquo; from <a href="https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads">https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads</a>.</p>
 <p>The downloaded binary is a self-extracting archive built with InstallAnywhere. Before executing it, set its execute bit must be set and some dependencies have to be installed:</p>
 <div class="highlight"><div class="chroma">
@@ -252,8 +274,8 @@ Linux_Licensing_Daemon/lmgrd -c License.dat -log /tmp/lmgrd.log
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-03-18&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/5e9d3872a652c490ec9b8e2a63e342aa77313d60" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 5e9d3872a652c490ec9b8e2a63e342aa77313d60: fix markdown">
-                                    <i class="fas fa-hashtag fa-fw"></i>5e9d387</a></span>
+                <span>Updated on 2022-04-27&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/3a596812d4c6cb5492ef430eeaed26119a5cf50e" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 3a596812d4c6cb5492ef430eeaed26119a5cf50e: add known issues">
+                                    <i class="fas fa-hashtag fa-fw"></i>3a59681</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>

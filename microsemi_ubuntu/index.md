@@ -70,6 +70,22 @@ Linux_Licensing_Daemon/lmdown -c License.dat -q
 Linux_Licensing_Daemon/lmgrd -c License.dat -log /tmp/lmgrd.log
 ```
 
+## Known issues
+
+Let's have a look at the first lines of the license file again:
+
+```bash
+SERVER localhost 112233445566 1702
+DAEMON actlmgrd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/actlmgrd
+DAEMON mgcld /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/mgcld
+VENDOR snpslmd /home/USERNAME/.local/share/microsemi/license/Linux_Licensing_Daemon/snpslmd
+```
+
+- `actlmgrd`must be a 32-bit daemon.
+- `mgcld` and `snpslmd` must be 64-bits daemons.
+
+Don't ask me why, we went through several problems until finding this solution.
+
 ## Install Libero
 
 Download "Libero SoC v2021.3 for Linux" from https://www.microsemi.com/product-directory/design-resources/1750-libero-soc#downloads.
