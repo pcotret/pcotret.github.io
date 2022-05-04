@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://pcotret.github.io/microsemi_ubuntu/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/microsemi_ubuntu/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://pcotret.github.io/osint101/</loc><lastmod>2022-01-11T11:51:37&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/haxe_osint_2021/</loc><lastmod>2021-12-05T21:34:21&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/unlock2021/</loc><lastmod>2021-11-14T22:44:54&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -33,12 +33,12 @@
             <loc>https://pcotret.github.io/talks/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/xilinx_bashrc/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/yocto-zedboard-101/</loc><lastmod>2020-07-07T11:24:47&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/categories/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/fpga/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/microsemi/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/posts/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/categories/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://pcotret.github.io/tags/fpga/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://pcotret.github.io/tags/microsemi/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://pcotret.github.io/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://pcotret.github.io/posts/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://pcotret.github.io/tags/</loc><lastmod>2022-04-27T13:51:42&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://pcotret.github.io/tags/osintctf/</loc><lastmod>2022-01-11T11:51:37&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/osint/</loc><lastmod>2021-12-05T21:34:21&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/cert/</loc><lastmod>2021-08-11T15:09:34&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
