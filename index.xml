@@ -3,9 +3,17 @@
         <title>Pascal Cotret @ ENSTA Bretagne</title>
         <link>https://pcotret.github.io/</link>
         <description>Pascal Cotret @ ENSTA Bretagne</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://pcotret.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Godot reverse tools</title>
+    <link>https://pcotret.github.io/godot-tools/</link>
+    <pubDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/godot-tools/</guid>
+    <description><![CDATA[New set of challenges on Root Me related to the Godot engine. It seems to be an open-source game engine: https://godotengine.org/
+Some reverse tools  https://github.com/hhyyrylainen/GodotPckTool https://github.com/tehskai/godot-unpacker https://github.com/bruvzg/gdsdecomp   Existing CTF writeups  https://blog.bushwhackers.ru/lonely-island-write-up-faust-ctf-2021/  ]]></description>
+</item><item>
     <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
     <link>https://pcotret.github.io/microsemi_ubuntu/</link>
     <pubDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</pubDate>
@@ -82,16 +90,5 @@ https://ctf.brixel.space/]]></description>
     <guid>https://pcotret.github.io/ice-ctf/</guid>
     <description><![CDATA[IceCTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/icectf-2020
 https://icec.tf/]]></description>
-</item><item>
-    <title>Lockdown setup - Working with an IPEVO document camera</title>
-    <link>https://pcotret.github.io/document-camera/</link>
-    <pubDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/document-camera/</guid>
-    <description><![CDATA[As most of us, we&rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
-Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
-Software Go to https://www.ipevo.com/software/visualizer#download
-As you can see, the IPEVO visualizer is supported by several platforms:
-In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin]]></description>
 </item></channel>
 </rss>

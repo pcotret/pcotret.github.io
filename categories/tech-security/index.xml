@@ -4,6 +4,14 @@
         <link>https://pcotret.github.io/categories/tech-security/</link>
         <description>Tech notes / Security - Category - Pascal Cotret @ ENSTA Bretagne</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-security/" rel="self" type="application/rss+xml" /><item>
+    <title>Godot reverse tools</title>
+    <link>https://pcotret.github.io/godot-tools/</link>
+    <pubDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/godot-tools/</guid>
+    <description><![CDATA[New set of challenges on Root Me related to the Godot engine. It seems to be an open-source game engine: https://godotengine.org/
+Some reverse tools  https://github.com/hhyyrylainen/GodotPckTool https://github.com/tehskai/godot-unpacker https://github.com/bruvzg/gdsdecomp   Existing CTF writeups  https://blog.bushwhackers.ru/lonely-island-write-up-faust-ctf-2021/  ]]></description>
+</item><item>
     <title>OWASP BWA VM settings</title>
     <link>https://pcotret.github.io/owasp-bwa/</link>
     <pubDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</pubDate>
