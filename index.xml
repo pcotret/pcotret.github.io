@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Pascal Cotret personal blog</title>
+        <title>Github personal blog</title>
         <link>https://pcotret.github.io/</link>
-        <description>Pascal Cotret @ ENSTA Bretagne</description>
+        <description>Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://pcotret.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>

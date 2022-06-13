@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>lockdown - Tag - Pascal Cotret personal blog</title>
+        <title>lockdown - Tag - Github personal blog</title>
         <link>https://pcotret.github.io/tags/lockdown/</link>
-        <description>lockdown - Tag - Pascal Cotret personal blog</description>
+        <description>lockdown - Tag - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Nov 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/lockdown/" rel="self" type="application/rss+xml" /><item>
     <title>Lockdown setup - Working with an IPEVO document camera</title>
     <link>https://pcotret.github.io/document-camera/</link>

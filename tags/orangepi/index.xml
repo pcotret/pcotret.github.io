@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>orangepi - Tag - Pascal Cotret personal blog</title>
+        <title>orangepi - Tag - Github personal blog</title>
         <link>https://pcotret.github.io/tags/orangepi/</link>
-        <description>orangepi - Tag - Pascal Cotret personal blog</description>
+        <description>orangepi - Tag - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/orangepi/" rel="self" type="application/rss+xml" /><item>
     <title>OrangePi4SDR</title>
     <link>https://pcotret.github.io/orangepi4sdr/</link>

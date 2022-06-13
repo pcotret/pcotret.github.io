@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>pcb - Tag - Pascal Cotret personal blog</title>
+        <title>pcb - Tag - Github personal blog</title>
         <link>https://pcotret.github.io/tags/pcb/</link>
-        <description>pcb - Tag - Pascal Cotret personal blog</description>
+        <description>pcb - Tag - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/pcb/" rel="self" type="application/rss+xml" /><item>
     <title>Comment faire des PCB avec des produits basiques</title>
     <link>https://pcotret.github.io/pcb-maison/</link>

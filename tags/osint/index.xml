@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>osint - Tag - Pascal Cotret personal blog</title>
+        <title>osint - Tag - Github personal blog</title>
         <link>https://pcotret.github.io/tags/osint/</link>
-        <description>osint - Tag - Pascal Cotret personal blog</description>
+        <description>osint - Tag - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/osint/" rel="self" type="application/rss+xml" /><item>
     <title>HEXA OSINT CTF 2021</title>
     <link>https://pcotret.github.io/haxe_osint_2021/</link>
