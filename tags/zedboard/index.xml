@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>zedboard - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <title>zedboard - Tag - Pascal Cotret personal blog</title>
         <link>https://pcotret.github.io/tags/zedboard/</link>
-        <description>zedboard - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <description>zedboard - Tag - Pascal Cotret personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Jun 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/zedboard/" rel="self" type="application/rss+xml" /><item>
     <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
     <link>https://pcotret.github.io/coresight-zedboard/</link>

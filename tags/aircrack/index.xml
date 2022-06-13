@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>aircrack - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <title>aircrack - Tag - Pascal Cotret personal blog</title>
         <link>https://pcotret.github.io/tags/aircrack/</link>
-        <description>aircrack - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <description>aircrack - Tag - Pascal Cotret personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/aircrack/" rel="self" type="application/rss+xml" /><item>
     <title>Aircrack 101 - How to get the password of a WEP/WPA2 session captured in Wireshark</title>
     <link>https://pcotret.github.io/aircrack-101/</link>

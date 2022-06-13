@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tech notes / Security - Category - Pascal Cotret @ ENSTA Bretagne</title>
+        <title>Tech notes / Security - Category - Pascal Cotret personal blog</title>
         <link>https://pcotret.github.io/categories/tech-security/</link>
-        <description>Tech notes / Security - Category - Pascal Cotret @ ENSTA Bretagne</description>
+        <description>Tech notes / Security - Category - Pascal Cotret personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-security/" rel="self" type="application/rss+xml" /><item>
     <title>Godot reverse tools</title>
     <link>https://pcotret.github.io/godot-tools/</link>

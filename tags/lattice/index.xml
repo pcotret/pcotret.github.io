@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>lattice - Tag - Pascal Cotret @ ENSTA Bretagne</title>
+        <title>lattice - Tag - Pascal Cotret personal blog</title>
         <link>https://pcotret.github.io/tags/lattice/</link>
-        <description>lattice - Tag - Pascal Cotret @ ENSTA Bretagne</description>
+        <description>lattice - Tag - Pascal Cotret personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/lattice/" rel="self" type="application/rss+xml" /><item>
     <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
     <link>https://pcotret.github.io/lattice-ubuntu/</link>
