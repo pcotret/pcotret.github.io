@@ -4,6 +4,13 @@
         <link>https://pcotret.github.io/categories/tech-misc/</link>
         <description>Tech notes / Misc. - Category - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-misc/" rel="self" type="application/rss+xml" /><item>
+    <title>Static page for conference deadlines</title>
+    <link>https://pcotret.github.io/confs_static/</link>
+    <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/confs_static/</guid>
+    <description><![CDATA[Recently added a webpage to view conference deadlines: https://pcotret.github.io/deadlines-confs/ Based on sec-deadlines.github.io which is based on https://aideadlin.es/]]></description>
+</item><item>
     <title>OSINT 101</title>
     <link>https://pcotret.github.io/osint101/</link>
     <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
