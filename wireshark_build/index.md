@@ -9,7 +9,7 @@ cd wireshark
 mkdir build
 cd build
 cmake .. -DUSE_qt6=OFF
-make
+make -j$(nproc)
 sudo make install
 ```
 
