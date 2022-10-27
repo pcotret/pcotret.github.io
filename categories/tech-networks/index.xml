@@ -9,7 +9,7 @@
     <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/wireshark_build/</guid>
-    <description><![CDATA[Download and build 1 2 3 4 5 6 7 8  git clone https://gitlab.com/wireshark/wireshark source wireshark/tools/debian-setup.sh cd wireshark mkdir build cd build cmake .. -DUSE_qt6=OFF make -j$(nproc) sudo make install   ]]></description>
+    <description><![CDATA[Download and build 1 2 3 4 5 6 7 8  git clone https://gitlab.com/wireshark/wireshark sudo wireshark/tools/./debian-setup.sh cd wireshark mkdir build cd build cmake .. -DUSE_qt6=OFF make -j$(nproc) sudo make install   ]]></description>
 </item><item>
     <title>My first topology</title>
     <link>https://pcotret.github.io/first_topology/</link>

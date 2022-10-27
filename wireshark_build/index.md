@@ -4,7 +4,7 @@
 ## Download and build
 ```bash
 git clone https://gitlab.com/wireshark/wireshark
-source wireshark/tools/debian-setup.sh
+sudo wireshark/tools/./debian-setup.sh
 cd wireshark
 mkdir build
 cd build
