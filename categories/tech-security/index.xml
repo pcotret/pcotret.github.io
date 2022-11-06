@@ -4,6 +4,14 @@
         <link>https://pcotret.github.io/categories/tech-security/</link>
         <description>Tech notes / Security - Category - Github personal blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://pcotret.github.io/categories/tech-security/" rel="self" type="application/rss+xml" /><item>
+    <title>M82 bibliography PDF</title>
+    <link>https://pcotret.github.io/biblio-cyber/</link>
+    <pubDate>Sun, 06 Nov 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/biblio-cyber/</guid>
+    <description><![CDATA[The idea is to get a PDF of M82 bibliography instead of the Framapad.
+https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></description>
+</item><item>
     <title>Godot reverse tools</title>
     <link>https://pcotret.github.io/godot-tools/</link>
     <pubDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</pubDate>

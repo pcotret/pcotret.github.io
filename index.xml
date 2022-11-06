@@ -3,9 +3,17 @@
         <title>Github personal blog</title>
         <link>https://pcotret.github.io/</link>
         <description>Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 13 Oct 2022 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 06 Nov 2022 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://pcotret.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>M82 bibliography PDF</title>
+    <link>https://pcotret.github.io/biblio-cyber/</link>
+    <pubDate>Sun, 06 Nov 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/biblio-cyber/</guid>
+    <description><![CDATA[The idea is to get a PDF of M82 bibliography instead of the Framapad.
+https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></description>
+</item><item>
     <title>Static page for conference deadlines</title>
     <link>https://pcotret.github.io/confs_static/</link>
     <pubDate>Thu, 13 Oct 2022 00:00:00 &#43;0800</pubDate>
@@ -79,14 +87,5 @@ https://defendingthesoc.ctf.cert.rcts.pt/]]></description>
     <description><![CDATA[Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
 Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
 Just access the IP address in your browser and you&rsquo;re ready to go!]]></description>
-</item><item>
-    <title>Brixel CTF</title>
-    <link>https://pcotret.github.io/brixel-ctf/</link>
-    <pubDate>Sun, 03 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/brixel-ctf/</guid>
-    <description><![CDATA[Brixel CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/brixelctf-2020
-It was quite nice with challenge in several categories.
-https://ctf.brixel.space/]]></description>
 </item></channel>
 </rss>
