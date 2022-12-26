@@ -10,7 +10,7 @@
 <meta property="og:description" content="Github personal blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2022-12-26T10:56:54+01:00" />
+<meta property="og:updated_time" content="2022-12-26T11:03:50+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Github personal blog"/>
 <meta name="twitter:description" content="Github personal blog"/>
@@ -100,6 +100,17 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/pcotret" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/pascalcotret" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/Pa0x73cal" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://www.root-me.org/Pa0x73cal" title="Root Me" target="_blank" rel="noopener noreffer me"><i class="fas fa-flag-checkered fa-fw"></i></a><a href="mailto:mailto:firstname.lastname[at]gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/suunto_ambit3/">Suunto Ambit and Linux</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-12-26">2022-12-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div><div class="content">Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
+ Prerequisites :
+ Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
+1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
+1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
+1  winetricks dotnet452   Windows 7 mode:
+1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):</div><div class="post-footer">
+        <a href="/suunto_ambit3/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/suunto/">suunto</a>,&nbsp;<a href="/tags/gps/">gps</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/biblio-cyber/">M82 bibliography PDF</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-11-06">2022-11-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-security/"><i class="far fa-folder fa-fw"></i>Tech notes / Security</a></span></div><div class="content">The idea is to get a PDF of M82 bibliography instead of the Framapad.
 https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06</div><div class="post-footer">
@@ -123,17 +134,6 @@ Get License Create a directory for the license server (here I use ~/.local/share
 1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:</div><div class="post-footer">
         <a href="/microsemi_ubuntu/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/microsemi/">microsemi</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/suunto_ambit3/">Suunto Ambit and Linux</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div><div class="content">Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
- Prerequisites :
- Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
-1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
-1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
-1  winetricks dotnet452   Windows 7 mode:
-1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):</div><div class="post-footer">
-        <a href="/suunto_ambit3/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/suunto/">suunto</a>,&nbsp;<a href="/tags/gps/">gps</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/osint101/">OSINT 101</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-01-11">2022-01-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-misc/"><i class="far fa-folder fa-fw"></i>Tech notes / Misc.</a></span></div><div class="content">OSINT 101 Some ressources to get into OSINT:
