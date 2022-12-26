@@ -36,6 +36,19 @@ https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></desc
 Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
 1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
 </item><item>
+    <title>Suunto Ambit and Linux</title>
+    <link>https://pcotret.github.io/suunto_ambit3/</link>
+    <pubDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/suunto_ambit3/</guid>
+    <description><![CDATA[Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
+ Prerequisites :
+ Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
+1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
+1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
+1  winetricks dotnet452   Windows 7 mode:
+1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):]]></description>
+</item><item>
     <title>OSINT 101</title>
     <link>https://pcotret.github.io/osint101/</link>
     <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
@@ -76,14 +89,5 @@ https://defendingthesoc.ctf.cert.rcts.pt/]]></description>
     <guid>https://pcotret.github.io/tryhackme/</guid>
     <description><![CDATA[Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&hellip;
  Level 1 - Intro  OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting  Introductory CTFs to get your feet wet  Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan  Level 2 - Tooling  Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning  More introductory CTFs  Vulnversity - https://tryhackme.]]></description>
-</item><item>
-    <title>OWASP BWA VM settings</title>
-    <link>https://pcotret.github.io/owasp-bwa/</link>
-    <pubDate>Sun, 17 Jan 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/owasp-bwa/</guid>
-    <description><![CDATA[Download the OWASP BWA VM: https://www.vulnhub.com/entry/owasp-broken-web-applications-project-12,46/
-Network settings VM startup Just start the VM. After a few seconds, it will display its IP address. No need to login for the moment.
-Just access the IP address in your browser and you&rsquo;re ready to go!]]></description>
 </item></channel>
 </rss>

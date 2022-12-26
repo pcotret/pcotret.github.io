@@ -10,7 +10,7 @@
 <meta property="og:description" content="Github personal blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pcotret.github.io/" />
-<meta property="og:updated_time" content="2022-11-06T15:01:18+01:00" />
+<meta property="og:updated_time" content="2022-12-26T10:56:54+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Github personal blog"/>
 <meta name="twitter:description" content="Github personal blog"/>
@@ -124,19 +124,23 @@ Get License Create a directory for the license server (here I use ~/.local/share
         <a href="/microsemi_ubuntu/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/microsemi/">microsemi</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/suunto_ambit3/">Suunto Ambit and Linux</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-18">2022-03-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/articles/"><i class="far fa-folder fa-fw"></i>Articles</a></span></div><div class="content">Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
+ Prerequisites :
+ Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
+1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
+1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
+1  winetricks dotnet452   Windows 7 mode:
+1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):</div><div class="post-footer">
+        <a href="/suunto_ambit3/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/suunto/">suunto</a>,&nbsp;<a href="/tags/gps/">gps</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/osint101/">OSINT 101</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-01-11">2022-01-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-misc/"><i class="far fa-folder fa-fw"></i>Tech notes / Misc.</a></span></div><div class="content">OSINT 101 Some ressources to get into OSINT:
  https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy  CTFs:
  https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges  </div><div class="post-footer">
         <a href="/osint101/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/osintctf/">osint,ctf</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/haxe_osint_2021/">HEXA OSINT CTF 2021</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-12-05">2021-12-05</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div><div class="content">https://hexactf.ctfd.io/
-An OSINT-based CTF done by Sopra and &ldquo;La Fabrique Défense&rdquo; (French DoD entity)
-Some writeups are here: https://github.com/pcotret/ctf-writeups/tree/master/hexa-2021</div><div class="post-footer">
-        <a href="/haxe_osint_2021/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/osint/">osint</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

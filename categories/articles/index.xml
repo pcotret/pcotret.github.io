@@ -13,5 +13,18 @@
  Prerequisites 1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
 Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
 1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
+</item><item>
+    <title>Suunto Ambit and Linux</title>
+    <link>https://pcotret.github.io/suunto_ambit3/</link>
+    <pubDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/suunto_ambit3/</guid>
+    <description><![CDATA[Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
+ Prerequisites :
+ Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
+1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
+1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
+1  winetricks dotnet452   Windows 7 mode:
+1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):]]></description>
 </item></channel>
 </rss>
