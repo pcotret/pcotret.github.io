@@ -5,33 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine" />
-<meta property="og:description" content="Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018." />
+        <title>Implementation settings for (very) simple Vivado projects - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Implementation settings for (very) simple Vivado projects" />
+<meta property="og:description" content="https://support.xilinx.com/s/article/58992?language=en_US
+ [Place 30-415] IO Placement failed due to over utilization
+ Project Manager =&gt; Settings =&gt; Synthesis =&gt; More options. Add this flag:
+1  -mode out_of_context   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/fpga-env-101/" />
+<meta property="og:url" content="https://pcotret.github.io/implementation_test/" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta property="article:modified_time" content="2023-01-18T09:51:47+01:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine"/>
-<meta name="twitter:description" content="Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018."/>
+<meta name="twitter:title" content="Implementation settings for (very) simple Vivado projects"/>
+<meta name="twitter:description" content="https://support.xilinx.com/s/article/58992?language=en_US
+ [Place 30-415] IO Placement failed due to over utilization
+ Project Manager =&gt; Settings =&gt; Synthesis =&gt; More options. Add this flag:
+1  -mode out_of_context   "/>
 <meta name="application-name" content="Github personal blog">
 <meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/fpga-env-101/" /><link rel="prev" href="https://pcotret.github.io/lattice-ubuntu/" /><link rel="next" href="https://pcotret.github.io/implementation_test/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/implementation_test/" /><link rel="prev" href="https://pcotret.github.io/fpga-env-101/" /><link rel="next" href="https://pcotret.github.io/image_scripts/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Installing a Xilinx FPGA environment for an Ubuntu-based machine",
+        "headline": "Implementation settings for (very) simple Vivado projects",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/pcotret.github.io\/fpga-env-101\/"
-        },"genre": "posts","keywords": "fpga, xilinx","wordcount":  222 ,
-        "url": "https:\/\/pcotret.github.io\/fpga-env-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+            "@id": "https:\/\/pcotret.github.io\/implementation_test\/"
+        },"genre": "posts","keywords": "xilinx, settings","wordcount":  25 ,
+        "url": "https:\/\/pcotret.github.io\/implementation_test\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2023-01-18T09:51:47+01:00","publisher": {
             "@type": "Organization",
             "name": "xxxx"},"author": {
                 "@type": "Person",
@@ -105,94 +107,41 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Installing a Xilinx FPGA environment for an Ubuntu-based machine</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Implementation settings for (very) simple Vivado projects</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-hardware/"><i class="far fa-folder fa-fw"></i>Tech notes / Hardware</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;222 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;25 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#installing-vivado">Installing Vivado</a>
-      <ul>
-        <li><a href="#license">License</a></li>
-        <li><a href="#pre-configuration">Pre-configuration</a></li>
-        <li><a href="#hello-world-tutorial-for-zedboard-and-nexys4">&ldquo;Hello World&rdquo; tutorial for Zedboard and Nexys4</a></li>
-      </ul>
-    </li>
-    <li><a href="#vhdl-simulation">VHDL simulation</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="installing-vivado">Installing Vivado</h2>
-<ul>
-<li>Vivado Design Suite - HLx Editions - 2019.2 for the latest version: <a href="https://www.xilinx.com/support/download.html">https://www.xilinx.com/support/download.html</a></li>
-<li>Tutorial available here: : <a href="https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0">https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0</a></li>
-</ul>
-<h3 id="license">License</h3>
-<ul>
-<li>Infos available in <a href="./xilinx_bashrc.md" rel="">another note</a>.</li>
-<li>However, some families don&rsquo;t need a license file 😉</li>
-</ul>
-<h3 id="pre-configuration">Pre-configuration</h3>
-<p>Before executing Vivado, a few things to be aware of:</p>
-<ul>
-<li>
-<p>Add this line in your <code>$HOME/.bashrc</code> (amongst other things, this script add binaries to <code>PATH</code>) :</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><a href="https://support.xilinx.com/s/article/58992?language=en_US">https://support.xilinx.com/s/article/58992?language=en_US</a></p>
+<blockquote>
+<p>[Place 30-415] IO Placement failed due to over utilization</p>
+</blockquote>
+<p>Project Manager =&gt; Settings =&gt; Synthesis =&gt; More options. Add this flag:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> /opt/Xilinx/Vivado/2018.2/settings64.sh  <span class="c1"># Modify the path to Vivado if needed</span>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-mode out_of_context
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p>Now, Vivado could be executed with the command: <code>vivado</code></p>
-</li>
-<li>
-<p>It may be easier to have write rights on the Vivado install directory:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chown -R <span class="nv">$USER</span> /opt/Xilinx
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>Board drivers may be installed with scripts at <code>/opt/Xilinx/Vivado/2018.3/data/xicom/cable_drivers/lin64/install_script</code></p>
-</li>
-</ul>
-<h3 id="hello-world-tutorial-for-zedboard-and-nexys4">&ldquo;Hello World&rdquo; tutorial for Zedboard and Nexys4</h3>
-<ul>
-<li>For the Zedboard: <a href="https://gitlab.com/pcotret/hello-zedboard">https://gitlab.com/pcotret/hello-zedboard</a>
-Without going into details, it allows the user to compile a first design and verifies that the user can talk with the board.</li>
-<li>For the Nexys4: <a href="https://reference.digilentinc.com/learn/programmable-logic/tutorials/nexys-4-ddr-programming-guide/start#tutorial">https://reference.digilentinc.com/learn/programmable-logic/tutorials/nexys-4-ddr-programming-guide/start#tutorial</a></li>
-</ul>
-<h2 id="vhdl-simulation">VHDL simulation</h2>
-<p>Vivado includes a VHDL simulator which seems not optimal to me. Furthermore, for a quick simulation of a tiny component, it may be interesting to get a simulator without all the FPGA vendor layer. Modelsim is a well-known solution:</p>
-<ul>
-<li><strong>Problem #1 :</strong> Modelsim is usually included in a bundle with other tools.</li>
-<li><strong>Problem #2 :</strong> Modelsim isn&rsquo;t very 64-bits friendly</li>
-</ul>
-<p>Here is a note to set up Modelsim on a <a href="./modelsim-ubuntu.md" rel="">64-bit Ubuntu machine</a>.</p>
-</div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
-                                    <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+                <span>Updated on 2023-01-18&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/76cad58ec21d737dee00d77adc1dc4bf297afb0d" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 76cad58ec21d737dee00d77adc1dc4bf297afb0d: update">
+                                    <i class="fas fa-hashtag fa-fw"></i>76cad58</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/fpga-env-101/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/implementation_test/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
                 <span></span>
@@ -201,14 +150,14 @@ Without going into details, it allows the user to compile a first design and ver
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/fpga/">fpga</a>,&nbsp;<a href="/tags/xilinx/">xilinx</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/xilinx/">xilinx</a>,&nbsp;<a href="/tags/settings/">settings</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/lattice-ubuntu/" class="prev" rel="prev" title="Installing Lattice iCEcube2 FPGA tools on Ubuntu"><i class="fas fa-angle-left fa-fw"></i>Installing Lattice iCEcube2 FPGA tools on Ubuntu</a>
-            <a href="/implementation_test/" class="next" rel="next" title="Implementation settings for (very) simple Vivado projects">Implementation settings for (very) simple Vivado projects<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/fpga-env-101/" class="prev" rel="prev" title="Installing a Xilinx FPGA environment for an Ubuntu-based machine"><i class="fas fa-angle-left fa-fw"></i>Installing a Xilinx FPGA environment for an Ubuntu-based machine</a>
+            <a href="/image_scripts/" class="next" rel="next" title="Image processing">Image processing<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main></div>
