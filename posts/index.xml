@@ -3,7 +3,15 @@
         <title>All Posts - Github personal blog</title>
         <link>https://pcotret.github.io/posts/</link>
         <description>All Posts | Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 26 Dec 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 22 Jan 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+    <link>https://pcotret.github.io/simulide/</link>
+    <pubDate>Sun, 22 Jan 2023 00:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/simulide/</guid>
+    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
+ Downloading tools  SimulIDE : Download the Lin64 AppImage or the Win32.zip archive depending of your operating system.]]></description>
+</item><item>
     <title>Suunto Ambit and Linux</title>
     <link>https://pcotret.github.io/suunto_ambit3/</link>
     <pubDate>Mon, 26 Dec 2022 00:00:00 &#43;0800</pubDate>
@@ -81,13 +89,5 @@ Some writeups are here: https://github.com/pcotret/ctf-writeups/tree/master/hexa
     <guid>https://pcotret.github.io/rcts-cert/</guid>
     <description><![CDATA[RCTS CERT CTF writeups: https://github.com/pcotret/ctf-writeups/tree/master/rcts-cert-2021
 https://defendingthesoc.ctf.cert.rcts.pt/]]></description>
-</item><item>
-    <title>TryHackMe free rooms</title>
-    <link>https://pcotret.github.io/tryhackme/</link>
-    <pubDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/tryhackme/</guid>
-    <description><![CDATA[Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&hellip;
- Level 1 - Intro  OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting  Introductory CTFs to get your feet wet  Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan  Level 2 - Tooling  Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning  More introductory CTFs  Vulnversity - https://tryhackme.]]></description>
 </item></channel>
 </rss>
