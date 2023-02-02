@@ -12,7 +12,7 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/simulide/</guid>
     <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Download the Lin64 AppImage or the Win32.zip archive depending of your operating system.]]></description>
+ Downloading tools  SimulIDE : Last Stable Version. For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.]]></description>
 </item><item>
     <title>Suunto Ambit and Linux</title>
     <link>https://pcotret.github.io/suunto_ambit3/</link>

@@ -5,8 +5,14 @@
 
 ## Downloading tools
 
-- [SimulIDE](https://www.simulide.com/p/downloads.html) : Download the **Lin64 AppImage** or the **Win32.zip** archive depending of your operating system. 
-- [Arduino](https://www.arduino.cc/en/Main/Software). Download the **Windows ZIP for non admin install** or the **Linux 64 bits** archive.
+- [SimulIDE](https://www.simulide.com/p/downloads.html) : **Last Stable Version**. For Linux, please prefer the `Linux64` archive. 
+- [Arduino](https://www.arduino.cc/en/Main/Software). **Legacy IDE (1.8.X)**. Download the `Windows ZIP file` or the `Linux 64 bits` archive.
+
+Note : for Ubuntu/Debian derivatives, you should install a few libraries to make SimulIDE working:
+
+```bash
+sudo apt-get install libqt5core5a libqt5gui5 libqt5xml5 libqt5svg5 libqt5widgets5 libqt5concurrent5 libqt5multimedia5 libqt5multimedia5-plugins libqt5serialport5 libqt5script5 libelf1
+```
 
 Extract softwares in a directory. You should get something similar to this:
 
@@ -24,14 +30,14 @@ Here is the main interface :
 
 ### Schematic settings (red rectangle)
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|
+| 1                 | 2                                   | 3        | 4    | 5    | 6       | 7              | 8     |
+| ----------------- | ----------------------------------- | -------- | ---- | ---- | ------- | -------------- | ----- |
 | SimulIDE settings | Switch between already opened files | New file | Open | Save | Save as | Run simulation | Pause |
 
 ### Code editor settings (blue rectangle)
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|
+| 1             | 2                                   | 3        | 4    | 5    | 6       | 7       | 8                       |
+| ------------- | ----------------------------------- | -------- | ---- | ---- | ------- | ------- | ----------------------- |
 | Code settings | Switch between already opened files | New file | Open | Save | Save as | Compile | Download on the Arduino |
 
 Open the LED fadding example (`<simulide_dir>/share/simulide/examples/Arduino/ledFadding`)
@@ -43,7 +49,7 @@ Open the LED fadding example (`<simulide_dir>/share/simulide/examples/Arduino/le
 
 ![image-20200422210236017](../img/simulide-img4.jpg)
 
-Right click on the `ledFadding.ino` and click `Compiler Settings`. Select the directory where you have the Arduino executable (`./simul_ide/arduino-1.8.12` in the screenshot below).
+Right click on the `ledFadding.ino` and click `Set Compiler Path`. Select the directory where you have the Arduino executable (`./simul_ide/arduino-1.8.12` in the screenshot below).
 
 ![image-20200422210353987](../img/simulide-img5.jpg)
 
@@ -61,9 +67,9 @@ Now, just click on the red button in the upper left toolbar:
 
 ![mcu](../img/simulide-img8.jpg)
 
-## Alaternative compiler configuration
+## Alternative compiler configuration
 
-Sometimes, compiler settings are a bit painful. It amy be easier to compile the binary in the default Arduino IDE and export the HEX file to be loaded in the simulator.
+Sometimes, compiler settings are a bit painful. It may be easier to compile the binary in the default Arduino IDE and export the HEX file to be loaded in the simulator.
 
 - Compile the binary in the Arduino editor. Then click on `Sketch => Export compiled binary`.
-- Then, right click on the Arduino and select `Load firmware` and look for the `*.hex` file just compiled close to the Arduino project file.
+- Then, right click on the Arduino in SimulIDE and select `Load firmware` and look for the `*.hex` file just compiled close to the Arduino project file.

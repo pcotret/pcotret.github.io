@@ -7,15 +7,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Quick start guide for SimulIDE as an Arduino simulator - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Quick start guide for SimulIDE as an Arduino simulator" />
 <meta property="og:description" content="The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Download the Lin64 AppImage or the Win32.zip archive depending of your operating system." />
+ Downloading tools  SimulIDE : Last Stable Version. For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/simulide/" />
 <meta property="article:published_time" content="2023-01-22T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-01-22T20:51:13+01:00" />
+<meta property="article:modified_time" content="2023-02-02T09:59:04+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Quick start guide for SimulIDE as an Arduino simulator"/>
 <meta name="twitter:description" content="The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Download the Lin64 AppImage or the Win32.zip archive depending of your operating system."/>
+ Downloading tools  SimulIDE : Last Stable Version. For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1."/>
 <meta name="application-name" content="Github personal blog">
 <meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,8 +28,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/simulide\/"
-        },"genre": "posts","keywords": "simulide, arduino, simulation","wordcount":  369 ,
-        "url": "https:\/\/pcotret.github.io\/simulide\/","datePublished": "2023-01-22T00:00:00+08:00","dateModified": "2023-01-22T20:51:13+01:00","publisher": {
+        },"genre": "posts","keywords": "simulide, arduino, simulation","wordcount":  398 ,
+        "url": "https:\/\/pcotret.github.io\/simulide\/","datePublished": "2023-01-22T00:00:00+08:00","dateModified": "2023-02-02T09:59:04+01:00","publisher": {
             "@type": "Organization",
             "name": "xxxx"},"author": {
                 "@type": "Person",
@@ -105,7 +105,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Quick start guide for SimulIDE as an Arduino simulator</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-embedded/"><i class="far fa-folder fa-fw"></i>Tech notes / Embedded</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-22">2023-01-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;369 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-22">2023-01-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;398 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -122,6 +122,7 @@
         <li><a href="#compiler-configuration">Compiler configuration</a></li>
       </ul>
     </li>
+    <li><a href="#alternative-compiler-configuration">Alternative compiler configuration</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -129,10 +130,19 @@
 </blockquote>
 <h2 id="downloading-tools">Downloading tools</h2>
 <ul>
-<li><a href="https://www.simulide.com/p/downloads.html" target="_blank" rel="noopener noreffer">SimulIDE</a> : Download the <strong>Lin64 AppImage</strong> or the <strong>Win32.zip</strong> archive depending of your operating system.</li>
-<li><a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener noreffer">Arduino</a>. Download the <strong>Windows ZIP for non admin install</strong> or the <strong>Linux 64 bits</strong> archive.</li>
+<li><a href="https://www.simulide.com/p/downloads.html" target="_blank" rel="noopener noreffer">SimulIDE</a> : <strong>Last Stable Version</strong>. For Linux, please prefer the <code>Linux64</code> archive.</li>
+<li><a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener noreffer">Arduino</a>. <strong>Legacy IDE (1.8.X)</strong>. Download the <code>Windows ZIP file</code> or the <code>Linux 64 bits</code> archive.</li>
 </ul>
-<p>Extract softwares in a directory. You should get something similar to this:</p>
+<p>Note : for Ubuntu/Debian derivatives, you should install a few libraries to make SimulIDE working:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install libqt5core5a libqt5gui5 libqt5xml5 libqt5svg5 libqt5widgets5 libqt5concurrent5 libqt5multimedia5 libqt5multimedia5-plugins libqt5serialport5 libqt5script5 libelf1
+</code></pre></td></tr></table>
+</div>
+</div><p>Extract softwares in a directory. You should get something similar to this:</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -228,7 +238,7 @@
         data-sizes="auto"
         alt="../img/simulide-img4.jpg"
         title="image-20200422210236017" /></p>
-<p>Right click on the <code>ledFadding.ino</code> and click <code>Compiler Settings</code>. Select the directory where you have the Arduino executable (<code>./simul_ide/arduino-1.8.12</code> in the screenshot below).</p>
+<p>Right click on the <code>ledFadding.ino</code> and click <code>Set Compiler Path</code>. Select the directory where you have the Arduino executable (<code>./simul_ide/arduino-1.8.12</code> in the screenshot below).</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -269,18 +279,18 @@
         data-sizes="auto"
         alt="../img/simulide-img8.jpg"
         title="mcu" /></p>
-<p>## Alaternative compiler configuration</p>
-<p>Sometimes, compiler settings are a bit painful. It amy be easier to compile the binary in the default Arduino IDE and export the HEX file to be loaded in the simulator.</p>
+<h2 id="alternative-compiler-configuration">Alternative compiler configuration</h2>
+<p>Sometimes, compiler settings are a bit painful. It may be easier to compile the binary in the default Arduino IDE and export the HEX file to be loaded in the simulator.</p>
 <ul>
 <li>Compile the binary in the Arduino editor. Then click on <code>Sketch =&gt; Export compiled binary</code>.</li>
-<li>Then, right click on the Arduino and select <code>Load firmware</code> and look for the <code>*.hex</code> file just compiled close to the Arduino project file.</li>
+<li>Then, right click on the Arduino in SimulIDE and select <code>Load firmware</code> and look for the <code>*.hex</code> file just compiled close to the Arduino project file.</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-01-22&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/3348ab3e159818c9ac2f3fca253d0467124581f7" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 3348ab3e159818c9ac2f3fca253d0467124581f7: update date">
-                                    <i class="fas fa-hashtag fa-fw"></i>3348ab3</a></span>
+                <span>Updated on 2023-02-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/607540f24db6472f11759ae8ec1e53b9e37291aa" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 607540f24db6472f11759ae8ec1e53b9e37291aa: fix typos">
+                                    <i class="fas fa-hashtag fa-fw"></i>607540f</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
