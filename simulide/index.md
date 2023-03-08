@@ -5,7 +5,7 @@
 
 ## Downloading tools
 
-- [SimulIDE](https://www.simulide.com/p/downloads.html) : **Last Stable Version**. For Linux, please prefer the `Linux64` archive. 
+- [SimulIDE](https://www.simulide.com/p/downloads.html) : **Last Stable Version (0.4.15)**. For Linux, please prefer the `Linux64` archive. 
 - [Arduino](https://www.arduino.cc/en/Main/Software). **Legacy IDE (1.8.X)**. Download the `Windows ZIP file` or the `Linux 64 bits` archive.
 
 Note : for Ubuntu/Debian derivatives, you should install a few libraries to make SimulIDE working:
