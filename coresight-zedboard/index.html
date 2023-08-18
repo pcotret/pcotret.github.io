@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Activate Coresight components in a Yocto environment for the Zedboard - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Activate Coresight components in a Yocto environment for the Zedboard" />
+        <title>Activate Coresight components in a Yocto environment for the Zedboard - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Activate Coresight components in a Yocto environment for the Zedboard" />
 <meta property="og:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​" />
+1 2 3 4 5 6 7 Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue No Coresight components 😢 ​" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/coresight-zedboard/" />
+<meta property="og:url" content="https://pcotret.github.io/coresight-zedboard/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-29T00:00:00+08:00" />
 <meta property="article:modified_time" content="2021-04-29T12:41:51+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Activate Coresight components in a Yocto environment for the Zedboard"/>
 <meta name="twitter:description" content="Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​"/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+1 2 3 4 5 6 7 Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue No Coresight components 😢 ​"/>
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/coresight-zedboard/" /><link rel="prev" href="https://pcotret.github.io/aircrack-101/" /><link rel="next" href="https://pcotret.github.io/wireshark_build/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -130,10 +130,10 @@
 </nav></div>
             </div><div class="content" id="content"><h2 id="activate-coresight-components---software-side---method-1">Activate Coresight components - Software side - Method #1</h2>
 <h3 id="generate-a-core-image-minimal">Generate a <code>core-image-minimal</code></h3>
-<p>Just follow <a href="https://pcotret.github.io/yocto-zedboard-101/">https://pcotret.github.io/yocto-zedboard-101/</a>. When booting this image:</p>
+<p>Just follow <a href="https://pcotret.github.io/yocto-zedboard-101/" target="_blank" rel="noopener noreffer">https://pcotret.github.io/yocto-zedboard-101/</a>. When booting this image:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -142,25 +142,25 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
-
-zedboard-zynq7 login: root
-root@zedboard-zynq7:~# ls /sys/bus/
-amba          container     event_source  i2c           media         nvmem         scsi          soc           usb
-clockevents   cpu           gpio          iio           mmc           pci           sdio          spi           virtio
-clocksource   edac          hid           mdio_bus      mmc_rpmb      platform      serio         ulpi          workqueue
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">zedboard-zynq7 login: root
+</span></span><span class="line"><span class="cl">root@zedboard-zynq7:~# ls /sys/bus/
+</span></span><span class="line"><span class="cl">amba          container     event_source  i2c           media         nvmem         scsi          soc           usb
+</span></span><span class="line"><span class="cl">clockevents   cpu           gpio          iio           mmc           pci           sdio          spi           virtio
+</span></span><span class="line"><span class="cl">clocksource   edac          hid           mdio_bus      mmc_rpmb      platform      serio         ulpi          workqueue
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>No Coresight components 😢 ​</p>
 <h3 id="customize-a-linux-xlnx-dev-kernel-uimage">Customize a <code>linux-xlnx-dev</code> kernel <code>uImage</code></h3>
 <p>The idea is to create a custom kernel where the support of Coresight components is enabled. Unfortunately, we cannot customize the usual <code>core-image-minimal</code> image with Yocto tools. Fortunately, we can do it on a <code>linux-xlnx-dev</code> image!</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bitbake linux-xlnx-dev -c menuconfig
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bitbake linux-xlnx-dev -c menuconfig
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><img
         class="lazyload"
@@ -181,18 +181,18 @@ clocksource   edac          hid           mdio_bus      mmc_rpmb      platform  
         title="menu-coresight" /></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bitbake linux-xlnx-dev -c compile -f
-bitbake linux-xlnx-dev -c deploy
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bitbake linux-xlnx-dev -c compile -f
+</span></span><span class="line"><span class="cl">bitbake linux-xlnx-dev -c deploy
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now, you should have a new <code>uImage</code> file in <code>build/tmp/deploy/images/zedboard-zynq7</code>. Just replace it in the first partititon of the SD card and boot the board.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -204,17 +204,17 @@ bitbake linux-xlnx-dev -c deploy
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
-
-zedboard-zynq7 login: root
-root@zedboard-zynq7:/sys/bus/coresight# ll       
-drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jan  <span class="m">1</span>  <span class="m">1970</span> devices
-drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jun <span class="m">29</span> 21:56 drivers
--rw-r--r--    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_autoprobe
---w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_probe
---w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 uevent
-root@zedboard-zynq7:/sys/bus/coresight# ll devices/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">zedboard-zynq7 login: root
+</span></span><span class="line"><span class="cl">root@zedboard-zynq7:/sys/bus/coresight# ll       
+</span></span><span class="line"><span class="cl">drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jan  <span class="m">1</span>  <span class="m">1970</span> devices
+</span></span><span class="line"><span class="cl">drwxr-xr-x    <span class="m">2</span> root     root           <span class="m">0</span> Jun <span class="m">29</span> 21:56 drivers
+</span></span><span class="line"><span class="cl">-rw-r--r--    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_autoprobe
+</span></span><span class="line"><span class="cl">--w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 drivers_probe
+</span></span><span class="line"><span class="cl">--w-------    <span class="m">1</span> root     root        4.0K Jun <span class="m">29</span> 21:56 uevent
+</span></span><span class="line"><span class="cl">root@zedboard-zynq7:/sys/bus/coresight# ll devices/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>We can see some Coresight support in the kernel but no devices detected&hellip; And, well, there are several reasons for that 😨</p>
 <h2 id="activate-coresight-components---hardware-side">Activate Coresight components - Hardware side</h2>
@@ -223,51 +223,51 @@ root@zedboard-zynq7:/sys/bus/coresight# ll devices/
 <p><a href="https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/conf/machine/zedboard-zynq7.conf" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/conf/machine/zedboard-zynq7.conf</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">require conf/machine/include/machine-xilinx-default.inc
-<span class="c1"># Skipping a few lines</span>
-<span class="nv">KERNEL_DEVICETREE</span> <span class="o">=</span> <span class="s2">&#34;zynq-zed.dtb&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">require conf/machine/include/machine-xilinx-default.inc
+</span></span><span class="line"><span class="cl"><span class="c1"># Skipping a few lines</span>
+</span></span><span class="line"><span class="cl"><span class="nv">KERNEL_DEVICETREE</span> <span class="o">=</span> <span class="s2">&#34;zynq-zed.dtb&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/conf/machine/include/machine-xilinx-default.inc" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/conf/machine/include/machine-xilinx-default.inc</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Kernel Configuration</span>
-XILINX_DEFAULT_KERNEL :<span class="o">=</span> <span class="s2">&#34;linux-xlnx&#34;</span>
-XILINX_DEFAULT_KERNEL_microblaze :<span class="o">=</span> <span class="s2">&#34;linux-yocto&#34;</span>
-XILINX_DEFAULT_KERNEL_zynqmp :<span class="o">=</span> <span class="s2">&#34;linux-yocto&#34;</span>
-PREFERRED_PROVIDER_virtual/kernel ??<span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">XILINX_DEFAULT_KERNEL</span><span class="si">}</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Kernel Configuration</span>
+</span></span><span class="line"><span class="cl">XILINX_DEFAULT_KERNEL :<span class="o">=</span> <span class="s2">&#34;linux-xlnx&#34;</span>
+</span></span><span class="line"><span class="cl">XILINX_DEFAULT_KERNEL_microblaze :<span class="o">=</span> <span class="s2">&#34;linux-yocto&#34;</span>
+</span></span><span class="line"><span class="cl">XILINX_DEFAULT_KERNEL_zynqmp :<span class="o">=</span> <span class="s2">&#34;linux-yocto&#34;</span>
+</span></span><span class="line"><span class="cl">PREFERRED_PROVIDER_virtual/kernel ??<span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">XILINX_DEFAULT_KERNEL</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>According to the BitBake files, it will clone the <code>xlnx_rebase_v4.19</code> branch of the Linux kernel provided by Xilinx (<a href="https://github.com/Xilinx/linux-xlnx/tree/xlnx_rebase_v4.19" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/linux-xlnx/tree/xlnx_rebase_v4.19</a>).</p>
 <p><a href="https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2019.2.bb" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/meta-xilinx/tree/zeus/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2019.2.bb</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">LINUX_VERSION</span> <span class="o">=</span> <span class="s2">&#34;4.19&#34;</span>
-KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">LINUX_VERSION</span> <span class="o">=</span> <span class="s2">&#34;4.19&#34;</span>
+</span></span><span class="line"><span class="cl">KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then, if we look at the device tree file common to all Zynq 7000-based boards (<a href="https://github.com/Xilinx/linux-xlnx/blob/xlnx_rebase_v4.19/arch/arm/boot/dts/zynq-7000.dtsi" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/linux-xlnx/blob/xlnx_rebase_v4.19/arch/arm/boot/dts/zynq-7000.dtsi</a>):
 <strong>No mention of Coresight components at all</strong> 😨</p>
 <p>Which in not the case in the <code>master</code> branch (<a href="https://github.com/Xilinx/linux-xlnx/blob/master/arch/arm/boot/dts/zynq-7000.dtsi" target="_blank" rel="noopener noreffer">https://github.com/Xilinx/linux-xlnx/blob/master/arch/arm/boot/dts/zynq-7000.dtsi</a>):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -314,57 +314,57 @@ KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># [...]</span>
-		etb@f8801000 <span class="o">{</span>
-			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-etb10&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
-			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8801000 0x1000&gt;<span class="p">;</span>
-			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
-			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
-			in-ports <span class="o">{</span>
-				port <span class="o">{</span>
-					etb_in_port: endpoint <span class="o">{</span>
-						remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>replicator_out_port1&gt;<span class="p">;</span>
-					<span class="o">}</span><span class="p">;</span>
-				<span class="o">}</span><span class="p">;</span>
-			<span class="o">}</span><span class="p">;</span>
-		<span class="o">}</span><span class="p">;</span>
-
-		tpiu@f8803000 <span class="o">{</span>
-			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-tpiu&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
-			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8803000 0x1000&gt;<span class="p">;</span>
-			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
-			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
-			in-ports <span class="o">{</span>
-				port <span class="o">{</span>
-					tpiu_in_port: endpoint <span class="o">{</span>
-						remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>replicator_out_port0&gt;<span class="p">;</span>
-					<span class="o">}</span><span class="p">;</span>
-				<span class="o">}</span><span class="p">;</span>
-			<span class="o">}</span><span class="p">;</span>
-		<span class="o">}</span><span class="p">;</span>
-
-		funnel@f8804000 <span class="o">{</span>
-			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-static-funnel&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
-			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8804000 0x1000&gt;<span class="p">;</span>
-			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
-			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
-
-			/* funnel output ports */
-			out-ports <span class="o">{</span>
-				port <span class="o">{</span>
-					funnel_out_port: endpoint <span class="o">{</span>
-						remote-endpoint <span class="o">=</span>
-							&lt;<span class="p">&amp;</span>replicator_in_port0&gt;<span class="p">;</span>
-					<span class="o">}</span><span class="p">;</span>
-				<span class="o">}</span><span class="p">;</span>
-			<span class="o">}</span><span class="p">;</span>
-<span class="c1"># [...]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># [...]</span>
+</span></span><span class="line"><span class="cl">		etb@f8801000 <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-etb10&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8801000 0x1000&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			in-ports <span class="o">{</span>
+</span></span><span class="line"><span class="cl">				port <span class="o">{</span>
+</span></span><span class="line"><span class="cl">					etb_in_port: endpoint <span class="o">{</span>
+</span></span><span class="line"><span class="cl">						remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>replicator_out_port1&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">					<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		tpiu@f8803000 <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-tpiu&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8803000 0x1000&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			in-ports <span class="o">{</span>
+</span></span><span class="line"><span class="cl">				port <span class="o">{</span>
+</span></span><span class="line"><span class="cl">					tpiu_in_port: endpoint <span class="o">{</span>
+</span></span><span class="line"><span class="cl">						remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>replicator_out_port0&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">					<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		funnel@f8804000 <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&#34;arm,coresight-static-funnel&#34;</span>, <span class="s2">&#34;arm,primecell&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">reg</span> <span class="o">=</span> &lt;0xf8804000 0x1000&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="nv">clocks</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>clkc 27&gt;, &lt;<span class="p">&amp;</span>clkc 46&gt;, &lt;<span class="p">&amp;</span>clkc 47&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">			clock-names <span class="o">=</span> <span class="s2">&#34;apb_pclk&#34;</span>, <span class="s2">&#34;dbg_trc&#34;</span>, <span class="s2">&#34;dbg_apb&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			/* funnel output ports */
+</span></span><span class="line"><span class="cl">			out-ports <span class="o">{</span>
+</span></span><span class="line"><span class="cl">				port <span class="o">{</span>
+</span></span><span class="line"><span class="cl">					funnel_out_port: endpoint <span class="o">{</span>
+</span></span><span class="line"><span class="cl">						remote-endpoint <span class="o">=</span>
+</span></span><span class="line"><span class="cl">							&lt;<span class="p">&amp;</span>replicator_in_port0&gt;<span class="p">;</span>
+</span></span><span class="line"><span class="cl">					<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="o">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [...]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is mainly due to the fact that the kernel version in the <a href="https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb" target="_blank" rel="noopener noreffer">meta-xilinx</a> layer has been updated later in the <code>master branch</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -385,31 +385,31 @@ KBRANCH ?<span class="o">=</span> <span class="s2">&#34;xlnx_rebase_v4.19&#34;</
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">commit 48998ea5b79af13fb1b181037cd3a12990463e8a
-Author: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
-Date:   Fri Feb 21 11:20:37 2020 -0800
-
-    Update KERNEL_VERSION to 5.4
-    
-    Update KERNEL_VERSION to 5.4
-    
-    Signed-off-by: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
-
-<span class="gh">diff --git a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gh">index 58f163c..2b8763a 100644
-</span><span class="gh"></span><span class="gd">--- a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gd"></span><span class="gi">+++ b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
-</span><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
-</span><span class="gu"></span><span class="gd">-LINUX_VERSION = &#34;4.19&#34;
-</span><span class="gd"></span><span class="gi">+LINUX_VERSION = &#34;5.4&#34;
-</span><span class="gi"></span> KBRANCH ?= &#34;xlnx_rebase_v4.19&#34;
- SRCREV ?= &#34;b983d5fd71d4feaf494cdbe0593ecc29ed471cb8&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">commit 48998ea5b79af13fb1b181037cd3a12990463e8a
+</span></span><span class="line"><span class="cl">Author: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
+</span></span><span class="line"><span class="cl">Date:   Fri Feb 21 11:20:37 2020 -0800
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Update KERNEL_VERSION to 5.4
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Update KERNEL_VERSION to 5.4
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Signed-off-by: Sai Hari Chandana Kalluri &lt;chandana.kalluri@xilinx.com&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh">diff --git a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span></span></span><span class="line"><span class="cl"><span class="gh">index 58f163c..2b8763a 100644
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- a/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx_2020.1.bb
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -1,4 +1,4 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gd">-LINUX_VERSION = &#34;4.19&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+LINUX_VERSION = &#34;5.4&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> KBRANCH ?= &#34;xlnx_rebase_v4.19&#34;
+</span></span><span class="line"><span class="cl"> SRCREV ?= &#34;b983d5fd71d4feaf494cdbe0593ecc29ed471cb8&#34;
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>Furthermore, this has been updated only in the <code>5.6</code> release of the Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master</a></p>
+</div><p>Furthermore, this has been updated only in the <code>5.6</code> release of the Linux kernel: <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&amp;h=master" target="_blank" rel="noopener noreffer">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=9b0b308a1586f620a49c50605ae8abf509190661&h=master</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -561,171 +561,171 @@ Date:   Fri Feb 21 11:20:37 2020 -0800
 </span><span class="lnt">150
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">--- a/arch/arm/boot/dts/zynq-7000.dtsi
-</span><span class="gd"></span><span class="gi">+++ b/arch/arm/boot/dts/zynq-7000.dtsi
-</span><span class="gi"></span><span class="gu">@@ -59,6 +59,39 @@
-</span><span class="gu"></span> 		regulator-always-on;
- 	};
- 
-<span class="gi">+	replicator {
-</span><span class="gi">+		compatible = &#34;arm,coresight-static-replicator&#34;;
-</span><span class="gi">+		clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+		clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+
-</span><span class="gi">+		out-ports {
-</span><span class="gi">+			#address-cells = &lt;1&gt;;
-</span><span class="gi">+			#size-cells = &lt;0&gt;;
-</span><span class="gi">+
-</span><span class="gi">+			/* replicator output ports */
-</span><span class="gi">+			port@0 {
-</span><span class="gi">+				reg = &lt;0&gt;;
-</span><span class="gi">+				replicator_out_port0: endpoint {
-</span><span class="gi">+					remote-endpoint = &lt;&amp;tpiu_in_port&gt;;
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+			port@1 {
-</span><span class="gi">+				reg = &lt;1&gt;;
-</span><span class="gi">+				replicator_out_port1: endpoint {
-</span><span class="gi">+					remote-endpoint = &lt;&amp;etb_in_port&gt;;
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+		in-ports {
-</span><span class="gi">+			/* replicator input port */
-</span><span class="gi">+			port {
-</span><span class="gi">+				replicator_in_port0: endpoint {
-</span><span class="gi">+					remote-endpoint = &lt;&amp;funnel_out_port&gt;;
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+	};
-</span><span class="gi">+
-</span><span class="gi"></span> 	amba: amba {
- 		compatible = &#34;simple-bus&#34;;
- 		#address-cells = &lt;1&gt;;
-<span class="gu">@@ -365,5 +398,107 @@
-</span><span class="gu"></span> 			reg = &lt;0xf8005000 0x1000&gt;;
- 			timeout-sec = &lt;10&gt;;
- 		};
-<span class="gi">+
-</span><span class="gi">+		etb@f8801000 {
-</span><span class="gi">+			compatible = &#34;arm,coresight-etb10&#34;, &#34;arm,primecell&#34;;
-</span><span class="gi">+			reg = &lt;0xf8801000 0x1000&gt;;
-</span><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+			in-ports {
-</span><span class="gi">+				port {
-</span><span class="gi">+					etb_in_port: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;replicator_out_port1&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+
-</span><span class="gi">+		tpiu@f8803000 {
-</span><span class="gi">+			compatible = &#34;arm,coresight-tpiu&#34;, &#34;arm,primecell&#34;;
-</span><span class="gi">+			reg = &lt;0xf8803000 0x1000&gt;;
-</span><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+			in-ports {
-</span><span class="gi">+				port {
-</span><span class="gi">+					tpiu_in_port: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;replicator_out_port0&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+
-</span><span class="gi">+		funnel@f8804000 {
-</span><span class="gi">+			compatible = &#34;arm,coresight-static-funnel&#34;, &#34;arm,primecell&#34;;
-</span><span class="gi">+			reg = &lt;0xf8804000 0x1000&gt;;
-</span><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+
-</span><span class="gi">+			/* funnel output ports */
-</span><span class="gi">+			out-ports {
-</span><span class="gi">+				port {
-</span><span class="gi">+					funnel_out_port: endpoint {
-</span><span class="gi">+						remote-endpoint =
-</span><span class="gi">+							&lt;&amp;replicator_in_port0&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+
-</span><span class="gi">+			in-ports {
-</span><span class="gi">+				#address-cells = &lt;1&gt;;
-</span><span class="gi">+				#size-cells = &lt;0&gt;;
-</span><span class="gi">+
-</span><span class="gi">+				/* funnel input ports */
-</span><span class="gi">+				port@0 {
-</span><span class="gi">+					reg = &lt;0&gt;;
-</span><span class="gi">+					funnel0_in_port0: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;ptm0_out_port&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+
-</span><span class="gi">+				port@1 {
-</span><span class="gi">+					reg = &lt;1&gt;;
-</span><span class="gi">+					funnel0_in_port1: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;ptm1_out_port&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+
-</span><span class="gi">+				port@2 {
-</span><span class="gi">+					reg = &lt;2&gt;;
-</span><span class="gi">+					funnel0_in_port2: endpoint {
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+				/* The other input ports are not connect to anything */
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+
-</span><span class="gi">+		ptm@f889c000 {
-</span><span class="gi">+			compatible = &#34;arm,coresight-etm3x&#34;, &#34;arm,primecell&#34;;
-</span><span class="gi">+			reg = &lt;0xf889c000 0x1000&gt;;
-</span><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+			cpu = &lt;&amp;cpu0&gt;;
-</span><span class="gi">+			out-ports {
-</span><span class="gi">+				port {
-</span><span class="gi">+					ptm0_out_port: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;funnel0_in_port0&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi">+
-</span><span class="gi">+		ptm@f889d000 {
-</span><span class="gi">+			compatible = &#34;arm,coresight-etm3x&#34;, &#34;arm,primecell&#34;;
-</span><span class="gi">+			reg = &lt;0xf889d000 0x1000&gt;;
-</span><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
-</span><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
-</span><span class="gi">+			cpu = &lt;&amp;cpu1&gt;;
-</span><span class="gi">+			out-ports {
-</span><span class="gi">+				port {
-</span><span class="gi">+					ptm1_out_port: endpoint {
-</span><span class="gi">+						remote-endpoint = &lt;&amp;funnel0_in_port1&gt;;
-</span><span class="gi">+					};
-</span><span class="gi">+				};
-</span><span class="gi">+			};
-</span><span class="gi">+		};
-</span><span class="gi"></span> 	};
- };
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">--- a/arch/arm/boot/dts/zynq-7000.dtsi
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/arch/arm/boot/dts/zynq-7000.dtsi
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -59,6 +59,39 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span> 		regulator-always-on;
+</span></span><span class="line"><span class="cl"> 	};
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="gi">+	replicator {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		compatible = &#34;arm,coresight-static-replicator&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		out-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			#address-cells = &lt;1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			#size-cells = &lt;0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			/* replicator output ports */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			port@0 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				reg = &lt;0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				replicator_out_port0: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					remote-endpoint = &lt;&amp;tpiu_in_port&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			port@1 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				reg = &lt;1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				replicator_out_port1: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					remote-endpoint = &lt;&amp;etb_in_port&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		in-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			/* replicator input port */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				replicator_in_port0: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					remote-endpoint = &lt;&amp;funnel_out_port&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+	};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> 	amba: amba {
+</span></span><span class="line"><span class="cl"> 		compatible = &#34;simple-bus&#34;;
+</span></span><span class="line"><span class="cl"> 		#address-cells = &lt;1&gt;;
+</span></span><span class="line"><span class="cl"><span class="gu">@@ -365,5 +398,107 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span> 			reg = &lt;0xf8005000 0x1000&gt;;
+</span></span><span class="line"><span class="cl"> 			timeout-sec = &lt;10&gt;;
+</span></span><span class="line"><span class="cl"> 		};
+</span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		etb@f8801000 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			compatible = &#34;arm,coresight-etb10&#34;, &#34;arm,primecell&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			reg = &lt;0xf8801000 0x1000&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			in-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					etb_in_port: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;replicator_out_port1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		tpiu@f8803000 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			compatible = &#34;arm,coresight-tpiu&#34;, &#34;arm,primecell&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			reg = &lt;0xf8803000 0x1000&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			in-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					tpiu_in_port: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;replicator_out_port0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		funnel@f8804000 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			compatible = &#34;arm,coresight-static-funnel&#34;, &#34;arm,primecell&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			reg = &lt;0xf8804000 0x1000&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			/* funnel output ports */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			out-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					funnel_out_port: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint =
+</span></span></span><span class="line"><span class="cl"><span class="gi">+							&lt;&amp;replicator_in_port0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			in-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				#address-cells = &lt;1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				#size-cells = &lt;0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				/* funnel input ports */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port@0 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					reg = &lt;0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					funnel0_in_port0: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;ptm0_out_port&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port@1 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					reg = &lt;1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					funnel0_in_port1: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;ptm1_out_port&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port@2 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					reg = &lt;2&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					funnel0_in_port2: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				/* The other input ports are not connect to anything */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		ptm@f889c000 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			compatible = &#34;arm,coresight-etm3x&#34;, &#34;arm,primecell&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			reg = &lt;0xf889c000 0x1000&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			cpu = &lt;&amp;cpu0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			out-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					ptm0_out_port: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;funnel0_in_port0&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		ptm@f889d000 {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			compatible = &#34;arm,coresight-etm3x&#34;, &#34;arm,primecell&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			reg = &lt;0xf889d000 0x1000&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clocks = &lt;&amp;clkc 27&gt;, &lt;&amp;clkc 46&gt;, &lt;&amp;clkc 47&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			clock-names = &#34;apb_pclk&#34;, &#34;dbg_trc&#34;, &#34;dbg_apb&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			cpu = &lt;&amp;cpu1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			out-ports {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				port {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					ptm1_out_port: endpoint {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+						remote-endpoint = &lt;&amp;funnel0_in_port1&gt;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+					};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+				};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+			};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+		};
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> 	};
+</span></span><span class="line"><span class="cl"> };
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>As a consequence, we need to clone the <code>master</code> branch of <a href="https://github.com/Xilinx/linux-xlnx/branches" target="_blank" rel="noopener noreffer">linux-xlnx</a> in order to get a correct device tree.
 This can be done by modifying a parameter in <a href="https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/conf/machine/include/machine-xilinx-default.inc" target="_blank" rel="noopener noreffer">machine-xilinx-default.inc</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff"># Kernel Configuration
-<span class="gd">- PREFERRED_PROVIDER_virtual/kernel ??= &#34;linux-xlnx&#34;
-</span><span class="gd"></span><span class="gi">+ PREFERRED_PROVIDER_virtual/kernel ??= &#34;linux-xlnx-dev&#34;
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"># Kernel Configuration
+</span></span><span class="line"><span class="cl"><span class="gd">- PREFERRED_PROVIDER_virtual/kernel ??= &#34;linux-xlnx&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+ PREFERRED_PROVIDER_virtual/kernel ??= &#34;linux-xlnx-dev&#34;
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>This information was given in a kernel recipe file of the <a href="https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/recipes-kernel/linux/linux-xlnx-dev.bb" target="_blank" rel="noopener noreffer">meta-xilinx</a> layer.</p>
 <h3 id="recompiling-everything">Recompiling everything&hellip;</h3>
@@ -737,7 +737,7 @@ This can be done by modifying a parameter in <a href="https://github.com/Xilinx/
 <p>Then, once everything is copied on the SD card:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -755,23 +755,23 @@ This can be done by modifying a parameter in <a href="https://github.com/Xilinx/
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">Starting kernel ...
-
-Booting Linux on physical CPU 0x0
-Linux version 5.4.0-xilinx-dev <span class="o">(</span>oe-user@oe-host<span class="o">)</span> <span class="o">(</span>gcc version 9.2.0 <span class="o">(</span>GCC<span class="o">))</span> <span class="c1">#1 SMP PREEMPT Mon Jul 6 16:40:45 UTC 2020</span>
-<span class="o">[</span>...<span class="o">]</span>
-coresight etm0: PTM 1.0 initialized
-coresight etm1: PTM 1.0 initialized
-fpga_manager fpga0: Xilinx Zynq FPGA Manager registered
-<span class="o">[</span>...<span class="o">]</span>
-Starting syslogd/klogd: <span class="k">done</span>
-
-Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
-
-zedboard-zynq7 login: root
-root@zedboard-zynq7:~# ls /sys/bus/coresight/devices/
-etb0         etm0         etm1         funnel0      replicator0  tpiu0
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Starting kernel ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Booting Linux on physical CPU 0x0
+</span></span><span class="line"><span class="cl">Linux version 5.4.0-xilinx-dev <span class="o">(</span>oe-user@oe-host<span class="o">)</span> <span class="o">(</span>gcc version 9.2.0 <span class="o">(</span>GCC<span class="o">))</span> <span class="c1">#1 SMP PREEMPT Mon Jul 6 16:40:45 UTC 2020</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>...<span class="o">]</span>
+</span></span><span class="line"><span class="cl">coresight etm0: PTM 1.0 initialized
+</span></span><span class="line"><span class="cl">coresight etm1: PTM 1.0 initialized
+</span></span><span class="line"><span class="cl">fpga_manager fpga0: Xilinx Zynq FPGA Manager registered
+</span></span><span class="line"><span class="cl"><span class="o">[</span>...<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Starting syslogd/klogd: <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Poky <span class="o">(</span>Yocto Project Reference Distro<span class="o">)</span> 3.0.3 zedboard-zynq7 /dev/ttyPS0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">zedboard-zynq7 login: root
+</span></span><span class="line"><span class="cl">root@zedboard-zynq7:~# ls /sys/bus/coresight/devices/
+</span></span><span class="line"><span class="cl">etb0         etm0         etm1         funnel0      replicator0  tpiu0
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Yay, we can see Coresight components on the Zedboard! 🕶️</p>
 <p><a href="https://asciinema.org/a/345848" target="_blank" rel="noopener noreffer"><img

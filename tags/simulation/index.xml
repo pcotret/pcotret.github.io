@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/simulide/</guid>
     <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino.]]></description>
+Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.]]></description>
 </item><item>
     <title>My first topology</title>
     <link>https://pcotret.github.io/first_topology/</link>
@@ -20,7 +20,7 @@
     <description><![CDATA[Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
 We can see our two routers:
 Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.]]></description>
 </item></channel>

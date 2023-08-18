@@ -5,29 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Suunto Ambit and Linux - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="Suunto Ambit and Linux" />
+        <title>Suunto Ambit and Linux - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Suunto Ambit and Linux" />
 <meta property="og:description" content="Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
- Prerequisites :
- Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
-1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
-1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
-1  winetricks dotnet452   Windows 7 mode:
-1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):" />
+Prerequisites :
+Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit Watch with R/W for everyone:
+1 2 sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger 32-bit Wine prefix:
+1 export WINEARCH=&#34;win32&#34; Install .NET 4.5.2:
+1 winetricks dotnet452 Windows 7 mode:
+1 winetricks win7 Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):
+1 wine reg add &#39;HKLM\System\CurrentControlSet\Services\WineBus&#39; /v &#39;Enable SDL&#39; /t REG_DWORD /d 0 /f Download and install Suuntolink:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/suunto_ambit3/" />
+<meta property="og:url" content="https://pcotret.github.io/suunto_ambit3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-12-26T00:00:00+08:00" />
 <meta property="article:modified_time" content="2022-12-26T11:03:50+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Suunto Ambit and Linux"/>
 <meta name="twitter:description" content="Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
- Prerequisites :
- Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
-1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
-1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
-1  winetricks dotnet452   Windows 7 mode:
-1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):"/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+Prerequisites :
+Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit Watch with R/W for everyone:
+1 2 sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger 32-bit Wine prefix:
+1 export WINEARCH=&#34;win32&#34; Install .NET 4.5.2:
+1 winetricks dotnet452 Windows 7 mode:
+1 winetricks win7 Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):
+1 wine reg add &#39;HKLM\System\CurrentControlSet\Services\WineBus&#39; /v &#39;Enable SDL&#39; /t REG_DWORD /d 0 /f Download and install Suuntolink:"/>
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/suunto_ambit3/" /><link rel="prev" href="https://pcotret.github.io/biblio-cyber/" /><link rel="next" href="https://pcotret.github.io/simulide/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -124,80 +126,80 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>Just copying instructions from <a href="https://debian-facile.org/viewtopic.php?id=29025">https://debian-facile.org/viewtopic.php?id=29025</a> in case this case falls down</p>
+<p>Just copying instructions from <a href="https://debian-facile.org/viewtopic.php?id=29025" target="_blank" rel="noopener noreffer">https://debian-facile.org/viewtopic.php?id=29025</a> in case this case falls down</p>
 </blockquote>
 <p>Prerequisites :</p>
 <ul>
-<li>Wine staging: <a href="https://wiki.winehq.org/Download">https://wiki.winehq.org/Download</a></li>
-<li>Winetricks: <a href="https://wiki.winehq.org/Winetricks">https://wiki.winehq.org/Winetricks</a></li>
-<li>Openambit: <a href="https://github.com/openambitproject/openambit">https://github.com/openambitproject/openambit</a></li>
+<li>Wine staging: <a href="https://wiki.winehq.org/Download" target="_blank" rel="noopener noreffer">https://wiki.winehq.org/Download</a></li>
+<li>Winetricks: <a href="https://wiki.winehq.org/Winetricks" target="_blank" rel="noopener noreffer">https://wiki.winehq.org/Winetricks</a></li>
+<li>Openambit: <a href="https://github.com/openambitproject/openambit" target="_blank" rel="noopener noreffer">https://github.com/openambitproject/openambit</a></li>
 </ul>
 <p>Watch with R/W for everyone:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules
-sudo udevadm control --reload-rules <span class="o">&amp;&amp;</span> udevadm trigger
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules
+</span></span><span class="line"><span class="cl">sudo udevadm control --reload-rules <span class="o">&amp;&amp;</span> udevadm trigger
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>32-bit Wine prefix:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">WINEARCH</span><span class="o">=</span><span class="s2">&#34;win32&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">WINEARCH</span><span class="o">=</span><span class="s2">&#34;win32&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Install .NET 4.5.2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">winetricks dotnet452
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">winetricks dotnet452
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Windows 7 mode:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">winetricks win7
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">winetricks win7
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wine reg add <span class="s1">&#39;HKLM\System\CurrentControlSet\Services\WineBus&#39;</span> /v <span class="s1">&#39;Enable SDL&#39;</span> /t REG_DWORD /d <span class="m">0</span> /f
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wine reg add <span class="s1">&#39;HKLM\System\CurrentControlSet\Services\WineBus&#39;</span> /v <span class="s1">&#39;Enable SDL&#39;</span> /t REG_DWORD /d <span class="m">0</span> /f
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Download and install Suuntolink:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wget -P ~/.wine/drive_c/ https://suuntolink.static.movescount.com/Suuntolink_installer.exe
-wine ~/.wine/drive_c/Suuntolink_installer.exe
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -P ~/.wine/drive_c/ https://suuntolink.static.movescount.com/Suuntolink_installer.exe
+</span></span><span class="line"><span class="cl">wine ~/.wine/drive_c/Suuntolink_installer.exe
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>In case of a bug, just restart Wine:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wineserver -k
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wineserver -k
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">

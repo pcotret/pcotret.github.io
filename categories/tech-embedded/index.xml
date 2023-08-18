@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/simulide/</guid>
     <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino.]]></description>
+Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.]]></description>
 </item><item>
     <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
     <link>https://pcotret.github.io/coresight-zedboard/</link>
@@ -18,15 +18,15 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/coresight-zedboard/</guid>
     <description><![CDATA[Activate Coresight components - Software side - Method #1 Generate a core-image-minimal Just follow https://pcotret.github.io/yocto-zedboard-101/. When booting this image:
-1 2 3 4 5 6 7  Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue   No Coresight components 😢 ​]]></description>
+1 2 3 4 5 6 7 Poky (Yocto Project Reference Distro) 3.0.3 zedboard-zynq7 /dev/ttyPS0 zedboard-zynq7 login: root root@zedboard-zynq7:~# ls /sys/bus/ amba container event_source i2c media nvmem scsi soc usb clockevents cpu gpio iio mmc pci sdio spi virtio clocksource edac hid mdio_bus mmc_rpmb platform serio ulpi workqueue No Coresight components 😢 ​]]></description>
 </item><item>
     <title>Buffer overflow on ARM architecture</title>
     <link>https://pcotret.github.io/buffer-overflow-raspberrypi/</link>
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/buffer-overflow-raspberrypi/</guid>
-    <description><![CDATA[Prerequisites  A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB.  ARM registers and stack TODO
-An example of buffer overflow Initial state  We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.]]></description>
+    <description><![CDATA[Prerequisites A RaspberryPi and a distro. For this tutorial, I had an up-to-date Raspbian Stretch Lite with LXDE. GCC and GDB. ARM registers and stack TODO
+An example of buffer overflow Initial state We have a binary without its source code but compiled with debug information. We know how to use it: ./prog2 PASS where PASS is a 4-character string. We would like to know if there&rsquo;s interesting stuff or even dead code in it.]]></description>
 </item><item>
     <title>Memory alignment</title>
     <link>https://pcotret.github.io/memory-alignment/</link>
@@ -51,7 +51,7 @@ How does memory alignment work for variables of a structured type? Let&rsquo;s f
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/sparc_window_registers/</guid>
-    <description><![CDATA[128 registers available in SPARC. Each window is divided in 3 areas:  8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07)    1 2 3 4 5 6 7  input // Function F1 local output	input // Save instruction (F2 called in F1) 	local output	input // Save instruction (F3 called in F2) 	local output   As you can see, each time a function is called in another, the registers window &ldquo;slides&rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.]]></description>
+    <description><![CDATA[128 registers available in SPARC. Each window is divided in 3 areas: 8 input registers (i0-i7) 8 local registers (l0-l7) 8 output registers (o0-07) 1 2 3 4 5 6 7 input // Function F1 local output	input // Save instruction (F2 called in F1) local output	input // Save instruction (F3 called in F2) local output As you can see, each time a function is called in another, the registers window &ldquo;slides&rdquo;: by the way, output registers of $F_n$ are equal to input registers of $F_{n+1}$.]]></description>
 </item><item>
     <title>Yocto on the Zedboard 101</title>
     <link>https://pcotret.github.io/yocto-zedboard-101/</link>
@@ -59,7 +59,7 @@ How does memory alignment work for variables of a structured type? Let&rsquo;s f
     <author>Author</author>
     <guid>https://pcotret.github.io/yocto-zedboard-101/</guid>
     <description><![CDATA[1. Introduction Yocto provides tools and metadata for creating custom embedded systems with following main features :
- Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance)  Other keywords and their meanings are explained here:
- An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages  Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization   A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack  1.]]></description>
+Images are tailored to specific hardware and use cases But metadata is generally arch-independent Unlike a distro, kitchen sink is not included (we know what we need in advance) Other keywords and their meanings are explained here:
+An image is a collection of baked recipes (packages) A &lsquo;recipe&rsquo; is a set of instructions for building packages Where to get the source and which patches to apply Dependencies (on libraries or other recipes, for example) Config/compile options, install customization A layer is a logical collection of recipes representing the core, a board support package (BSP), or an application stack 1.]]></description>
 </item></channel>
 </rss>

@@ -10,12 +10,13 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/suunto_ambit3/</guid>
     <description><![CDATA[Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
- Prerequisites :
- Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
-1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
-1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
-1  winetricks dotnet452   Windows 7 mode:
-1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):]]></description>
+Prerequisites :
+Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit Watch with R/W for everyone:
+1 2 sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger 32-bit Wine prefix:
+1 export WINEARCH=&#34;win32&#34; Install .NET 4.5.2:
+1 winetricks dotnet452 Windows 7 mode:
+1 winetricks win7 Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):
+1 wine reg add &#39;HKLM\System\CurrentControlSet\Services\WineBus&#39; /v &#39;Enable SDL&#39; /t REG_DWORD /d 0 /f Download and install Suuntolink:]]></description>
 </item><item>
     <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
     <link>https://pcotret.github.io/microsemi_ubuntu/</link>
@@ -23,8 +24,8 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
     <description><![CDATA[Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
- Prerequisites 1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Prerequisites 1 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386 You may need other QT related packages in their i386 flavour.
 Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
-1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
+1 mkdir --p /home/USERNAME/.local/share/microsemi/license Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
 </item></channel>
 </rss>

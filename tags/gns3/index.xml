@@ -12,7 +12,7 @@
     <description><![CDATA[Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
 We can see our two routers:
 Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.]]></description>
 </item></channel>

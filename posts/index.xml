@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/simulide/</guid>
     <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
- Downloading tools  SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino.]]></description>
+Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.]]></description>
 </item><item>
     <title>Suunto Ambit and Linux</title>
     <link>https://pcotret.github.io/suunto_ambit3/</link>
@@ -18,12 +18,13 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/suunto_ambit3/</guid>
     <description><![CDATA[Just copying instructions from https://debian-facile.org/viewtopic.php?id=29025 in case this case falls down
- Prerequisites :
- Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit  Watch with R/W for everyone:
-1 2  sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger   32-bit Wine prefix:
-1  export WINEARCH=&#34;win32&#34;   Install .NET 4.5.2:
-1  winetricks dotnet452   Windows 7 mode:
-1  winetricks win7   Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):]]></description>
+Prerequisites :
+Wine staging: https://wiki.winehq.org/Download Winetricks: https://wiki.winehq.org/Winetricks Openambit: https://github.com/openambitproject/openambit Watch with R/W for everyone:
+1 2 sudo wget https://raw.githubusercontent.com/openambitproject/openambit/master/src/libambit/libambit.rules -O /etc/udev/rules.d/libambit.rules sudo udevadm control --reload-rules &amp;&amp; udevadm trigger 32-bit Wine prefix:
+1 export WINEARCH=&#34;win32&#34; Install .NET 4.5.2:
+1 winetricks dotnet452 Windows 7 mode:
+1 winetricks win7 Disable SDL detection in Wine (otherwise, watch isn&rsquo;t detected):
+1 wine reg add &#39;HKLM\System\CurrentControlSet\Services\WineBus&#39; /v &#39;Enable SDL&#39; /t REG_DWORD /d 0 /f Download and install Suuntolink:]]></description>
 </item><item>
     <title>M82 bibliography PDF</title>
     <link>https://pcotret.github.io/biblio-cyber/</link>
@@ -45,7 +46,7 @@ https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></desc
     <pubDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/godot-tools/</guid>
-    <description><![CDATA[ https://github.com/hhyyrylainen/GodotPckTool. GUI to play with Godot files. https://github.com/tehskai/godot-unpacker. Really useful as it&rsquo;s able to unpack a Godot binary. https://github.com/bruvzg/gdsdecomp  ]]></description>
+    <description><![CDATA[ https://github.com/hhyyrylainen/GodotPckTool. GUI to play with Godot files. https://github.com/tehskai/godot-unpacker. Really useful as it&rsquo;s able to unpack a Godot binary. https://github.com/bruvzg/gdsdecomp ]]></description>
 </item><item>
     <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
     <link>https://pcotret.github.io/microsemi_ubuntu/</link>
@@ -53,9 +54,9 @@ https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></desc
     <author>Author</author>
     <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
     <description><![CDATA[Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
- Prerequisites 1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Prerequisites 1 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386 You may need other QT related packages in their i386 flavour.
 Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
-1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
+1 mkdir --p /home/USERNAME/.local/share/microsemi/license Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
 </item><item>
     <title>OSINT 101</title>
     <link>https://pcotret.github.io/osint101/</link>
@@ -63,8 +64,8 @@ Get License Create a directory for the license server (here I use ~/.local/share
     <author>Author</author>
     <guid>https://pcotret.github.io/osint101/</guid>
     <description><![CDATA[OSINT 101 Some ressources to get into OSINT:
- https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy  CTFs:
- https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges  ]]></description>
+https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy CTFs:
+https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges ]]></description>
 </item><item>
     <title>HEXA OSINT CTF 2021</title>
     <link>https://pcotret.github.io/haxe_osint_2021/</link>

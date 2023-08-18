@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://pcotret.github.io/simulide/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/simulide/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/suunto_ambit3/</loc><lastmod>2022-12-26T11:03:50&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/biblio-cyber/</loc><lastmod>2022-11-06T15:01:18&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/confs_static/</loc><lastmod>2022-10-23T20:13:07&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -17,7 +17,7 @@
             <loc>https://pcotret.github.io/brixel-ctf/</loc><lastmod>2021-01-03T19:56:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/ice-ctf/</loc><lastmod>2021-01-03T19:56:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/document-camera/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/wireshark_build/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/wireshark_build/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/coresight-zedboard/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/aircrack-101/</loc><lastmod>2021-01-18T16:40:29&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/buffer-overflow-raspberrypi/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -36,13 +36,13 @@
             <loc>https://pcotret.github.io/talks/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/xilinx_bashrc/</loc><lastmod>2020-05-02T00:10:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/yocto-zedboard-101/</loc><lastmod>2020-07-07T11:24:47&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/tags/arduino/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/categories/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/posts/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/simulation/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/simulide/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/tags/arduino/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/categories/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/posts/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/simulation/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/simulide/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/</loc><lastmod>2023-03-08T13:21:24&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/gps/</loc><lastmod>2022-12-26T11:03:50&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/suunto/</loc><lastmod>2022-12-26T11:03:50&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/bibliography/</loc><lastmod>2022-11-06T15:01:18&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -63,8 +63,8 @@
             <loc>https://pcotret.github.io/tags/stegano/</loc><lastmod>2021-01-03T19:56:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/web/</loc><lastmod>2021-01-03T19:56:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/lockdown/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://pcotret.github.io/tags/networks/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://pcotret.github.io/tags/wireshark/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://pcotret.github.io/tags/networks/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://pcotret.github.io/tags/wireshark/</loc><lastmod>2023-03-02T14:25:33&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/coresight/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/yocto/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://pcotret.github.io/tags/zedboard/</loc><lastmod>2021-04-29T12:41:51&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

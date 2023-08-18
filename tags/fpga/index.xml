@@ -10,17 +10,17 @@
     <author>Author</author>
     <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
     <description><![CDATA[Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
- Prerequisites 1  sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386   You may need other QT related packages in their i386 flavour.
+Prerequisites 1 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386 You may need other QT related packages in their i386 flavour.
 Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
-1  mkdir --p /home/USERNAME/.local/share/microsemi/license   Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
+1 mkdir --p /home/USERNAME/.local/share/microsemi/license Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
 </item><item>
     <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine</title>
     <link>https://pcotret.github.io/fpga-env-101/</link>
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/fpga-env-101/</guid>
-    <description><![CDATA[Installing Vivado  Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0  License  Infos available in another note. However, some families don&rsquo;t need a license file 😉  Pre-configuration Before executing Vivado, a few things to be aware of:
-  Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1  source /opt/Xilinx/Vivado/2018.]]></description>
+    <description><![CDATA[Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
+Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
+1 source /opt/Xilinx/Vivado/2018.2/settings64.sh # Modify the path to Vivado if needed Now, Vivado could be executed with the command: vivado]]></description>
 </item></channel>
 </rss>

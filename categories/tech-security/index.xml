@@ -17,7 +17,7 @@ https://github.com/pcotret/pad-biblio-cyber-pdf/releases/tag/2022-11-06]]></desc
     <pubDate>Sun, 12 Jun 2022 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/godot-tools/</guid>
-    <description><![CDATA[ https://github.com/hhyyrylainen/GodotPckTool. GUI to play with Godot files. https://github.com/tehskai/godot-unpacker. Really useful as it&rsquo;s able to unpack a Godot binary. https://github.com/bruvzg/gdsdecomp  ]]></description>
+    <description><![CDATA[ https://github.com/hhyyrylainen/GodotPckTool. GUI to play with Godot files. https://github.com/tehskai/godot-unpacker. Really useful as it&rsquo;s able to unpack a Godot binary. https://github.com/bruvzg/gdsdecomp ]]></description>
 </item><item>
     <title>OWASP BWA VM settings</title>
     <link>https://pcotret.github.io/owasp-bwa/</link>
@@ -33,9 +33,10 @@ Just access the IP address in your browser and you&rsquo;re ready to go!]]></des
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/aircrack-101/</guid>
-    <description><![CDATA[Prerequisites  sudo apt install aircrack-ng  Some wordlists/dictionaries. Kali Linux has already some of them.  WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
+    <description><![CDATA[Prerequisites sudo apt install aircrack-ng Some wordlists/dictionaries. Kali Linux has already some of them. WiFi handshakes 101 Introduction from @evilsocket&rsquo;s Pwnagotchi: https://pwnagotchi.ai/intro/#wifi-handshakes-101
 Dictionary-based attack In order to test a PCAP with a given dictionary:
-1  aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt;   You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
-One of them should work with a short dictionary. Find it 😉]]></description>
+1 aircrack-ng -w &lt;wordlist&gt; &lt;wireshark_file&gt; You have several dictionaries and sample PCAPs extracted from a Kali distro here: https://github.com/pcotret/aircrack-101-material
+One of them should work with a short dictionary. Find it 😉
+Wireshark captures Lots of sample captures are available of Wireshark Gitlab: https://gitlab.]]></description>
 </item></channel>
 </rss>

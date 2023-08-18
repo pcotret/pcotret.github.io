@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>OrangePi4SDR - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="OrangePi4SDR" />
+        <title>OrangePi4SDR - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="OrangePi4SDR" />
 <meta property="og:description" content="The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB&#43; and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/orangepi4sdr/" />
+<meta property="og:url" content="https://pcotret.github.io/orangepi4sdr/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
 <meta property="article:modified_time" content="2021-04-29T12:41:51+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="OrangePi4SDR"/>
 <meta name="twitter:description" content="The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB&#43; and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi [1]. For the operating system, Debian Jessie (8.2 version) is used: https://www."/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/orangepi4sdr/" /><link rel="prev" href="https://pcotret.github.io/sparc_window_registers/" /><link rel="next" href="https://pcotret.github.io/first_topology/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -133,7 +133,7 @@
     <li><a href="#result">Result</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi <strong>[1]</strong>. For the operating system, Debian Jessie (8.2 version) is used: <a href="https://www.debian.org/releases/stable/">https://www.debian.org/releases/stable/</a></p>
+            </div><div class="content" id="content"><p>The goal was to get a single-board computer able to execute Gnuradio tools quite smoothly with various SDR devices (USB dongles, HackRF, USRP development boards). Unfortunately, the RaspberryPi family (both PiB+ and Pi2) did not met such requirements due to a lack of throughput in the USB controller. This tutorial introduces another solution based on a Chinese alternative called OrangePi <strong>[1]</strong>. For the operating system, Debian Jessie (8.2 version) is used: <a href="https://www.debian.org/releases/stable/" target="_blank" rel="noopener noreffer">https://www.debian.org/releases/stable/</a></p>
 <h2 id="requirements">Requirements</h2>
 <h3 id="hardware">Hardware</h3>
 <ul>
@@ -152,10 +152,10 @@
 <ul>
 <li><code>Debian_wheezy_mini.img.xz</code>: the minimal Debian Jessie image (without graphical user interface)</li>
 <li><code>scriptbin_kernel.tar.gz</code>: the kernel image and boot-related stuff</li>
-<li>Win32DiskImager from <a href="http://sourceforge.net/projects/win32diskimager">http://sourceforge.net/projects/win32diskimager</a></li>
-<li>SDFormatter from <a href="https://www.sdcard.org/downloads/formatter_4">https://www.sdcard.org/downloads/formatter_4</a></li>
+<li>Win32DiskImager from <a href="http://sourceforge.net/projects/win32diskimager" target="_blank" rel="noopener noreffer">http://sourceforge.net/projects/win32diskimager</a></li>
+<li>SDFormatter from <a href="https://www.sdcard.org/downloads/formatter_4" target="_blank" rel="noopener noreffer">https://www.sdcard.org/downloads/formatter_4</a></li>
 </ul>
-<p>It is assumed that you decompress <code>.xz</code> files somewhere on your computer. Other OS images can be downloaded from this Google Drive or directly from OrangePi website: <a href="http://www.orangepi.org/downloadresources/">http://www.orangepi.org/downloadresources/</a></p>
+<p>It is assumed that you decompress <code>.xz</code> files somewhere on your computer. Other OS images can be downloaded from this Google Drive or directly from OrangePi website: <a href="http://www.orangepi.org/downloadresources/" target="_blank" rel="noopener noreffer">http://www.orangepi.org/downloadresources/</a></p>
 <h2 id="creating-µsd-image">Creating µSD image</h2>
 <p>This step was tested on Windows. Similar results are expected on Linux using <code>fdisk</code> and <code>dd</code> commands.</p>
 <h3 id="os-image">OS image</h3>
@@ -239,15 +239,15 @@
 <p>In this configuration, following binaries were installed:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr* hackrf gpredict gqrx-sdr libhackrf*
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr* hackrf gpredict gqrx-sdr libhackrf*
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="references">References</h1>
 <ol>
-<li>Orangepi website. <a href="http://www.orangepi.org/">http://www.orangepi.org/</a>.</li>
+<li>Orangepi website. <a href="http://www.orangepi.org/" target="_blank" rel="noopener noreffer">http://www.orangepi.org/</a>.</li>
 <li><a href="http://www.orangepi.org/orangepimini2/" target="_blank" rel="noopener noreffer">Orangepimini2</a>.</li>
 <li><a href="https://www.amazon.fr/Alimentation-Chargeur-secteur-Adaptateur-switcher/dp/B00P0XXYJG/ref=sr_1_3?ie=UTF8&amp;qid=1447018191&amp;sr=8-3&amp;keywords=5v&#43;2A" target="_blank" rel="noopener noreffer">5v/2a power supply</a>.</li>
 </ol>

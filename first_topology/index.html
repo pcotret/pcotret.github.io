@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>My first topology - Github personal blog</title><meta name="Description" content="Github personal blog"><meta property="og:title" content="My first topology" />
+        <title>My first topology - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="My first topology" />
 <meta property="og:description" content="Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
 We can see our two routers:
 Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pcotret.github.io/first_topology/" />
+<meta property="og:url" content="https://pcotret.github.io/first_topology/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
 <meta property="article:modified_time" content="2021-04-29T12:41:51+02:00" />
 <meta name="twitter:card" content="summary"/>
@@ -21,11 +21,11 @@ Use the link icon in order to&hellip; &hellip;link them. In this case, we connec
 <meta name="twitter:description" content="Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
 We can see our two routers:
 Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers."/>
-<meta name="application-name" content="Github personal blog">
-<meta name="apple-mobile-web-app-title" content="Github personal blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Pascal Github page">
+<meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://pcotret.github.io/first_topology/" /><link rel="prev" href="https://pcotret.github.io/orangepi4sdr/" /><link rel="next" href="https://pcotret.github.io/memory-alignment/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -174,7 +174,7 @@ Use the link icon in order to&hellip; &hellip;link them. In this case, we connec
 <h2 id="routers-configuration">Routers configuration</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -183,19 +183,19 @@ Use the link icon in order to&hellip; &hellip;link them. In this case, we connec
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1# sh ip int br
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1# sh ip int br
+</span></span><span class="line"><span class="cl">Interface                  IP-Address      OK? Method Status                Protocol
+</span></span><span class="line"><span class="cl">FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>As you can see, all interfaces are <strong>administratively down</strong>. Same thing for R2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -204,19 +204,19 @@ FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  ad
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2# sh ip int br
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2# sh ip int br
+</span></span><span class="line"><span class="cl">Interface                  IP-Address      OK? Method Status                Protocol
+</span></span><span class="line"><span class="cl">FastEthernet0/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Let&rsquo;s configure <code>fa0/0</code> and <code>loopback0</code> interfaces:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -232,26 +232,26 @@ FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  ad
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1# conf t
-R1<span class="o">(</span>config<span class="o">)</span><span class="c1"># int fa0/0</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.1 255.255.255.0</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 1.1.1.1 255.255.255.255</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
-R1#sh ip int br
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            10.1.1.1        YES manual administratively down down    
-FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-Loopback0                  1.1.1.1         YES manual up                    up   
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1# conf t
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config<span class="o">)</span><span class="c1"># int fa0/0</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.1 255.255.255.0</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 1.1.1.1 255.255.255.255</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
+</span></span><span class="line"><span class="cl">R1#sh ip int br
+</span></span><span class="line"><span class="cl">Interface                  IP-Address      OK? Method Status                Protocol
+</span></span><span class="line"><span class="cl">FastEthernet0/0            10.1.1.1        YES manual administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">Loopback0                  1.1.1.1         YES manual up                    up   
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Interfaces are correctly configured. There&rsquo;s only one difference: <em>loopback</em> virtual interfaces are automatically enabled (<strong>up</strong> state). In order to enable <code>fa0/0</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -265,24 +265,24 @@ Loopback0                  1.1.1.1         YES manual up                    up
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1# conf t
-R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
-R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#end</span>
-R1#sh ip int br
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            10.1.1.1        YES manual up                    up      
-FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-Loopback0                  1.1.1.1         YES manual up                    up  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1# conf t
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#end</span>
+</span></span><span class="line"><span class="cl">R1#sh ip int br
+</span></span><span class="line"><span class="cl">Interface                  IP-Address      OK? Method Status                Protocol
+</span></span><span class="line"><span class="cl">FastEthernet0/0            10.1.1.1        YES manual up                    up      
+</span></span><span class="line"><span class="cl">FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">Loopback0                  1.1.1.1         YES manual up                    up  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Let&rsquo;s configure R2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -299,27 +299,27 @@ Loopback0                  1.1.1.1         YES manual up                    up
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2#conf t
-R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
-R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
-R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.2 255.255.255.0</span>
-R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
-R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 2.2.2.2 255.255.255.255</span>
-R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
-R2#sh ip int br
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            10.1.1.2        YES manual up                    up      
-FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
-Loopback0                  2.2.2.2         YES manual up                    up     
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2#conf t
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#int fa0/0</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#no shut</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 10.1.1.2 255.255.255.0</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#int loop 0</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1">#ip add 2.2.2.2 255.255.255.255</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-if<span class="o">)</span><span class="c1"># end</span>
+</span></span><span class="line"><span class="cl">R2#sh ip int br
+</span></span><span class="line"><span class="cl">Interface                  IP-Address      OK? Method Status                Protocol
+</span></span><span class="line"><span class="cl">FastEthernet0/0            10.1.1.2        YES manual up                    up      
+</span></span><span class="line"><span class="cl">FastEthernet1/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet2/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet3/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">FastEthernet4/0            unassigned      YES <span class="nb">unset</span>  administratively down down    
+</span></span><span class="line"><span class="cl">Loopback0                  2.2.2.2         YES manual up                    up     
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>We can have some information about the IOS with the following command:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -327,54 +327,54 @@ Loopback0                  2.2.2.2         YES manual up                    up
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2#sh ver
-Cisco IOS Software, <span class="m">7200</span> Software <span class="o">(</span>C7200-JK9S-M<span class="o">)</span>, Version 12.4<span class="o">(</span>13b<span class="o">)</span>, RELEASE SOFTWARE <span class="o">(</span>fc3<span class="o">)</span>
-Technical Support: http://www.cisco.com/techsupport
-Copyright <span class="o">(</span>c<span class="o">)</span> 1986-2007 by Cisco Systems, Inc.
-Compiled Wed 25-Apr-07 03:18 by prod_rel_team
-<span class="o">[</span>...<span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2#sh ver
+</span></span><span class="line"><span class="cl">Cisco IOS Software, <span class="m">7200</span> Software <span class="o">(</span>C7200-JK9S-M<span class="o">)</span>, Version 12.4<span class="o">(</span>13b<span class="o">)</span>, RELEASE SOFTWARE <span class="o">(</span>fc3<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Technical Support: http://www.cisco.com/techsupport
+</span></span><span class="line"><span class="cl">Copyright <span class="o">(</span>c<span class="o">)</span> 1986-2007 by Cisco Systems, Inc.
+</span></span><span class="line"><span class="cl">Compiled Wed 25-Apr-07 03:18 by prod_rel_team
+</span></span><span class="line"><span class="cl"><span class="o">[</span>...<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>By now, R1 and R2 can talk to each other:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2#ping 10.1.1.1
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 10.1.1.1, timeout is <span class="m">2</span> seconds:
-.!!!!
-Success rate is <span class="m">80</span> percent <span class="o">(</span>4/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 44/57/64 ms
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2#ping 10.1.1.1
+</span></span><span class="line"><span class="cl">Type escape sequence to abort.
+</span></span><span class="line"><span class="cl">Sending 5, 100-byte ICMP Echos to 10.1.1.1, timeout is <span class="m">2</span> seconds:
+</span></span><span class="line"><span class="cl">.!!!!
+</span></span><span class="line"><span class="cl">Success rate is <span class="m">80</span> percent <span class="o">(</span>4/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 44/57/64 ms
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Only 80% of packets are received, don&rsquo;t worry! The first packet is lost due to the <a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol" target="_blank" rel="noopener noreffer">ARP address resolution</a> (reminder: ARP is mainly responsible for <em>translating</em> IP to MAC addresses).</p>
 <p>Here is a ping in the other direction:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1#ping 10.1.1.2
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 10.1.1.2, timeout is <span class="m">2</span> seconds:
-!!!!!
-Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 60/62/68 ms
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1#ping 10.1.1.2
+</span></span><span class="line"><span class="cl">Type escape sequence to abort.
+</span></span><span class="line"><span class="cl">Sending 5, 100-byte ICMP Echos to 10.1.1.2, timeout is <span class="m">2</span> seconds:
+</span></span><span class="line"><span class="cl">!!!!!
+</span></span><span class="line"><span class="cl">Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 60/62/68 ms
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>100% of packets are received as the ARP exchange is already done!</p>
 <h2 id="ospf-routing">OSPF routing</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -386,36 +386,36 @@ Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<s
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1#conf t
-R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
-R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 1.1.1.1</span>
-R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
-R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
-R2#conf t
-R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
-R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 2.2.2.2</span>
-R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
-R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1#conf t
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 1.1.1.1</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
+</span></span><span class="line"><span class="cl">R1<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
+</span></span><span class="line"><span class="cl">R2#conf t
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config<span class="o">)</span><span class="c1">#router ospf 1</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#router-id 2.2.2.2</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#network 0.0.0.0 255.255.255.255 area 0</span>
+</span></span><span class="line"><span class="cl">R2<span class="o">(</span>config-router<span class="o">)</span><span class="c1">#end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>List of R2 neighbors:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2#sh ip ospf neigh
-Neighbor ID     Pri   State           Dead Time   Address         Interface
-1.1.1.1           <span class="m">1</span>   FULL/DR         00:00:32    10.1.1.1        FastEthernet0/0
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2#sh ip ospf neigh
+</span></span><span class="line"><span class="cl">Neighbor ID     Pri   State           Dead Time   Address         Interface
+</span></span><span class="line"><span class="cl">1.1.1.1           <span class="m">1</span>   FULL/DR         00:00:32    10.1.1.1        FastEthernet0/0
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>1.1.1.1</code> is the address of R1.</p>
 <p>R1 routing table:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -439,56 +439,56 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1#sh ip route
-Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
-       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
-       N1 - OSPF NSSA external <span class="nb">type</span> 1, N2 - OSPF NSSA external <span class="nb">type</span> <span class="m">2</span>
-       E1 - OSPF external <span class="nb">type</span> 1, E2 - OSPF external <span class="nb">type</span> <span class="m">2</span>
-       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
-       ia - IS-IS inter area, * - candidate default, U - per-user static route
-       o - ODR, P - periodic downloaded static route
-
-Gateway of last resort is not <span class="nb">set</span>
-
-     1.0.0.0/32 is subnetted, <span class="m">1</span> subnets
-C       1.1.1.1 is directly connected, Loopback0
-     2.0.0.0/32 is subnetted, <span class="m">1</span> subnets
-O       2.2.2.2 <span class="o">[</span>110/2<span class="o">]</span> via 10.1.1.2, 00:08:21, FastEthernet0/0
-     10.0.0.0/24 is subnetted, <span class="m">1</span> subnets
-C       10.1.1.0 is directly connected, FastEthernet0/0
-R1#ping 2.2.2.2
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is <span class="m">2</span> seconds:
-!!!!!
-Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 8/24/72 ms
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1#sh ip route
+</span></span><span class="line"><span class="cl">Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+</span></span><span class="line"><span class="cl">       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+</span></span><span class="line"><span class="cl">       N1 - OSPF NSSA external <span class="nb">type</span> 1, N2 - OSPF NSSA external <span class="nb">type</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">       E1 - OSPF external <span class="nb">type</span> 1, E2 - OSPF external <span class="nb">type</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+</span></span><span class="line"><span class="cl">       ia - IS-IS inter area, * - candidate default, U - per-user static route
+</span></span><span class="line"><span class="cl">       o - ODR, P - periodic downloaded static route
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Gateway of last resort is not <span class="nb">set</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     1.0.0.0/32 is subnetted, <span class="m">1</span> subnets
+</span></span><span class="line"><span class="cl">C       1.1.1.1 is directly connected, Loopback0
+</span></span><span class="line"><span class="cl">     2.0.0.0/32 is subnetted, <span class="m">1</span> subnets
+</span></span><span class="line"><span class="cl">O       2.2.2.2 <span class="o">[</span>110/2<span class="o">]</span> via 10.1.1.2, 00:08:21, FastEthernet0/0
+</span></span><span class="line"><span class="cl">     10.0.0.0/24 is subnetted, <span class="m">1</span> subnets
+</span></span><span class="line"><span class="cl">C       10.1.1.0 is directly connected, FastEthernet0/0
+</span></span><span class="line"><span class="cl">R1#ping 2.2.2.2
+</span></span><span class="line"><span class="cl">Type escape sequence to abort.
+</span></span><span class="line"><span class="cl">Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is <span class="m">2</span> seconds:
+</span></span><span class="line"><span class="cl">!!!!!
+</span></span><span class="line"><span class="cl">Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 8/24/72 ms
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>There&rsquo;s the OSPF route towards <code>2.2.2.2</code>. On the R2 side:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R2#ping 1.1.1.1
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is <span class="m">2</span> seconds:
-!!!!!
-Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 12/28/40 ms
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R2#ping 1.1.1.1
+</span></span><span class="line"><span class="cl">Type escape sequence to abort.
+</span></span><span class="line"><span class="cl">Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is <span class="m">2</span> seconds:
+</span></span><span class="line"><span class="cl">!!!!!
+</span></span><span class="line"><span class="cl">Success rate is <span class="m">100</span> percent <span class="o">(</span>5/5<span class="o">)</span>, round-trip min/avg/max <span class="o">=</span> 12/28/40 ms
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="router-configuration-backup">Router configuration backup</h2>
 <p>By default, GNS3 won&rsquo;t save routers configuration. It can be done manually:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">R1#copy running-config startup-config
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R1#copy running-config startup-config
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Next time GNS3 is launched, routers will still be configured!</p>
 </div><div class="post-footer" id="post-footer">

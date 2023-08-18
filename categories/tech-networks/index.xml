@@ -9,7 +9,7 @@
     <pubDate>Sun, 20 Sep 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/wireshark_build/</guid>
-    <description><![CDATA[Download and build 1 2 3 4 5 6 7 8  git clone https://gitlab.com/wireshark/wireshark sudo wireshark/tools/./debian-setup.sh --install-qt5-deps (--install-optional) cd wireshark mkdir build cd build cmake .. -DUSE_qt6=OFF make -j$(nproc) sudo make install   ]]></description>
+    <description><![CDATA[Download and build 1 2 3 4 5 6 7 8 git clone https://gitlab.com/wireshark/wireshark sudo wireshark/tools/./debian-setup.sh --install-qt5-deps (--install-optional) cd wireshark mkdir build cd build cmake .. -DUSE_qt6=OFF make -j$(nproc) sudo make install ]]></description>
 </item><item>
     <title>My first topology</title>
     <link>https://pcotret.github.io/first_topology/</link>
@@ -19,7 +19,7 @@
     <description><![CDATA[Mainly based on an official tutorial (link).
 A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
 In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
- Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
+Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
 We can see our two routers:
 Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.]]></description>
 </item></channel>

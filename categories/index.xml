@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Github personal blog</title>
+        <link>https://pcotret.github.io/categories/</link>
+        <description>Categories - Category - Github personal blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 22 Jan 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Articles</title>
+    <link>https://pcotret.github.io/categories/articles/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/articles/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>CTF</title>
+    <link>https://pcotret.github.io/categories/ctf/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/ctf/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Talks</title>
+    <link>https://pcotret.github.io/categories/talks/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/talks/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tech notes / Embedded</title>
+    <link>https://pcotret.github.io/categories/tech-embedded/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/tech-embedded/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tech notes / Hardware</title>
+    <link>https://pcotret.github.io/categories/tech-hardware/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/tech-hardware/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tech notes / Misc.</title>
+    <link>https://pcotret.github.io/categories/tech-misc/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/tech-misc/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tech notes / Networks</title>
+    <link>https://pcotret.github.io/categories/tech-networks/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/tech-networks/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tech notes / Security</title>
+    <link>https://pcotret.github.io/categories/tech-security/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://pcotret.github.io/categories/tech-security/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>
