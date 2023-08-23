@@ -19,9 +19,8 @@ Project Manager =&gt; Settings =&gt; Synthesis =&gt; More options. Add this flag
     <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://pcotret.github.io/fpga-env-101/</guid>
-    <description><![CDATA[Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
-Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1 source /opt/Xilinx/Vivado/2018.2/settings64.sh # Modify the path to Vivado if needed Now, Vivado could be executed with the command: vivado]]></description>
+    <description><![CDATA[Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 On recent Ubuntu versions, please install libtinfo and libncurses or you may get stuck in the final setup step: https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
+Add this line in your $HOME/.]]></description>
 </item><item>
     <title>Installing Lattice iCEcube2 FPGA tools on Ubuntu</title>
     <link>https://pcotret.github.io/lattice-ubuntu/</link>

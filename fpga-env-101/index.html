@@ -6,18 +6,16 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Installing a Xilinx FPGA environment for an Ubuntu-based machine - Github personal blog</title><meta name="Description" content="Pascal Github page"><meta property="og:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine" />
-<meta property="og:description" content="Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
-Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1 source /opt/Xilinx/Vivado/2018.2/settings64.sh # Modify the path to Vivado if needed Now, Vivado could be executed with the command: vivado" />
+<meta property="og:description" content="Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 On recent Ubuntu versions, please install libtinfo and libncurses or you may get stuck in the final setup step: https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
+Add this line in your $HOME/." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pcotret.github.io/fpga-env-101/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-01T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-05-02T00:10:21+02:00" />
+<meta property="article:modified_time" content="2023-08-23T10:54:04+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing a Xilinx FPGA environment for an Ubuntu-based machine"/>
-<meta name="twitter:description" content="Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
-Add this line in your $HOME/.bashrc (amongst other things, this script add binaries to PATH) :
-1 source /opt/Xilinx/Vivado/2018.2/settings64.sh # Modify the path to Vivado if needed Now, Vivado could be executed with the command: vivado"/>
+<meta name="twitter:description" content="Installing Vivado Vivado Design Suite - HLx Editions - 2019.2 for the latest version: https://www.xilinx.com/support/download.html Tutorial available here: : https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0 On recent Ubuntu versions, please install libtinfo and libncurses or you may get stuck in the final setup step: https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US License Infos available in another note. However, some families don&rsquo;t need a license file 😉 Pre-configuration Before executing Vivado, a few things to be aware of:
+Add this line in your $HOME/."/>
 <meta name="application-name" content="Pascal Github page">
 <meta name="apple-mobile-web-app-title" content="Pascal Github page"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,8 +28,8 @@ Add this line in your $HOME/.bashrc (amongst other things, this script add binar
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/pcotret.github.io\/fpga-env-101\/"
-        },"genre": "posts","keywords": "fpga, xilinx","wordcount":  222 ,
-        "url": "https:\/\/pcotret.github.io\/fpga-env-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2020-05-02T00:10:21+02:00","publisher": {
+        },"genre": "posts","keywords": "fpga, xilinx","wordcount":  242 ,
+        "url": "https:\/\/pcotret.github.io\/fpga-env-101\/","datePublished": "2020-01-01T00:00:00+08:00","dateModified": "2023-08-23T10:54:04+02:00","publisher": {
             "@type": "Organization",
             "name": "xxxx"},"author": {
                 "@type": "Person",
@@ -107,7 +105,7 @@ Add this line in your $HOME/.bashrc (amongst other things, this script add binar
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Installing a Xilinx FPGA environment for an Ubuntu-based machine</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pascal</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech-hardware/"><i class="far fa-folder fa-fw"></i>Tech notes / Hardware</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;222 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;242 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -130,6 +128,7 @@ Add this line in your $HOME/.bashrc (amongst other things, this script add binar
 <ul>
 <li>Vivado Design Suite - HLx Editions - 2019.2 for the latest version: <a href="https://www.xilinx.com/support/download.html" target="_blank" rel="noopener noreffer">https://www.xilinx.com/support/download.html</a></li>
 <li>Tutorial available here: : <a href="https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0" target="_blank" rel="noopener noreffer">https://www.dropbox.com/s/sgxhb08tcwuj9ko/Download_%26_Install_VIVADO_On_Ubuntu_July_3.pdf?dl=0</a></li>
+<li>On recent Ubuntu versions, please install libtinfo and libncurses or you may get stuck in the final setup step: <a href="https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US" target="_blank" rel="noopener noreffer">https://support.xilinx.com/s/question/0D52E00006iHjbcSAC/vivado-20211-installation-hangs-at-generating-installed-device-list?language=en_US</a></li>
 </ul>
 <h3 id="license">License</h3>
 <ul>
@@ -185,8 +184,8 @@ Without going into details, it allows the user to compile a first design and ver
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-05-02&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/a07d048dc0f05aea370e5abec2301f999cd868cc" target="_blank" title="commit by Pascal(pascal@ensta-laptop) a07d048dc0f05aea370e5abec2301f999cd868cc: Refonte">
-                                    <i class="fas fa-hashtag fa-fw"></i>a07d048</a></span>
+                <span>Updated on 2023-08-23&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/0cc45a371e42cad6fa785e6b36c5f82a9b5c9d97" target="_blank" title="commit by Pascal Cotret(pascal.cotret@gmail.com) 0cc45a371e42cad6fa785e6b36c5f82a9b5c9d97: update">
+                                    <i class="fas fa-hashtag fa-fw"></i>0cc45a3</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
