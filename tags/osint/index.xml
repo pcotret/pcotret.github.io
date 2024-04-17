@@ -1,23 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>osint - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/osint/</link>
-        <description>osint - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/osint/" rel="self" type="application/rss+xml" /><item>
-    <title>HEXA OSINT CTF 2021</title>
-    <link>https://pcotret.github.io/haxe_osint_2021/</link>
-    <pubDate>Sun, 05 Dec 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/haxe_osint_2021/</guid>
-    <description><![CDATA[https://hexactf.ctfd.io/
-An OSINT-based CTF done by Sopra and &ldquo;La Fabrique Défense&rdquo; (French DoD entity)
-Some writeups are here: https://github.com/pcotret/ctf-writeups/tree/master/hexa-2021]]></description>
-</item><item>
-    <title>Unlock your Brain OSINT CTF 2021</title>
-    <link>https://pcotret.github.io/unlock2021/</link>
-    <pubDate>Sun, 14 Nov 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/unlock2021/</guid>
-    <description><![CDATA[Unlock Your Brain OSINT CTF https://github.com/pcotret/ctf-writeups/tree/master/uybhys-2021 This year, it was again an OSINT related CTF made by the OSINT-FR community]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>osint on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/osint/</link>
+    <description>Recent content in osint on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Dec 2021 21:34:21 +0100</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HEXA OSINT CTF 2021</title>
+      <link>https://pcotret.github.io/haxe_osint_2021/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/haxe_osint_2021/</guid>
+      <description>https://hexactf.ctfd.io/&#xA;An OSINT-based CTF done by Sopra and &amp;ldquo;La Fabrique Défense&amp;rdquo; (French DoD entity)&#xA;Some writeups are here: https://github.com/pcotret/ctf-writeups/tree/master/hexa-2021</description>
+    </item>
+    <item>
+      <title>Unlock your Brain OSINT CTF 2021</title>
+      <link>https://pcotret.github.io/unlock2021/</link>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/unlock2021/</guid>
+      <description>Unlock Your Brain OSINT CTF https://github.com/pcotret/ctf-writeups/tree/master/uybhys-2021 This year, it was again an OSINT related CTF made by the OSINT-FR community</description>
+    </item>
+  </channel>
 </rss>

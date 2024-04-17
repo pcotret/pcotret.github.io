@@ -1,27 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>simulation - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/simulation/</link>
-        <description>simulation - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 22 Jan 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/simulation/" rel="self" type="application/rss+xml" /><item>
-    <title>Quick start guide for SimulIDE as an Arduino simulator</title>
-    <link>https://pcotret.github.io/simulide/</link>
-    <pubDate>Sun, 22 Jan 2023 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/simulide/</guid>
-    <description><![CDATA[The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)
-Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.]]></description>
-</item><item>
-    <title>My first topology</title>
-    <link>https://pcotret.github.io/first_topology/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/first_topology/</guid>
-    <description><![CDATA[Mainly based on an official tutorial (link).
-A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.
-In this tutorial, the c7200 is used. You may not have the same interfaces in another case.
-Topology creation Take two c7200 routers and add them to the schematic by a &ldquo;drag and drop&rdquo;.
-We can see our two routers:
-Use the link icon in order to&hellip; &hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>simulation on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/simulation/</link>
+    <description>Recent content in simulation on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Mar 2023 13:21:24 +0100</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick start guide for SimulIDE as an Arduino simulator</title>
+      <link>https://pcotret.github.io/simulide/</link>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/simulide/</guid>
+      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)&#xA;Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.</description>
+    </item>
+    <item>
+      <title>My first topology</title>
+      <link>https://pcotret.github.io/first_topology/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/first_topology/</guid>
+      <description>Mainly based on an official tutorial (link).&#xA;A Google Drive with several Cisco IOS: https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR.&#xA;In this tutorial, the c7200 is used. You may not have the same interfaces in another case.&#xA;Topology creation Take two c7200 routers and add them to the schematic by a &amp;ldquo;drag and drop&amp;rdquo;.&#xA;We can see our two routers:&#xA;Use the link icon in order to&amp;hellip; &amp;hellip;link them. In this case, we connect the FastEthernet0/0 interfaces of the routers.</description>
+    </item>
+  </channel>
 </rss>

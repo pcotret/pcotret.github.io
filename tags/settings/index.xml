@@ -1,25 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>settings - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/settings/</link>
-        <description>settings - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/settings/" rel="self" type="application/rss+xml" /><item>
-    <title>Implementation settings for (very) simple Vivado projects</title>
-    <link>https://pcotret.github.io/implementation_test/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/implementation_test/</guid>
-    <description><![CDATA[https://support.xilinx.com/s/article/58992?language=en_US
-[Place 30-415] IO Placement failed due to over utilization
-Project Manager =&gt; Settings =&gt; Synthesis =&gt; More options. Add this flag:
-1 -mode out_of_context ]]></description>
-</item><item>
-    <title>Xilinx settings in `~/.bashrc`</title>
-    <link>https://pcotret.github.io/xilinx_bashrc/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
-    <description><![CDATA[Just because I&rsquo;m too lazy to rewrite the few lines needed to get Vivado running.
-Requirements Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic These lines have to be added at the end of your ~/.bashrc file]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>settings on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/settings/</link>
+    <description>Recent content in settings on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Jan 2023 09:51:47 +0100</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/settings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementation settings for (very) simple Vivado projects</title>
+      <link>https://pcotret.github.io/implementation_test/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/implementation_test/</guid>
+      <description>https://support.xilinx.com/s/article/58992?language=en_US&#xA;[Place 30-415] IO Placement failed due to over utilization&#xA;Project Manager =&amp;gt; Settings =&amp;gt; Synthesis =&amp;gt; More options. Add this flag:&#xA;1 -mode out_of_context </description>
+    </item>
+    <item>
+      <title>Xilinx settings in `~/.bashrc`</title>
+      <link>https://pcotret.github.io/xilinx_bashrc/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/xilinx_bashrc/</guid>
+      <description>Just because I&amp;rsquo;m too lazy to rewrite the few lines needed to get Vivado running.&#xA;Requirements Xilinx tools are installed in /opt/Xilinx You have write rights in this repository. Otherwise, just run a chown -R on /opt/Xilinx For this note, I assume you have the 2018.2 version installed on a 64-bit OS. Your license file is /opt/Xilinx/Xilinx.lic These lines have to be added at the end of your ~/.bashrc file</description>
+    </item>
+  </channel>
 </rss>

@@ -1,15 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>free - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/free/</link>
-        <description>free - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/free/" rel="self" type="application/rss+xml" /><item>
-    <title>TryHackMe free rooms</title>
-    <link>https://pcotret.github.io/tryhackme/</link>
-    <pubDate>Tue, 10 Aug 2021 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/tryhackme/</guid>
-    <description><![CDATA[Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&hellip;
-Level 1 - Intro OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting Introductory CTFs to get your feet wet Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan Level 2 - Tooling Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning More introductory CTFs Vulnversity - https://tryhackme.com/room/vulnversity Blue - https://tryhackme.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>free on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/free/</link>
+    <description>Recent content in free on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 10 Aug 2021 13:20:07 +0200</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/free/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackMe free rooms</title>
+      <link>https://pcotret.github.io/tryhackme/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/tryhackme/</guid>
+      <description>Based on https://skerritt.blog/free-rooms/. Some rooms became private in the meantime&amp;hellip;&#xA;Level 1 - Intro OpenVPN https://tryhackme.com/room/openvpn Welcome https://tryhackme.com/jr/welcome Intro to Researching https://tryhackme.com/room/introtoresearch Crash Course Pentesting https://tryhackme.com/room/ccpentesting Introductory CTFs to get your feet wet Google Dorking https://tryhackme.com/room/googledorking OHsint https://tryhackme.com/room/ohsint Shodan.io https://tryhackme.com/room/shodan Level 2 - Tooling Tmux https://tryhackme.com/room/rptmux Web Scanning https://tryhackme.com/room/rpwebscanning Sublist3r https://tryhackme.com/room/rpsublist3r Metasploit https://tryhackme.com/room/rpmetasploit Hydra https://tryhackme.com/room/hydra Linux Privesc https://tryhackme.com/room/linuxprivesc Web Scanning https://tryhackme.com/room/rpwebscanning More introductory CTFs Vulnversity - https://tryhackme.com/room/vulnversity Blue - https://tryhackme.</description>
+    </item>
+  </channel>
 </rss>

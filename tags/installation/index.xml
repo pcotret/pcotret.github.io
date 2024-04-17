@@ -1,15 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>installation - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/installation/</link>
-        <description>installation - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/installation/" rel="self" type="application/rss+xml" /><item>
-    <title>Talks</title>
-    <link>https://pcotret.github.io/talks/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/talks/</guid>
-    <description><![CDATA[DevFest Bout du Monde - 28/02/2020 How to describe hardware code in Python down to the processor. Quick note about the license mess in the embedded world (in 🇫🇷). Con website and slides.
-Toulouse Hacking Convention - 09/03/2018 Results of a research project (link). Con website and slides.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installation on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/installation/</link>
+    <description>Recent content in installation on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2020 00:10:21 +0200</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talks</title>
+      <link>https://pcotret.github.io/talks/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/talks/</guid>
+      <description>DevFest Bout du Monde - 28/02/2020 How to describe hardware code in Python down to the processor. Quick note about the license mess in the embedded world (in &amp;#x1f1eb;&amp;#x1f1f7;). Con website and slides.&#xA;Toulouse Hacking Convention - 09/03/2018 Results of a research project (link). Con website and slides.</description>
+    </item>
+  </channel>
 </rss>

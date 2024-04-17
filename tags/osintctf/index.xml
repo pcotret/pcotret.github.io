@@ -1,16 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>osint,ctf - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/osintctf/</link>
-        <description>osint,ctf - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/osintctf/" rel="self" type="application/rss+xml" /><item>
-    <title>OSINT 101</title>
-    <link>https://pcotret.github.io/osint101/</link>
-    <pubDate>Tue, 11 Jan 2022 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/osint101/</guid>
-    <description><![CDATA[OSINT 101 Some ressources to get into OSINT:
-https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy CTFs:
-https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges ]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>osint,ctf on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/osintctf/</link>
+    <description>Recent content in osint,ctf on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jan 2022 11:51:37 +0100</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/osintctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSINT 101</title>
+      <link>https://pcotret.github.io/osint101/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/osint101/</guid>
+      <description>OSINT 101 Some ressources to get into OSINT:&#xA;https://osintfr.com/en/how-to-begin-faq/ https://www.youtube.com/playlist?list=PLrFPX1Vfqk3ehZKSFeb9pVIHqxqrNW8Sy CTFs:&#xA;https://sourcing.games/ (several challenges, maybe the easiest to start with) https://investigator.cybersoc.wales/challenges https://ctf.cybersoc.wales/challenges </description>
+    </item>
+  </channel>
 </rss>

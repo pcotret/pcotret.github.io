@@ -1,17 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>microsemi - Tag - Github personal blog</title>
-        <link>https://pcotret.github.io/tags/microsemi/</link>
-        <description>microsemi - Tag - Github personal blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://pcotret.github.io/tags/microsemi/" rel="self" type="application/rss+xml" /><item>
-    <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
-    <link>https://pcotret.github.io/microsemi_ubuntu/</link>
-    <pubDate>Fri, 18 Mar 2022 00:00:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
-    <description><![CDATA[Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html
-Prerequisites 1 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386 You may need other QT related packages in their i386 flavour.
-Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)
-1 mkdir --p /home/USERNAME/.local/share/microsemi/license Download the &ldquo;Linux Daemon&rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microsemi on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/microsemi/</link>
+    <description>Recent content in microsemi on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Apr 2022 13:51:42 +0200</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/microsemi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing Microsemi Libero 2021.3 on Ubuntu 20 LTS</title>
+      <link>https://pcotret.github.io/microsemi_ubuntu/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/microsemi_ubuntu/</guid>
+      <description>Mostly based on this great tutorial : https://bobbl.github.io/fpga/microsemi/2021/04/30/install-libero-update.html&#xA;Prerequisites 1 sudo apt install libxtst6:i386 libxrender1:i386 apt-file lsb xfonts-intl-asian xfonts-intl-chinese xfonts-intl-chinese-big xfonts-intl-japanese xfonts-intl-japanese-big ksh libxft2:i386 libgtk2.0-0:i386 libcanberra-gtk-module:i386 libqt5xdg-dev:i386 You may need other QT related packages in their i386 flavour.&#xA;Get License Create a directory for the license server (here I use ~/.local/share/microsemi/license)&#xA;1 mkdir --p /home/USERNAME/.local/share/microsemi/license Download the &amp;ldquo;Linux Daemon&amp;rdquo; from https://www.microsemi.com/product-directory/design-resources/1711-licensing#downloads to the license directory and extract it with:</description>
+    </item>
+  </channel>
 </rss>

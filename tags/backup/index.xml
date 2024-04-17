@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backup on Github personal blog</title>
+    <link>https://pcotret.github.io/tags/backup/</link>
+    <description>Recent content in backup on Github personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Apr 2024 14:02:54 +0200</lastBuildDate>
+    <atom:link href="https://pcotret.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static page for conference deadlines</title>
+      <link>https://pcotret.github.io/rsync-google/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://pcotret.github.io/rsync-google/</guid>
+      <description>How to sync files between a Google Drive and a local directory: https://linovox.com/how-to-sync-google-drive-on-linux/&#xA;1 2 3 4 # From Google to local rclone sync google: /path/to/local/directory # From local to Google rclone sync /path/to/local/directory google: </description>
+    </item>
+  </channel>
+</rss>
