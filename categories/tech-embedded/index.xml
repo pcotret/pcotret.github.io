@@ -12,7 +12,7 @@
       <link>https://pcotret.github.io/simulide/</link>
       <pubDate>Sun, 22 Jan 2023 00:00:00 +0800</pubDate>
       <guid>https://pcotret.github.io/simulide/</guid>
-      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)&#xA;Downloading tools SimulIDE : Last Stable Version (0.4.15). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.</description>
+      <description>The idea behind this tutorial is to show how to install SimulIDE to run codes for an Arduino Uno board. Screenshots below were taken from a Windows machine. It will be the same thing for Unix-based systems (tested on Ubuntu). Some comments for the Mac port at the end (but it works!)&#xA;Downloading tools SimulIDE : Last Stable Version (1.1.10). For Linux, please prefer the Linux64 archive. Arduino. Legacy IDE (1.</description>
     </item>
     <item>
       <title>Activate Coresight components in a Yocto environment for the Zedboard</title>
